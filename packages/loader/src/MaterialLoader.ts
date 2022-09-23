@@ -86,7 +86,7 @@ class MaterialLoader extends Loader<string> {
         }
 
         Promise.all(texturePromises).then(() => {
-          resolve(material);
+          resolve(material);  
         });
       });
     });
