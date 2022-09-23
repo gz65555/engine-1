@@ -153,8 +153,11 @@ export class ResourceManager {
     const obj = this._objectPool[refId];
     const promise = obj
       ? Promise.resolve(obj)
-      : this.load<any>({ type: this._editorResourceConfig[refId].type, url: this._editorResourceConfig[refId].path });
-    return promise.then((res) => (key ? Utils._reflectGet(res, key) : res)).then((item) => (isClone ? item.clone() : item));
+      : this.load<any>({
+          type: this._editorResourceConfig[refId].type,
+          url: this._editorResourceConfig[refId].path + `?q=${key}`
+        });
+    return promise.then((item) => (isClone ? item.clone() : item));
   }
 
   /**
