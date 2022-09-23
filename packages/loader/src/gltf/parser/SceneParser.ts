@@ -63,7 +63,9 @@ export class SceneParser extends Parser {
     }
     
     context.gltf.extensions && delete context.gltf.extensions["OASIS_materials_remap"];
-    return Promise.all(promises);
+    Promise.all(promises).then(()=>{
+      return Promise.resolve();
+    })
   }
 
   private _createCamera(context: GLTFResource, cameraSchema: ICamera, entity: Entity): void {

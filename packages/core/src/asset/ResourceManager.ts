@@ -8,6 +8,15 @@ import { RefObject } from "./RefObject";
 
 type EditorResourceItem = { virtualPath: string; path: string; type: string; id: string };
 type EditorResourceConfig = Record<string, EditorResourceItem>;
+
+function wait(m:number) {
+  return new Promise(resolve=>{
+    setTimeout(() => {
+      resolve()
+    }, m);
+  })
+  
+}
 /**
  * ResourceManager
  */
@@ -157,7 +166,9 @@ export class ResourceManager {
           type: this._editorResourceConfig[refId].type,
           url: this._editorResourceConfig[refId].path + `?q=${key}`
         });
-    return promise.then((item) => (isClone ? item.clone() : item));
+    return promise.then((item) => {
+      return isClone ? item.clone() : item;
+    });
   }
 
   /**

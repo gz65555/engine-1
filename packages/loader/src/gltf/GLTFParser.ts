@@ -1,4 +1,5 @@
 import { GLTFResource } from "./GLTFResource";
+import { GLTFUtil } from "./GLTFUtil";
 import { AnimationParser } from "./parser/AnimationParser";
 import { BufferParser } from "./parser/BufferParser";
 import { EntityParser } from "./parser/EntityParser";
@@ -53,11 +54,23 @@ export class GLTFParser {
       if (lastPipe) {
         lastPipe
           .then((customRes) => {
-            resolve(customRes || context);
+            if(customRes) {
+              resolve(customRes);
+            } else {
+              if(!context.defaultKey) {
+                resolve(context);
+              } else {
+                resolve(context[context.defaultKey]);
+              }
+            }
           })
           .catch(reject);
       } else {
-        resolve(context);
+        if(!context.defaultKey) {
+          resolve(context);
+        } else {
+          resolve(context[context.defaultKey]);
+        }
       }
     });
   }

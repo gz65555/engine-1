@@ -45,9 +45,16 @@ export class GLTFResource extends EngineObject {
   /** Renderer can replace material by `renderer.setMaterial` if gltf use plugin-in KHR_materials_variants. */
   variants?: { renderer: Renderer; material: Material; variants: string[] }[];
   /** adapter subAsset */
+  /** @internal */
   textureIndex?: number;
+  /** @internal */
   materialIndex?: number;
+  /** @internal */
   animationIndex?: number;
+  /** @internal */
   meshIndex?: number;
+  /** @internal */
   subMeshIndex?: number;
+  /** @internal */
+  defaultKey?: string;
 }

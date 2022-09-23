@@ -175,6 +175,7 @@ export class MaterialParser extends Parser {
     if (materialIndex >= 0) {
       const material = materials[materialIndex];
       if (material) {
+        console.log("material", material);
         return material;
       } else {
         throw `material index not find in: ${materialIndex}`;

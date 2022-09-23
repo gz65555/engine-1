@@ -57,6 +57,7 @@ export class TextureParser extends Parser {
         if (textureIndex >= 0) {
           const texture = textures[textureIndex];
           if (texture) {
+            console.log("texture", texture);
             return texture;
           } else {
             throw `texture index not find in: ${textureIndex}`;

@@ -33,6 +33,7 @@ export class ReflectionParser {
     // @ts-ignore
     const assetRefId: string = entityConfig.assetRefId;
     if (assetRefId) {
+      console.log("assetRefId", assetRefId);
       // @ts-ignore
       return engine.resourceManager.getResourceByRef<Entity>({ refId: assetRefId, key: entityConfig.key });
     } else {

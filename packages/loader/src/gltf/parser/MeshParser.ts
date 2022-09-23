@@ -103,6 +103,7 @@ export class MeshParser extends Parser {
       if (meshIndex >= 0) {
         const mesh = meshes[meshIndex]?.[subMeshIndex];
         if (mesh) {
+          console.log("return mesh", mesh);
           return mesh;
         } else {
           throw `meshIndex-subMeshIndex index not find in: ${meshIndex}-${subMeshIndex}`;
