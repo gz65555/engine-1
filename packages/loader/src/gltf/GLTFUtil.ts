@@ -328,14 +328,19 @@ export class GLTFUtil {
   }
 
   static getQuery(path: string): { [key: string]: string } {
-    const url = new URL(path);
-    const entries = url.searchParams.entries();
-    const data = {};
+    try {
+      const url = new URL(path);
+      const entries = url.searchParams.entries();
+      const data = {};
 
-    for (const i of entries) {
-      data[i[0]] = i[1];
+      for (const i of entries) {
+        data[i[0]] = i[1];
+      }
+      return data;
+    } catch (e) {
+      console.log(path);
+      console.log(e);
     }
-    return data;
   }
 
   // "meshes[0][0]" => ["meshes","0","0"]
