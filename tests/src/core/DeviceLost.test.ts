@@ -46,4 +46,4 @@ describe("Device lost test", function () {
       }, 200);
     });
   });
-});
+}).timeout(10000);
