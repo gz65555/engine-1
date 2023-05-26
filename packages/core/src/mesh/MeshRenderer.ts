@@ -4,19 +4,20 @@ import { RenderContext } from "../RenderPipeline/RenderContext";
 import { Renderer, RendererUpdateFlags } from "../Renderer";
 import { Logger } from "../base/Logger";
 import { ignoreClone } from "../clone/CloneManager";
-import { ICustomClone } from "../clone/ComponentCloner";
 import { Mesh, MeshModifyFlags } from "../graphic/Mesh";
 import { ShaderMacro } from "../shader/ShaderMacro";
 
 /**
  * MeshRenderer Component.
  */
-export class MeshRenderer extends Renderer implements ICustomClone {
+export class MeshRenderer extends Renderer {
   private static _uvMacro = ShaderMacro.getByName("RENDERER_HAS_UV");
   private static _uv1Macro = ShaderMacro.getByName("RENDERER_HAS_UV1");
   private static _normalMacro = ShaderMacro.getByName("RENDERER_HAS_NORMAL");
   private static _tangentMacro = ShaderMacro.getByName("RENDERER_HAS_TANGENT");
-  private static _vertexColorMacro = ShaderMacro.getByName("RENDERER_HAS_VERTEXCOLOR");
+  private static _enableVertexColorMacro = ShaderMacro.getByName("RENDERER_ENABLE_VERTEXCOLOR");
+
+  private _enableVertexColor: boolean = false;
 
   /** @internal */
   @ignoreClone
@@ -36,6 +37,20 @@ export class MeshRenderer extends Renderer implements ICustomClone {
   }
 
   /**
+   * Whether enable vertex color.
+   */
+  get enableVertexColor(): boolean {
+    return this._enableVertexColor;
+  }
+
+  set enableVertexColor(value: boolean) {
+    if (value !== this._enableVertexColor) {
+      this._dirtyUpdateFlag |= MeshRendererUpdateFlags.VertexElementMacro;
+      this._enableVertexColor = value;
+    }
+  }
+
+  /**
    * @internal
    */
   constructor(entity: Entity) {
@@ -51,6 +66,7 @@ export class MeshRenderer extends Renderer implements ICustomClone {
     const mesh = this._mesh;
     if (mesh && !mesh.destroyed) {
       mesh._addReferCount(-1);
+      mesh._updateFlagManager.removeListener(this._onMeshChanged);
       this._mesh = null;
     }
   }
@@ -58,7 +74,8 @@ export class MeshRenderer extends Renderer implements ICustomClone {
   /**
    * @internal
    */
-  _cloneTo(target: MeshRenderer): void {
+  override _cloneTo(target: MeshRenderer): void {
+    super._cloneTo(target);
     target.mesh = this._mesh;
   }
 
@@ -91,7 +108,7 @@ export class MeshRenderer extends Renderer implements ICustomClone {
         shaderData.disableMacro(MeshRenderer._uv1Macro);
         shaderData.disableMacro(MeshRenderer._normalMacro);
         shaderData.disableMacro(MeshRenderer._tangentMacro);
-        shaderData.disableMacro(MeshRenderer._vertexColorMacro);
+        shaderData.disableMacro(MeshRenderer._enableVertexColorMacro);
 
         for (let i = 0, n = vertexElements.length; i < n; i++) {
           switch (vertexElements[i].semantic) {
@@ -108,7 +125,7 @@ export class MeshRenderer extends Renderer implements ICustomClone {
               shaderData.enableMacro(MeshRenderer._tangentMacro);
               break;
             case "COLOR_0":
-              shaderData.enableMacro(MeshRenderer._vertexColorMacro);
+              this._enableVertexColor && shaderData.enableMacro(MeshRenderer._enableVertexColorMacro);
               break;
           }
         }

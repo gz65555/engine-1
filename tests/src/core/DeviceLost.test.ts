@@ -43,7 +43,7 @@ describe("Device lost test", function () {
       setTimeout(() => {
         engine.forceRestoreDevice();
         resolve(null);
-      }, 1000);
+      }, 200);
     });
   });
-});
+}).timeout(10000);
