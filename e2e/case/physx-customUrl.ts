@@ -21,7 +21,7 @@ import {
   BlinnPhongMaterial,
   Entity
 } from "@galacean/engine";
-import { WireframeManager } from "@galacean/engine-toolkit";
+import { WireframeManager } from "./.WireframeManager";
 
 import { PhysXPhysics, PhysXRuntimeMode } from "@galacean/engine-physics-physx";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";

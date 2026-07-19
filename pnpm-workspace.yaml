@@ -9,7 +9,6 @@ packages:
 autoInstallPeers: false
 
 catalog:
-  "@galacean/engine-toolkit": 1.6.0
   dat.gui: 0.7.9
   vite: 8.1.5
 

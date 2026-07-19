@@ -6,9 +6,6 @@ settings:
 
 catalogs:
   default:
-    '@galacean/engine-toolkit':
-      specifier: 1.6.0
-      version: 1.6.0
     dat.gui:
       specifier: 0.7.9
       version: 0.7.9
@@ -102,9 +99,6 @@ importers:
       '@galacean/engine-shaderlab':
         specifier: workspace:*
         version: link:../packages/shader-lab
-      '@galacean/engine-toolkit':
-        specifier: 'catalog:'
-        version: 1.6.0(@galacean/engine-ui@1.6.13(@galacean/engine@packages+galacean))(@galacean/engine@packages+galacean)
       dat.gui:
         specifier: 'catalog:'
         version: 0.7.9
@@ -411,70 +405,6 @@ packages:
 
   '@emnapi/wasi-threads@1.2.2':
     resolution: {integrity: sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA==}
-
-  '@galacean/engine-toolkit-auxiliary-lines@1.6.0':
-    resolution: {integrity: sha512-wwQj28bXUGYiv7V9/ZgW8RPL8UULS5nFpBOr1ucqrqSTLMbedPcVXfuShyesFnB4QNRGCKR9pHCKrhLlYhpaeA==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-controls@1.6.0':
-    resolution: {integrity: sha512-qqbxHStb+SsRjKAOol6m42KYC2Ma0GaiZ8zWOBjq8plCcZQNenX22u01ViAiqh+pbYcLqkslNuE3R20pPi53Eg==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-custom-material@1.6.0':
-    resolution: {integrity: sha512-spUDhH35ZvD1yivJmzRorgIt2RGXXN8IGelqFRQEtt4nsph/0LuqddRrSI6o0NiEjEsWy6IvkzinQU4WXZvIbg==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-framebuffer-picker@1.6.0':
-    resolution: {integrity: sha512-lWaO7o+ehvtHttJdgwcG9Ix0eJFUBOzsO8kFc6RQp4aZ/IP6FS/SqGD2erRCicQeDnoIdMszW7xY2GGc8xrfMg==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-geometry-sketch@1.6.0':
-    resolution: {integrity: sha512-wYcjzJ80eO8ekOpCZRW78jUsiE5GKGtmrWWMa6v8p+HNugFu0X9UfyomTtTx3SuImvNb/TpP2O+KZ4ZW4RXmww==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-gizmo@1.6.0':
-    resolution: {integrity: sha512-a5y4NACFnBsKweNcFe9VKn9ttxSuFZnNBJCcLNcWED1+Botk1xsW+2xwS3dcGhWf7GHx+nuZ4HCq4MeCLbozNQ==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-      '@galacean/engine-ui': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-lines@1.6.0':
-    resolution: {integrity: sha512-QowKaRXAQPjvU21Xg+GoRpzbFcuuKrKoOcKjmC/qtFF8NF8GaeBOFhUbGPNt3ztrssDPJ474Soau8ZtqH42P5g==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-navigation-gizmo@1.6.0':
-    resolution: {integrity: sha512-m307kTSWwQCHiCHa/1fIWTGtytc1bLZIFkGrRQCLrj2dGiKDqK6VaC2Jdsnm6i2Exv2FJMmkGkYPrpi6xOwj9Q==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-outline@1.6.0':
-    resolution: {integrity: sha512-GrRZGb3B5Np35HlSVX08au9lUIQv30Yn+UPbz5tDongaIe//i7FFDpXnUC53NMfQgnySwxmjTBF8zFQtSQAsug==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-skeleton-viewer@1.6.0':
-    resolution: {integrity: sha512-kxzt4OHF0y+S3Zr6Bu/qDjzqGn7+rwK6fdewlwIlSOstYjLQ4jS/RgOFFPAvF5E8O9B9wIWkyreFXG2DPJTg9A==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit-stats@1.6.0':
-    resolution: {integrity: sha512-63LLxTWg15xR000jbtEONnK6lBBMylvl5m+3VqqC7b09YAuMWlm9CuPfaM8dlbctOYT6nmPu9bpQiq3JfdgtWg==}
-    peerDependencies:
-      '@galacean/engine': '>=1.6.0-0'
-
-  '@galacean/engine-toolkit@1.6.0':
-    resolution: {integrity: sha512-XBVMJd5WA73z25nQKF3P9GydYqjGVDWIrHzH7LjkgK5g5Yre2BLVxlRnMZAu5iW95PPt0riWwqcu+8BLm+3Fgw==}
-
-  '@galacean/engine-ui@1.6.13':
-    resolution: {integrity: sha512-pJD4VgeQwikfErEXQaboCllOHYBQgXRgJXoNgbUDIKHmdmHSjYpEduXrziUc76LGwVxKyYSX5Lu0xA295OEYBw==}
-    peerDependencies:
-      '@galacean/engine': 1.6.13
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -2034,77 +1964,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
-
-  '@galacean/engine-toolkit-auxiliary-lines@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-      '@galacean/engine-toolkit-custom-material': 1.6.0(@galacean/engine@packages+galacean)
-
-  '@galacean/engine-toolkit-controls@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-custom-material@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-framebuffer-picker@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-geometry-sketch@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-gizmo@1.6.0(@galacean/engine-ui@1.6.13(@galacean/engine@packages+galacean))(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-      '@galacean/engine-toolkit-custom-material': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-framebuffer-picker': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-ui': 1.6.13(@galacean/engine@packages+galacean)
-
-  '@galacean/engine-toolkit-lines@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-navigation-gizmo@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-      '@galacean/engine-toolkit-controls': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-custom-material': 1.6.0(@galacean/engine@packages+galacean)
-
-  '@galacean/engine-toolkit-outline@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-skeleton-viewer@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit-stats@1.6.0(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
-
-  '@galacean/engine-toolkit@1.6.0(@galacean/engine-ui@1.6.13(@galacean/engine@packages+galacean))(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine-toolkit-auxiliary-lines': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-controls': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-custom-material': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-framebuffer-picker': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-geometry-sketch': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-gizmo': 1.6.0(@galacean/engine-ui@1.6.13(@galacean/engine@packages+galacean))(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-lines': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-navigation-gizmo': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-outline': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-skeleton-viewer': 1.6.0(@galacean/engine@packages+galacean)
-      '@galacean/engine-toolkit-stats': 1.6.0(@galacean/engine@packages+galacean)
-    transitivePeerDependencies:
-      - '@galacean/engine'
-      - '@galacean/engine-ui'
-
-  '@galacean/engine-ui@1.6.13(@galacean/engine@packages+galacean)':
-    dependencies:
-      '@galacean/engine': link:packages/galacean
 
   '@jridgewell/resolve-uri@3.1.2': {}
 

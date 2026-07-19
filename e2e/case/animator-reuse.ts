@@ -13,7 +13,7 @@ import {
   Vector3,
   WebGLEngine
 } from "@galacean/engine";
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./.OrbitControl";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 Logger.enable();

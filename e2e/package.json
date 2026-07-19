@@ -17,7 +17,6 @@
     "@galacean/engine-rhi-webgl": "workspace:*",
     "@galacean/engine-shader": "workspace:*",
     "@galacean/engine-shaderlab": "workspace:*",
-    "@galacean/engine-toolkit": "catalog:",
     "dat.gui": "catalog:",
     "vite": "catalog:"
   }

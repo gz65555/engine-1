@@ -2,7 +2,7 @@
  * @title Animation BlendShape
  * @category Animation
  */
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./.OrbitControl";
 import * as dat from "dat.gui";
 
 import {

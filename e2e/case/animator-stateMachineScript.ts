@@ -2,7 +2,7 @@
  * @title AnimatorStateScript
  * @category Animation
  */
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./.OrbitControl";
 import {
   Animator,
   AnimatorState,
