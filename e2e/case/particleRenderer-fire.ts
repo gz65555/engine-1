@@ -44,7 +44,7 @@ WebGLEngine.create({
 
   // Create camera
   const cameraEntity = rootEntity.createChild("camera_entity");
-  cameraEntity.transform.position = new Vector3(-10, 1, 3);// -10 can test bounds transform
+  cameraEntity.transform.position = new Vector3(-10, 1, 3); // -10 can test bounds transform
   const camera = cameraEntity.addComponent(Camera);
   camera.fieldOfView = 60;
 

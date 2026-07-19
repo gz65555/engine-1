@@ -71,7 +71,7 @@ registerIncludes();
 
 //       struct a2v {
 //        vec4 POSITION;
-//        vec2 TEXCOORD_0; 
+//        vec2 TEXCOORD_0;
 //        mat3 TBN;
 //       };
 
@@ -150,7 +150,7 @@ registerIncludes();
 //           sg.Amplitude = sg.Sharpness /((2.0 * 1.) * (1.0 - exp(-2.0 * sg.Sharpness)));
 //           return sg;
 //         }
-          
+
 //         vec3 sgdiffuseLighting(vec3 light ,vec3 normal ,vec3 scatterAmt)
 //         {
 //           FsphericalGaussian Kernel = makeNormalizedSG(light, 1.0 / max(scatterAmt.xyz,0.0001));
@@ -166,10 +166,9 @@ registerIncludes();
 //         float fogDistance = length(i.v_position);
 //         float fogAmount = 1.0 - exp2(-u_fogDensity * u_fogDensity * fogDistance * fogDistance * 1.442695);
 //         fogAmount = clamp(fogAmount, 0.0, 1.0);
-//         gl_FragColor = mix(color, u_fogColor, fogAmount); 
-  
-//         gl_FragColor = linearToGamma(gl_FragColor);
+//         gl_FragColor = mix(color, u_fogColor, fogAmount);
 
+//         gl_FragColor = linearToGamma(gl_FragColor);
 
 // #define REFRACTION_MODE
 
@@ -182,7 +181,7 @@ registerIncludes();
 //           gl_FragColor = linearToGamma(gl_FragColor);
 //         #elif SCENE_SHADOW_TYPE == 3
 //           gl_FragColor = linearToGamma(gl_FragColor);
-//         #else 
+//         #else
 //           gl_FragColor = vec4(1.0, 1.0, 0.0, 0.0);
 //         #endif
 
@@ -192,11 +191,11 @@ registerIncludes();
 //           gl_FragColor = vec4(sgdiffuseLighting(vec3(1.0), vec3(1.0), vec3(1.0)), 1.0);
 //         #else
 //           gl_FragColor = vec4(1.0, 1.0, 0.0, 0.0);
-//         #endif 
+//         #endif
 
 //         #ifdef SCENE_SHADOW_TYPE
 //           gl_FragColor = vec4(1.0, 1.0, 0.0, 0.0);
-//         #endif 
+//         #endif
 //       }
 
 //       VertexShader = vert;
@@ -350,7 +349,6 @@ WebGLEngine.create({ canvas: "canvas", shaderLab }).then((engine) => {
     engine.resourceManager
       .load<GLTFResource>("https://gw.alipayobjects.com/os/bmw-prod/a1da72a4-023e-4bb1-9629-0f4b0f6b6fc4.glb")
       .then((glTF) => {
-
         // Replace shader to shaderLab PBR
         const material = glTF.materials[0];
         material.shader = shaderLabPBR;

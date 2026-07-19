@@ -249,20 +249,20 @@ describe("ModelMesh Test", async function () {
     const arrayBufferView = new Uint8Array(arrayBuffer, 20);
 
     const float32Array = new Float32Array(arrayBuffer, 20);
-    (float32Array[0] = 1), (float32Array[1] = 2), (float32Array[2] = 3);
-    (float32Array[3] = 1), (float32Array[4] = 1), (float32Array[5] = 1);
-    (float32Array[6] = 0.5), (float32Array[7] = 0.5);
+    ((float32Array[0] = 1), (float32Array[1] = 2), (float32Array[2] = 3));
+    ((float32Array[3] = 1), (float32Array[4] = 1), (float32Array[5] = 1));
+    ((float32Array[6] = 0.5), (float32Array[7] = 0.5));
 
-    (float32Array[10] = -1), (float32Array[11] = -2), (float32Array[12] = -3);
-    (float32Array[13] = 0), (float32Array[14] = -1), (float32Array[15] = 0);
-    (float32Array[16] = -0.5), (float32Array[17] = -0.5);
+    ((float32Array[10] = -1), (float32Array[11] = -2), (float32Array[12] = -3));
+    ((float32Array[13] = 0), (float32Array[14] = -1), (float32Array[15] = 0));
+    ((float32Array[16] = -0.5), (float32Array[17] = -0.5));
 
     const uint8Array = new Uint8Array(arrayBuffer, 20);
-    (uint8Array[32] = 1), (uint8Array[33] = 2), (uint8Array[34] = 3), (uint8Array[35] = 4);
-    (uint8Array[36] = 11), (uint8Array[37] = 12), (uint8Array[38] = 13), (uint8Array[39] = 14);
+    ((uint8Array[32] = 1), (uint8Array[33] = 2), (uint8Array[34] = 3), (uint8Array[35] = 4));
+    ((uint8Array[36] = 11), (uint8Array[37] = 12), (uint8Array[38] = 13), (uint8Array[39] = 14));
 
-    (uint8Array[72] = 9), (uint8Array[73] = 10), (uint8Array[74] = 11), (uint8Array[75] = 12);
-    (uint8Array[76] = 29), (uint8Array[77] = 55), (uint8Array[78] = 77), (uint8Array[79] = 88);
+    ((uint8Array[72] = 9), (uint8Array[73] = 10), (uint8Array[74] = 11), (uint8Array[75] = 12));
+    ((uint8Array[76] = 29), (uint8Array[77] = 55), (uint8Array[78] = 77), (uint8Array[79] = 88));
 
     const vertexBuffer = new Buffer(engine, BufferBindFlag.VertexBuffer, arrayBufferView, BufferUsage.Static, true);
     modelMesh.setVertexBufferBinding(vertexBuffer, 40, 0);
@@ -360,28 +360,28 @@ describe("ModelMesh Test", async function () {
     // UV
     const uv = new Float32Array(2 * vertexCount);
 
-    (pos[0] = -halfWidth), (pos[1] = halfHeight), (pos[2] = halfDepth);
-    (pos[3] = halfWidth), (pos[4] = halfHeight), (pos[5] = halfDepth);
-    (pos[6] = halfWidth), (pos[7] = -halfHeight), (pos[8] = halfDepth);
-    (pos[9] = -halfWidth), (pos[10] = -halfHeight), (pos[11] = halfDepth);
+    ((pos[0] = -halfWidth), (pos[1] = halfHeight), (pos[2] = halfDepth));
+    ((pos[3] = halfWidth), (pos[4] = halfHeight), (pos[5] = halfDepth));
+    ((pos[6] = halfWidth), (pos[7] = -halfHeight), (pos[8] = halfDepth));
+    ((pos[9] = -halfWidth), (pos[10] = -halfHeight), (pos[11] = halfDepth));
     rightPositions[0] = new Vector3(-halfWidth, halfHeight, halfDepth);
     rightPositions[1] = new Vector3(halfWidth, halfHeight, halfDepth);
     rightPositions[2] = new Vector3(halfWidth, -halfHeight, halfDepth);
     rightPositions[3] = new Vector3(-halfWidth, -halfHeight, halfDepth);
 
-    (nor[0] = 0), (nor[1] = 0), (nor[2] = 1);
-    (nor[3] = 0), (nor[4] = 0), (nor[5] = 1);
-    (nor[6] = 0), (nor[7] = 0), (nor[8] = 1);
-    (nor[9] = 0), (nor[10] = 0), (nor[11] = 1);
+    ((nor[0] = 0), (nor[1] = 0), (nor[2] = 1));
+    ((nor[3] = 0), (nor[4] = 0), (nor[5] = 1));
+    ((nor[6] = 0), (nor[7] = 0), (nor[8] = 1));
+    ((nor[9] = 0), (nor[10] = 0), (nor[11] = 1));
     rightNormals[0] = new Vector3(0, 0, 1);
     rightNormals[1] = new Vector3(0, 0, 1);
     rightNormals[2] = new Vector3(0, 0, 1);
     rightNormals[3] = new Vector3(0, 0, 1);
 
-    (uv[0] = 0), (uv[1] = 0);
-    (uv[2] = 1), (uv[3] = 0);
-    (uv[4] = 1), (uv[5] = 1);
-    (uv[6] = 0), (uv[7] = 1);
+    ((uv[0] = 0), (uv[1] = 0));
+    ((uv[2] = 1), (uv[3] = 0));
+    ((uv[4] = 1), (uv[5] = 1));
+    ((uv[6] = 0), (uv[7] = 1));
     rightUVs[0] = new Vector2(0, 0);
     rightUVs[1] = new Vector2(1, 0);
     rightUVs[2] = new Vector2(1, 1);
@@ -431,28 +431,28 @@ describe("ModelMesh Test", async function () {
     // UV
     const uv = new Float32Array(2 * vertexCount);
 
-    (pos[0] = -halfWidth), (pos[1] = halfHeight), (pos[2] = halfDepth);
-    (pos[3] = halfWidth), (pos[4] = halfHeight), (pos[5] = halfDepth);
-    (pos[6] = halfWidth), (pos[7] = -halfHeight), (pos[8] = halfDepth);
-    (pos[9] = -halfWidth), (pos[10] = -halfHeight), (pos[11] = halfDepth);
+    ((pos[0] = -halfWidth), (pos[1] = halfHeight), (pos[2] = halfDepth));
+    ((pos[3] = halfWidth), (pos[4] = halfHeight), (pos[5] = halfDepth));
+    ((pos[6] = halfWidth), (pos[7] = -halfHeight), (pos[8] = halfDepth));
+    ((pos[9] = -halfWidth), (pos[10] = -halfHeight), (pos[11] = halfDepth));
     rightPositions[0] = new Vector3(-halfWidth, halfHeight, halfDepth);
     rightPositions[1] = new Vector3(halfWidth, halfHeight, halfDepth);
     rightPositions[2] = new Vector3(halfWidth, -halfHeight, halfDepth);
     rightPositions[3] = new Vector3(-halfWidth, -halfHeight, halfDepth);
 
-    (nor[0] = 0), (nor[1] = 0), (nor[2] = 1);
-    (nor[3] = 0), (nor[4] = 0), (nor[5] = 1);
-    (nor[6] = 0), (nor[7] = 0), (nor[8] = 1);
-    (nor[9] = 0), (nor[10] = 0), (nor[11] = 1);
+    ((nor[0] = 0), (nor[1] = 0), (nor[2] = 1));
+    ((nor[3] = 0), (nor[4] = 0), (nor[5] = 1));
+    ((nor[6] = 0), (nor[7] = 0), (nor[8] = 1));
+    ((nor[9] = 0), (nor[10] = 0), (nor[11] = 1));
     rightNormals[0] = new Vector3(0, 0, 1);
     rightNormals[1] = new Vector3(0, 0, 1);
     rightNormals[2] = new Vector3(0, 0, 1);
     rightNormals[3] = new Vector3(0, 0, 1);
 
-    (uv[0] = 0), (uv[1] = 0);
-    (uv[2] = 1), (uv[3] = 0);
-    (uv[4] = 1), (uv[5] = 1);
-    (uv[6] = 0), (uv[7] = 1);
+    ((uv[0] = 0), (uv[1] = 0));
+    ((uv[2] = 1), (uv[3] = 0));
+    ((uv[4] = 1), (uv[5] = 1));
+    ((uv[6] = 0), (uv[7] = 1));
     rightUVs[0] = new Vector2(0, 0);
     rightUVs[1] = new Vector2(1, 0);
     rightUVs[2] = new Vector2(1, 1);
@@ -532,8 +532,8 @@ describe("ModelMesh Test", async function () {
     const pos = new Float32Array(3);
     // UV
     const uv = new Float32Array(2);
-    (pos[0] = -1), (pos[1] = 1), (pos[2] = 1);
-    (uv[0] = 0), (uv[1] = 0);
+    ((pos[0] = -1), (pos[1] = 1), (pos[2] = 1));
+    ((uv[0] = 0), (uv[1] = 0));
     const posBuffer = new Buffer(engine, BufferBindFlag.VertexBuffer, pos, BufferUsage.Static, true);
     const uvBuffer = new Buffer(engine, BufferBindFlag.VertexBuffer, uv, BufferUsage.Static, true);
     mesh.setVertexElements(vertexElements);

@@ -16,7 +16,5 @@
     "stripInternal": true,
     "strict": false
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

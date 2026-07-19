@@ -31,4 +31,3 @@ jobs:
         with:
           title: Release Note ${{ github.event.release.tag_name }}
           text: ${{ toJSON(github.event.release.body) }}
-      

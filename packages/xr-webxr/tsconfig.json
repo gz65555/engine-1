@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-        "module": "preserve",
-        "target": "esnext",
-        "types": ["webxr"],
-        "declaration": true,
-        "moduleResolution": "bundler",
-        "allowSyntheticDefaultImports": true,
-        "experimentalDecorators": true,
-        "declarationDir": "types",
-        "rootDir": "src",
-        "emitDeclarationOnly": true,
-        "noImplicitOverride": true,
-        "sourceMap": true,
-        "incremental": false,
-        "skipLibCheck": true,
-        "stripInternal": true,
-        "strict": false
-    },
-    "include": ["src/**/*"]
+  "compilerOptions": {
+    "module": "preserve",
+    "target": "esnext",
+    "types": ["webxr"],
+    "declaration": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "declarationDir": "types",
+    "rootDir": "src",
+    "emitDeclarationOnly": true,
+    "noImplicitOverride": true,
+    "sourceMap": true,
+    "incremental": false,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "strict": false
+  },
+  "include": ["src/**/*"]
 }

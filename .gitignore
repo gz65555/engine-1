@@ -3,6 +3,7 @@
 tmp
 .idea
 /node_modules
+/.pnpm-store
 /*/node_modules
 /packages/*/node_modules
 /packages/*/types

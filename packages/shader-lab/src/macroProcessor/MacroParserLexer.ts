@@ -100,7 +100,7 @@ export default class MacroParserLexer extends BaseLexer {
     const source = this._source;
     let start = this._currentIndex;
     let found = false;
-    for (var n = source.length; this._currentIndex < n; ) {
+    for (var n = source.length; this._currentIndex < n;) {
       if (MacroParserLexer._isPpCharacters(source.charCodeAt(this._currentIndex))) {
         this.advance(1);
         found = true;

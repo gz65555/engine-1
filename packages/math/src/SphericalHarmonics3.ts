@@ -57,17 +57,17 @@ export class SphericalHarmonics3
     const bv7 = -1.092548 * (x * z); // basis7 = -1.092548
     const bv8 = 0.546274 * (x * x - y * y); // basis8 = 0.546274
 
-    (coe[0] += r * bv0), (coe[1] += g * bv0), (coe[2] += b * bv0);
+    ((coe[0] += r * bv0), (coe[1] += g * bv0), (coe[2] += b * bv0));
 
-    (coe[3] += r * bv1), (coe[4] += g * bv1), (coe[5] += b * bv1);
-    (coe[6] += r * bv2), (coe[7] += g * bv2), (coe[8] += b * bv2);
-    (coe[9] += r * bv3), (coe[10] += g * bv3), (coe[11] += b * bv3);
+    ((coe[3] += r * bv1), (coe[4] += g * bv1), (coe[5] += b * bv1));
+    ((coe[6] += r * bv2), (coe[7] += g * bv2), (coe[8] += b * bv2));
+    ((coe[9] += r * bv3), (coe[10] += g * bv3), (coe[11] += b * bv3));
 
-    (coe[12] += r * bv4), (coe[13] += g * bv4), (coe[14] += b * bv4);
-    (coe[15] += r * bv5), (coe[16] += g * bv5), (coe[17] += b * bv5);
-    (coe[18] += r * bv6), (coe[19] += g * bv6), (coe[20] += b * bv6);
-    (coe[21] += r * bv7), (coe[22] += g * bv7), (coe[23] += b * bv7);
-    (coe[24] += r * bv8), (coe[25] += g * bv8), (coe[26] += b * bv8);
+    ((coe[12] += r * bv4), (coe[13] += g * bv4), (coe[14] += b * bv4));
+    ((coe[15] += r * bv5), (coe[16] += g * bv5), (coe[17] += b * bv5));
+    ((coe[18] += r * bv6), (coe[19] += g * bv6), (coe[20] += b * bv6));
+    ((coe[21] += r * bv7), (coe[22] += g * bv7), (coe[23] += b * bv7));
+    ((coe[24] += r * bv8), (coe[25] += g * bv8), (coe[26] += b * bv8));
   }
 
   /**
@@ -139,15 +139,15 @@ export class SphericalHarmonics3
   scale(s: number): void {
     const src = this.coefficients;
 
-    (src[0] *= s), (src[1] *= s), (src[2] *= s);
-    (src[3] *= s), (src[4] *= s), (src[5] *= s);
-    (src[6] *= s), (src[7] *= s), (src[8] *= s);
-    (src[9] *= s), (src[10] *= s), (src[11] *= s);
-    (src[12] *= s), (src[13] *= s), (src[14] *= s);
-    (src[15] *= s), (src[16] *= s), (src[17] *= s);
-    (src[18] *= s), (src[19] *= s), (src[20] *= s);
-    (src[21] *= s), (src[22] *= s), (src[23] *= s);
-    (src[24] *= s), (src[25] *= s), (src[26] *= s);
+    ((src[0] *= s), (src[1] *= s), (src[2] *= s));
+    ((src[3] *= s), (src[4] *= s), (src[5] *= s));
+    ((src[6] *= s), (src[7] *= s), (src[8] *= s));
+    ((src[9] *= s), (src[10] *= s), (src[11] *= s));
+    ((src[12] *= s), (src[13] *= s), (src[14] *= s));
+    ((src[15] *= s), (src[16] *= s), (src[17] *= s));
+    ((src[18] *= s), (src[19] *= s), (src[20] *= s));
+    ((src[21] *= s), (src[22] *= s), (src[23] *= s));
+    ((src[24] *= s), (src[25] *= s), (src[26] *= s));
   }
 
   /**
@@ -178,15 +178,15 @@ export class SphericalHarmonics3
   copyFromArray(array: ArrayLike<number>, offset: number = 0): void {
     const s = this.coefficients;
 
-    (s[0] = array[offset]), (s[1] = array[1 + offset]), (s[2] = array[2 + offset]);
-    (s[3] = array[3 + offset]), (s[4] = array[4 + offset]), (s[5] = array[5 + offset]);
-    (s[6] = array[6 + offset]), (s[7] = array[7 + offset]), (s[8] = array[8 + offset]);
-    (s[9] = array[9 + offset]), (s[10] = array[10 + offset]), (s[11] = array[11 + offset]);
-    (s[12] = array[12 + offset]), (s[13] = array[13 + offset]), (s[14] = array[14 + offset]);
-    (s[15] = array[15 + offset]), (s[16] = array[16 + offset]), (s[17] = array[17 + offset]);
-    (s[18] = array[18 + offset]), (s[19] = array[19 + offset]), (s[20] = array[20 + offset]);
-    (s[21] = array[21 + offset]), (s[22] = array[22 + offset]), (s[23] = array[23 + offset]);
-    (s[24] = array[24 + offset]), (s[25] = array[25 + offset]), (s[26] = array[26 + offset]);
+    ((s[0] = array[offset]), (s[1] = array[1 + offset]), (s[2] = array[2 + offset]));
+    ((s[3] = array[3 + offset]), (s[4] = array[4 + offset]), (s[5] = array[5 + offset]));
+    ((s[6] = array[6 + offset]), (s[7] = array[7 + offset]), (s[8] = array[8 + offset]));
+    ((s[9] = array[9 + offset]), (s[10] = array[10 + offset]), (s[11] = array[11 + offset]));
+    ((s[12] = array[12 + offset]), (s[13] = array[13 + offset]), (s[14] = array[14 + offset]));
+    ((s[15] = array[15 + offset]), (s[16] = array[16 + offset]), (s[17] = array[17 + offset]));
+    ((s[18] = array[18 + offset]), (s[19] = array[19 + offset]), (s[20] = array[20 + offset]));
+    ((s[21] = array[21 + offset]), (s[22] = array[22 + offset]), (s[23] = array[23 + offset]));
+    ((s[24] = array[24 + offset]), (s[25] = array[25 + offset]), (s[26] = array[26 + offset]));
   }
 
   /**
@@ -197,16 +197,16 @@ export class SphericalHarmonics3
   copyToArray(out: number[] | Float32Array | Float64Array, outOffset: number = 0): void {
     const s = this.coefficients;
 
-    (out[0 + outOffset] = s[0]), (out[1 + outOffset] = s[1]), (out[2 + outOffset] = s[2]);
+    ((out[0 + outOffset] = s[0]), (out[1 + outOffset] = s[1]), (out[2 + outOffset] = s[2]));
 
-    (out[3 + outOffset] = s[3]), (out[4 + outOffset] = s[4]), (out[5 + outOffset] = s[5]);
-    (out[6 + outOffset] = s[6]), (out[7 + outOffset] = s[7]), (out[8 + outOffset] = s[8]);
-    (out[9 + outOffset] = s[9]), (out[10 + outOffset] = s[10]), (out[11 + outOffset] = s[11]);
+    ((out[3 + outOffset] = s[3]), (out[4 + outOffset] = s[4]), (out[5 + outOffset] = s[5]));
+    ((out[6 + outOffset] = s[6]), (out[7 + outOffset] = s[7]), (out[8 + outOffset] = s[8]));
+    ((out[9 + outOffset] = s[9]), (out[10 + outOffset] = s[10]), (out[11 + outOffset] = s[11]));
 
-    (out[12 + outOffset] = s[12]), (out[13 + outOffset] = s[13]), (out[14 + outOffset] = s[14]);
-    (out[15 + outOffset] = s[15]), (out[16 + outOffset] = s[16]), (out[17 + outOffset] = s[17]);
-    (out[18 + outOffset] = s[18]), (out[19 + outOffset] = s[19]), (out[20 + outOffset] = s[20]);
-    (out[21 + outOffset] = s[21]), (out[22 + outOffset] = s[22]), (out[23 + outOffset] = s[23]);
-    (out[24 + outOffset] = s[24]), (out[25 + outOffset] = s[25]), (out[26 + outOffset] = s[26]);
+    ((out[12 + outOffset] = s[12]), (out[13 + outOffset] = s[13]), (out[14 + outOffset] = s[14]));
+    ((out[15 + outOffset] = s[15]), (out[16 + outOffset] = s[16]), (out[17 + outOffset] = s[17]));
+    ((out[18 + outOffset] = s[18]), (out[19 + outOffset] = s[19]), (out[20 + outOffset] = s[20]));
+    ((out[21 + outOffset] = s[21]), (out[22 + outOffset] = s[22]), (out[23 + outOffset] = s[23]));
+    ((out[24 + outOffset] = s[24]), (out[25 + outOffset] = s[25]), (out[26 + outOffset] = s[26]));
   }
 }

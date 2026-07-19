@@ -104,21 +104,21 @@ export class AnimationColorCurve extends AnimationCurve<Color> {
       out.r = p0.r;
     }
 
-    (t0 = tan0.y), (t1 = tan1.y);
+    ((t0 = tan0.y), (t1 = tan1.y));
     if (Number.isFinite(t0) && Number.isFinite(t1)) {
       out.g = a * p0.g + b * t0 * dur + c * t1 * dur + d * p1.g;
     } else {
       out.g = p0.g;
     }
 
-    (t0 = tan0.z), (t1 = tan1.z);
+    ((t0 = tan0.z), (t1 = tan1.z));
     if (Number.isFinite(t0) && Number.isFinite(t1)) {
       out.b = a * p0.b + b * t0 * dur + c * t1 * dur + d * p1.b;
     } else {
       out.b = p0.b;
     }
 
-    (t0 = tan0.w), (t1 = tan1.w);
+    ((t0 = tan0.w), (t1 = tan1.w));
     if (Number.isFinite(t0) && Number.isFinite(t1)) {
       out.a = a * p0.a + b * t0 * dur + c * t1 * dur + d * p1.a;
     } else {

@@ -104,7 +104,7 @@ export class AnimationVector2Curve extends AnimationCurve<Vector2> {
       out.x = p0.x;
     }
 
-    (t0 = tan0.y), (t1 = tan1.y);
+    ((t0 = tan0.y), (t1 = tan1.y));
     if (Number.isFinite(t0) && Number.isFinite(t1)) {
       out.y = a * p0.y + b * t0 * dur + c * t1 * dur + d * p1.y;
     } else {

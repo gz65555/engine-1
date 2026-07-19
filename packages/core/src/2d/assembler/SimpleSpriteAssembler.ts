@@ -38,9 +38,9 @@ export class SimpleSpriteAssembler {
     const { elements: pWE } = worldMatrix;
     const sx = flipX ? -width : width;
     const sy = flipY ? -height : height;
-    (wE[0] = pWE[0] * sx), (wE[1] = pWE[1] * sx), (wE[2] = pWE[2] * sx);
-    (wE[4] = pWE[4] * sy), (wE[5] = pWE[5] * sy), (wE[6] = pWE[6] * sy);
-    (wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]);
+    ((wE[0] = pWE[0] * sx), (wE[1] = pWE[1] * sx), (wE[2] = pWE[2] * sx));
+    ((wE[4] = pWE[4] * sy), (wE[5] = pWE[5] * sy), (wE[6] = pWE[6] * sy));
+    ((wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]));
     wE[12] = pWE[12] - pivotX * wE[0] - pivotY * wE[4];
     wE[13] = pWE[13] - pivotX * wE[1] - pivotY * wE[5];
     wE[14] = pWE[14] - pivotX * wE[2] - pivotY * wE[6];

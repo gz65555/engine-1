@@ -432,10 +432,10 @@ export class ShadowUtils {
     const offsetX = atlasOffset.x * oneOverAtlasWidth;
     const offsetY = atlasOffset.y * oneOverAtlasHeight;
 
-    (slice[0] = scaleX), (slice[1] = 0), (slice[2] = 0), (slice[3] = 0);
-    (slice[4] = 0), (slice[5] = scaleY), (slice[6] = 0), (slice[7] = 0);
-    (slice[8] = 0), (slice[9] = 0), (slice[10] = 1), (slice[11] = 0);
-    (slice[12] = offsetX), (slice[13] = offsetY), (slice[14] = 0), (slice[15] = 1);
+    ((slice[0] = scaleX), (slice[1] = 0), (slice[2] = 0), (slice[3] = 0));
+    ((slice[4] = 0), (slice[5] = scaleY), (slice[6] = 0), (slice[7] = 0));
+    ((slice[8] = 0), (slice[9] = 0), (slice[10] = 1), (slice[11] = 0));
+    ((slice[12] = offsetX), (slice[13] = offsetY), (slice[14] = 0), (slice[15] = 1));
 
     const offset = cascadeIndex * 16;
     Utils._floatMatrixMultiply(sliceMatrix, outShadowMatrices, offset, outShadowMatrices, offset);
