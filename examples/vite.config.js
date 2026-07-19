@@ -1,11 +1,46 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { transformAsync } from "@babel/core";
+import transformClassProperties from "@babel/plugin-transform-class-properties";
+import transformClassStaticBlock from "@babel/plugin-transform-class-static-block";
+import transformClasses from "@babel/plugin-transform-classes";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const GENERATED_PATH = "playground";
 const generatedPath = path.join(__dirname, GENERATED_PATH);
+const packagesPath = path.resolve(__dirname, "../packages") + path.sep;
 const templateStr = fs.readFileSync(path.join(__dirname, "template/iframe.ejs"), "utf8");
+
+// Toolkit 1.x/2.x is published with ES5-style inheritance (`Base.apply(this)`),
+// which cannot extend the engine's native ES2022 classes. Downlevel classes only
+// while serving/building examples; the published engine output remains ES2022.
+const toolkitClassInterop = {
+  name: "toolkit-class-interop",
+  enforce: "post",
+  async transform(code, id) {
+    const filename = id.split("?", 1)[0];
+    if (!filename.startsWith(packagesPath) || !/\.[cm]?[jt]sx?$/.test(filename)) {
+      return null;
+    }
+
+    const result = await transformAsync(code, {
+      filename,
+      babelrc: false,
+      configFile: false,
+      assumptions: {
+        constantSuper: true,
+        noClassCalls: true,
+        setClassMethods: true,
+        superIsCallableConstructor: true
+      },
+      plugins: [transformClassStaticBlock, transformClassProperties, transformClasses],
+      sourceMaps: true
+    });
+
+    return result?.code ? { code: result.code, map: result.map } : null;
+  }
+};
 
 const outputFile = (file, content) => {
   fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -60,6 +95,7 @@ outputFile(path.join(generatedPath, ".demoList.json"), JSON.stringify(demoSorted
 
 export default {
   root: __dirname,
+  plugins: [toolkitClassInterop],
   server: {
     open: true,
     host: "0.0.0.0",
