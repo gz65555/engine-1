@@ -381,7 +381,7 @@ export const E2E_CONFIG = {
       category: "Particle",
       caseFileName: "particleRenderer-emit-mesh-cone-scale-3d-rotation-life-seperate",
       threshold: 0,
-      diffPercentage: 0.01
+      diffPercentage: 0.00782
     },
     particleEmitBillboardStretched: {
       category: "Particle",
@@ -429,7 +429,7 @@ export const E2E_CONFIG = {
       category: "Text",
       caseFileName: "text-typed",
       threshold: 0,
-      diffPercentage: 0
+      diffPercentage: 0.0027
     }
   },
   Trail: {

@@ -28,6 +28,7 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   console.log(`📄 [${testId}] Page ready (${pageReadyTime - startTime}ms)`);
 
   console.log(`🔍 [${testId}] Looking for screenshot button...`);
+  const screenshotButton = page.getByTestId("screenshot");
   // 监听下载事件
   const downloadPromise = page.waitForEvent("download");
   console.log(`📡 [${testId}] Download listener set up`);
@@ -36,7 +37,7 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   let pageRenderedTime;
   try {
     // 等待 screenshot 按钮可见
-    await page.getByTestId("screenshot").waitFor({ timeout: 180000 });
+    await screenshotButton.waitFor({ timeout: 180000 });
     pageRenderedTime = Date.now();
     console.log(`✅ [${testId}] Screenshot button visible (${pageRenderedTime - pageReadyTime}ms)`);
   } catch (error) {
@@ -45,9 +46,16 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
     throw error;
   }
 
+  const screenshotSize = await screenshotButton.evaluate((element) => {
+    const { screenshotWidth, screenshotHeight } = (element as HTMLElement).dataset;
+    const width = Number(screenshotWidth);
+    const height = Number(screenshotHeight);
+    return width > 0 && height > 0 ? { width, height } : null;
+  });
+
   console.log(`👆 [${testId}] Clicking screenshot button...`);
   // 点击下载按钮
-  await page.getByTestId("screenshot").click();
+  await screenshotButton.click();
   console.log(`✅ [${testId}] Screenshot button clicked`);
 
   console.log(`⬇️ [${testId}] Waiting for download to start...`);
@@ -81,16 +89,23 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
     return result;
   }
 
-  if (result.reason === "pixel-diff" && result.diffPercentage <= diffPercentage) {
+  const actualDiffPercentage =
+    result.reason === "pixel-diff"
+      ? screenshotSize
+        ? (result.diffCount * 100) / (screenshotSize.width * screenshotSize.height)
+        : result.diffPercentage
+      : null;
+
+  if (actualDiffPercentage !== null && actualDiffPercentage <= diffPercentage) {
     console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
     return result;
   }
 
-  const actualDiffPercentage = result.reason === "pixel-diff" ? result.diffPercentage : "unknown";
-  console.log(`❌ [${testId}] Visual regression: ${actualDiffPercentage}% (${Date.now() - startTime}ms)`);
+  const displayedDiffPercentage = actualDiffPercentage ?? "unknown";
+  console.log(`❌ [${testId}] Visual regression: ${displayedDiffPercentage}% (${Date.now() - startTime}ms)`);
   throw new Error(
     `Visual regression detected for ${imageName}. ` +
-      `Difference: ${actualDiffPercentage}%, threshold: ${threshold}. ` +
+      `Difference: ${displayedDiffPercentage}%, allowed: ${diffPercentage}%, pixel threshold: ${threshold}. ` +
       `Diff saved to: ${diffImagePath}`
   );
 }
