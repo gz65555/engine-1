@@ -33,7 +33,7 @@ WebGLEngine.create({ canvas: "canvas" }).then((engine) => {
   cameraEntity.addComponent(OrbitControl).target = new Vector3(0, 1, 0);
 
   const lightNode = rootEntity.createChild("light_node");
-  lightNode.addComponent(DirectLight).intensity = 1.0;
+  lightNode.addComponent(DirectLight);
   lightNode.transform.lookAt(new Vector3(0, 0, 1));
   lightNode.transform.rotate(new Vector3(-45, -135, 0));
 

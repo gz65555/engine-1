@@ -25,8 +25,7 @@ Logger.enable();
 WebGLEngine.create({
   canvas: "canvas",
   graphicDeviceOptions: {
-    webGLMode: WebGLMode.WebGL2,
-    antialias: false
+    webGLMode: WebGLMode.WebGL2
   }
 }).then((engine) => {
   engine.canvas.resizeByClientSize();

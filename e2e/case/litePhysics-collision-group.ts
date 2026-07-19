@@ -84,7 +84,7 @@ WebGLEngine.create({ canvas: "canvas", physics: new LitePhysics() }).then((engin
   const light = rootEntity.createChild("light");
   light.transform.setPosition(0, 10, 0);
   const pointLight = light.addComponent(PointLight);
-  pointLight.intensity = 1.5;
+  pointLight.color.set(1.5, 1.5, 1.5, 1);
 
   const groundEntity = rootEntity.createChild("ground");
 

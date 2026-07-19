@@ -6,7 +6,7 @@
   "files": [],
   "scripts": {
     "case": "vite serve .dev --config .dev/vite.config.js",
-    "b:types": "echo hi"
+    "b:types": "tsc --noEmit"
   },
   "dependencies": {
     "@galacean/engine": "workspace:*",

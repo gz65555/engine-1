@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { E2E_CONFIG } from "../config";
 import { screenshotWithThreshold } from "../utils/screenshot";
-import type { CategoryConfig, TestCaseConfig } from "../types/test-config";
+import type { CategoryConfig, TestCaseConfig } from "../test-config";
 
 /**
  * Create test cases for a given category

@@ -91,7 +91,7 @@ WebGLEngine.create({ canvas: "canvas", physics: new PhysXPhysics() }).then((engi
   const light = rootEntity.createChild("light");
   light.transform.setPosition(0, 10, 0);
   const pointLight = light.addComponent(PointLight);
-  pointLight.intensity = 1.5;
+  pointLight.color.set(1.5, 1.5, 1.5, 1);
 
   // 创建立方体作为地面
   const groundEntity = rootEntity.createChild("ground");

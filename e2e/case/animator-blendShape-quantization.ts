@@ -28,7 +28,6 @@ WebGLEngine.create({
   directLightEntity.transform.lookAt(new Vector3(0, 0, 0));
   const directLightComp = directLightEntity.addComponent(DirectLight);
   directLightComp.color = new Color(1, 1, 1, 1);
-  directLightComp.intensity = 1;
 
   // Create camera
   const cameraNode = new Entity(engine, "camera_node");
