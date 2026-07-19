@@ -25,8 +25,6 @@ import {
   WebGLEngine
 } from "@galacean/engine";
 
-import { OrbitControl } from "@galacean/engine-toolkit";
-
 Logger.enable();
 main();
 
