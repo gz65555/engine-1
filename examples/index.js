@@ -1,9 +1,11 @@
-import demoList from "./dist/.demoList.json";
+import demoList from "./playground/.demoList.json";
 const itemListDOM = document.getElementById("itemList");
 const searchBarDOM = document.getElementById("searchBar");
 const fullScreenDOM = document.getElementById("fullScreen");
 const iframe = document.getElementById("iframe");
 const items = []; // itemDOM,label
+const routePrefix = "playground/";
+const legacyRoutePrefix = "dist/";
 
 Object.keys(demoList).forEach((group, groupIndex) => {
   const demos = demoList[group];
@@ -71,10 +73,10 @@ searchBarDOM.oninput = () => {
 };
 
 fullScreenDOM.onclick = () => {
-  const itemName = location.hash.split("#dist/")[1];
+  const itemName = getItemNameFromHash();
 
   if (itemName) {
-    location.href = location.origin + `/dist/${itemName}.html`;
+    location.href = new URL(`./${routePrefix}${itemName}.html`, location.href).href;
   }
 };
 
@@ -92,21 +94,36 @@ function updateFilter(value) {
 }
 
 function clickItem(itemDOM) {
-  window.location.hash = `#dist/${itemDOM.title}`;
+  window.location.hash = `#${routePrefix}${itemDOM.title}`;
+}
+
+function getItemNameFromHash() {
+  const hashPath = window.location.hash.slice(1);
+
+  if (hashPath.startsWith(routePrefix)) {
+    return hashPath.slice(routePrefix.length);
+  }
+
+  if (hashPath.startsWith(legacyRoutePrefix)) {
+    return hashPath.slice(legacyRoutePrefix.length);
+  }
+
+  return "";
 }
 
 function onHashChange() {
-  const hashPath = window.location.hash.split("#")[1];
-  if (!hashPath) {
+  const itemName = getItemNameFromHash();
+  const selectedItem = items.find(({ itemDOM }) => itemDOM.title === itemName);
+
+  if (!selectedItem) {
     clickItem(items[0].itemDOM);
     return;
   }
 
-  iframe.src = hashPath + ".html";
+  iframe.src = `${routePrefix}${itemName}.html`;
 
   items.forEach(({ itemDOM }) => {
-    const itemPath = `dist/${itemDOM.title}`;
-    if (itemPath === hashPath) {
+    if (itemDOM === selectedItem.itemDOM) {
       itemDOM.classList.add("active");
     } else {
       itemDOM.classList.remove("active");

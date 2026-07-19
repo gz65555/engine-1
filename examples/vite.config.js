@@ -1,15 +1,10 @@
 const path = require("path");
 const fs = require("fs-extra");
-const OUT_PATH = "dist";
+const GENERATED_PATH = "playground";
+const generatedPath = path.join(__dirname, GENERATED_PATH);
 const templateStr = fs.readFileSync(path.join(__dirname, "template/iframe.ejs"), "utf8");
 
-// 替换 ejs 模版格式的字符串，如 <%= title %>: templateStr.replaceEJS("title","replaced title");
-String.prototype.replaceEJS = function (regStr, replaceStr) {
-  return this.replace(new RegExp(`<%=\\s*${regStr}\\s*%>`, "g"), replaceStr);
-};
-
-const out_p = path.join(__dirname, "./");
-console.log(out_p);
+const replaceTemplateValue = (template, key, value) => template.replace(new RegExp(`<%=\\s*${key}\\s*%>`, "g"), value);
 
 const demoList = fs
   .readdirSync(path.join(__dirname, "./src"))
@@ -30,11 +25,14 @@ const demoList = fs
     };
   });
 
-demoList.forEach(({ title, file }) => {
-  const ejs = templateStr.replaceEJS("title", title).replaceEJS("url", `./${file}.ts`);
+fs.emptyDirSync(generatedPath);
 
-  fs.outputFileSync(path.resolve(__dirname, OUT_PATH, file + ".ts"), `import "../src/${file}"`);
-  fs.outputFileSync(path.resolve(__dirname, OUT_PATH, file + ".html"), ejs);
+demoList.forEach(({ title, file }) => {
+  const titledTemplate = replaceTemplateValue(templateStr, "title", title);
+  const html = replaceTemplateValue(titledTemplate, "url", `./${file}.ts`);
+
+  fs.outputFileSync(path.resolve(generatedPath, file + ".ts"), `import "../src/${file}"`);
+  fs.outputFileSync(path.resolve(generatedPath, file + ".html"), html);
 });
 
 // output demolist
@@ -49,9 +47,10 @@ demoList.forEach(({ title, category, file }) => {
   });
 });
 
-fs.outputJSONSync(path.join(__dirname, OUT_PATH, ".demoList.json"), demoSorted);
+fs.outputJSONSync(path.join(generatedPath, ".demoList.json"), demoSorted);
 
 module.exports = {
+  root: __dirname,
   server: {
     open: true,
     host: "0.0.0.0",
@@ -91,5 +90,13 @@ module.exports = {
       "@galacean/engine-toolkit-input-logger",
       "@galacean/engine-toolkit-custom-material"
     ]
+  },
+  build: {
+    rolldownOptions: {
+      input: [
+        path.resolve(__dirname, "index.html"),
+        ...demoList.map(({ file }) => path.resolve(generatedPath, `${file}.html`))
+      ]
+    }
   }
 };
