@@ -12,7 +12,7 @@ import { ShaderLab as ShaderLabVerbose } from "@galacean/engine-shaderlab/verbos
 import { glslValidate } from "./ShaderValidate";
 
 import { Logger, WebGLEngine } from "@galacean/engine";
-import { server } from "@vitest/browser/context";
+import { server } from "vitest/browser";
 import { describe, expect, it } from "vitest";
 const { readFile } = server.commands;
 Logger.enable();
@@ -87,7 +87,7 @@ describe("ShaderLab", async () => {
   });
 
   it("render state", async () => {
-    const demoShader = await readFile("./shaders/render-state.shader");
+    const demoShader = await readFile("./src/shader-lab/shaders/render-state.shader");
     const shader = shaderLabRelease._parseShaderSource(demoShader);
     const subShader = shader.subShaders[0];
     const passList = subShader.passes;
@@ -176,27 +176,27 @@ describe("ShaderLab", async () => {
   });
 
   it("No frag shader args", async () => {
-    const demoShader = await readFile("./shaders/noFragArgs.shader");
+    const demoShader = await readFile("./src/shader-lab/shaders/noFragArgs.shader");
     glslValidate(engine, demoShader, shaderLabRelease);
   });
 
   it("water full shader(complex)", async () => {
-    const demoShader = await readFile("./shaders/waterfull.shader");
+    const demoShader = await readFile("./src/shader-lab/shaders/waterfull.shader");
     glslValidate(engine, demoShader, shaderLabRelease);
   });
 
   it("multi-pass", async () => {
-    const shaderSource = await readFile("./shaders/multi-pass.shader");
+    const shaderSource = await readFile("./src/shader-lab/shaders/multi-pass.shader");
     glslValidate(engine, shaderSource, shaderLabRelease);
   });
 
   it("macro-with-preprocessor", async () => {
-    const shaderSource = await readFile("./shaders/macro-pre.shader");
+    const shaderSource = await readFile("./src/shader-lab/shaders/macro-pre.shader");
     glslValidate(engine, shaderSource, shaderLabRelease);
   });
 
   it("mrt-struct", async () => {
-    const shaderSource = await readFile("./shaders/mrt-struct.shader");
+    const shaderSource = await readFile("./src/shader-lab/shaders/mrt-struct.shader");
     glslValidate(engine, shaderSource, shaderLabRelease);
   });
 });

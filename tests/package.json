@@ -26,8 +26,5 @@
     "@galacean/engine-shaderlab": "workspace:*",
     "@galacean/engine-ui": "workspace:*"
   },
-  "devDependencies": {
-    "@vitest/browser": "2.1.3"
-  },
   "debug": "src/index.ts"
 }
