@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       build_official_preload:
-        description: 'Build and publish official preload package'
+        description: "Build and publish official preload package"
         type: boolean
         default: true
 
@@ -21,20 +21,20 @@ jobs:
       id-token: write
     steps:
       - name: Checkout Engine repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           run_install: true
 
       # after pnpm
       - name: Use Node.js LTS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '>=22.6.0'
+          node-version: ">=22.6.0"
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
@@ -74,10 +74,10 @@ jobs:
           OASISBE_UPLOAD_URL: https://oasisbe.alipay.com/api/file/no-auth/crypto/upload
           OASISBE_REQUEST_HEADER: ${{secrets.OASISBE_REQUEST_HEADER}}
           OASISBE_PUBLIC_KEY: ${{secrets.OASISBE_PUBLIC_KEY}}
-          
+
       - name: Upload official preload artifact
         if: ${{ github.event.inputs.build_official_preload == '' || github.event.inputs.build_official_preload == 'true' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: editor-preload-official
           path: editor-preload-official/dist/browser.js

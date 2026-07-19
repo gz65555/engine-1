@@ -4,8 +4,10 @@ import { IXRPlatformFeature } from "../IXRPlatformFeature";
 import { IXRRequestTracking } from "./IXRRequestTracking";
 import { IXRTracked } from "./IXRTracked";
 
-export interface IXRTrackablePlatformFeature<T extends IXRTracked, K extends IXRRequestTracking<T>>
-  extends IXRPlatformFeature {
+export interface IXRTrackablePlatformFeature<
+  T extends IXRTracked,
+  K extends IXRRequestTracking<T>
+> extends IXRPlatformFeature {
   /**
    * Returns whether request tracking can be modified after initialization.
    */

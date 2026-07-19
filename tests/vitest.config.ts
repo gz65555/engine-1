@@ -1,6 +1,10 @@
 import { defineProject } from "vitest/config";
+import { playwright } from "@vitest/browser-playwright";
 
 export default defineProject({
+  resolve: {
+    mainFields: ["module", "main", "browser"]
+  },
   server: {
     port: 51204
   },
@@ -14,18 +18,21 @@ export default defineProject({
     ]
   },
   test: {
+    clearMocks: true,
+    fileParallelism: false,
+    isolate: true,
+    restoreMocks: true,
     browser: {
-      provider: "playwright",
       enabled: true,
-      name: "chromium",
-      providerOptions: {
-        launch: {
+      provider: playwright({
+        launchOptions: {
           args:
             process.env.HEADLESS === "true"
               ? ["--use-gl=egl", "--ignore-gpu-blocklist", "--use-gl=angle", "--headless"]
               : ["--use-gl=egl", "--ignore-gpu-blocklist", "--use-gl=angle"]
         }
-      }
+      }),
+      instances: [{ browser: "chromium" }]
     }
   }
 });

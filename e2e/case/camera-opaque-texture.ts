@@ -55,7 +55,6 @@ WebGLEngine.create({ canvas: "canvas" }).then((engine) => {
 
       showOpaquePlane(engine, cameraEntity);
 
-
       updateForE2E(engine);
 
       initScreenshot(engine, camera);

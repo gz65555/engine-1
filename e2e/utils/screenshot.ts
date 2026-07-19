@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 import { compare } from "odiff-bin";
+import { mkdir } from "node:fs/promises";
 import * as path from "path";
 
 export interface ScreenshotOptions {
@@ -27,6 +28,7 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   console.log(`📄 [${testId}] Page ready (${pageReadyTime - startTime}ms)`);
 
   console.log(`🔍 [${testId}] Looking for screenshot button...`);
+  const screenshotButton = page.getByTestId("screenshot");
   // 监听下载事件
   const downloadPromise = page.waitForEvent("download");
   console.log(`📡 [${testId}] Download listener set up`);
@@ -35,7 +37,7 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   let pageRenderedTime;
   try {
     // 等待 screenshot 按钮可见
-    await page.getByTestId("screenshot").waitFor({ timeout: 180000 });
+    await screenshotButton.waitFor({ timeout: 180000 });
     pageRenderedTime = Date.now();
     console.log(`✅ [${testId}] Screenshot button visible (${pageRenderedTime - pageReadyTime}ms)`);
   } catch (error) {
@@ -44,9 +46,16 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
     throw error;
   }
 
+  const screenshotSize = await screenshotButton.evaluate((element) => {
+    const { screenshotWidth, screenshotHeight } = (element as HTMLElement).dataset;
+    const width = Number(screenshotWidth);
+    const height = Number(screenshotHeight);
+    return width > 0 && height > 0 ? { width, height } : null;
+  });
+
   console.log(`👆 [${testId}] Clicking screenshot button...`);
   // 点击下载按钮
-  await page.getByTestId("screenshot").click();
+  await screenshotButton.click();
   console.log(`✅ [${testId}] Screenshot button clicked`);
 
   console.log(`⬇️ [${testId}] Waiting for download to start...`);
@@ -56,6 +65,13 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
 
   console.log(`💾 [${testId}] Saving download...`);
   const downloadPath = path.join(process.cwd(), "e2e/downloads", imageName);
+  const baseImagePath = path.join(process.cwd(), "e2e/fixtures/originImage", imageName);
+  const diffImagePath = path.join(process.cwd(), "e2e/diff", `${testId}.png`);
+
+  await Promise.all([
+    mkdir(path.dirname(downloadPath), { recursive: true }),
+    mkdir(path.dirname(diffImagePath), { recursive: true })
+  ]);
 
   // 保存下载的文件
   await download.saveAs(downloadPath);
@@ -63,29 +79,33 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   console.log(`📥 [${testId}] Downloaded (${Date.now() - pageRenderedTime}ms)`);
 
   // Compare with baseline
-  const baseImagePath = path.join(process.cwd(), "e2e/fixtures/originImage", imageName);
-  const diffImagePath = path.join(process.cwd(), "e2e/diff", imageName);
-
   const result = await compare(baseImagePath, downloadPath, diffImagePath, {
     threshold,
     antialiasing: true
   });
-  //@ts-ignore
-  if (result.match === false && result.diffPercentage <= diffPercentage) {
-    //@ts-ignore
-    result.match = true;
+
+  if (!("reason" in result)) {
+    console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
+    return result;
   }
 
-  if (!result.match) {
-    const diffPercentage = "diffPercentage" in result ? result.diffPercentage : "unknown";
-    console.log(`❌ [${testId}] Visual regression: ${diffPercentage}% (${Date.now() - startTime}ms)`);
-    throw new Error(
-      `Visual regression detected for ${imageName}. ` +
-        `Difference: ${diffPercentage}%, threshold: ${threshold}. ` +
-        `Diff saved to: ${diffImagePath}`
-    );
+  const actualDiffPercentage =
+    result.reason === "pixel-diff"
+      ? screenshotSize
+        ? (result.diffCount * 100) / (screenshotSize.width * screenshotSize.height)
+        : result.diffPercentage
+      : null;
+
+  if (actualDiffPercentage !== null && actualDiffPercentage <= diffPercentage) {
+    console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
+    return result;
   }
 
-  console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
-  return result;
+  const displayedDiffPercentage = actualDiffPercentage ?? "unknown";
+  console.log(`❌ [${testId}] Visual regression: ${displayedDiffPercentage}% (${Date.now() - startTime}ms)`);
+  throw new Error(
+    `Visual regression detected for ${imageName}. ` +
+      `Difference: ${displayedDiffPercentage}%, allowed: ${diffPercentage}%, pixel threshold: ${threshold}. ` +
+      `Diff saved to: ${diffImagePath}`
+  );
 }

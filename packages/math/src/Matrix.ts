@@ -723,9 +723,9 @@ export class Matrix implements IClone<Matrix>, ICopy<Matrix, Matrix> {
         a33 = me[10],
         a34 = me[11];
 
-      (oe[0] = a11), (oe[1] = a12), (oe[2] = a13), (oe[3] = a14);
-      (oe[4] = a21), (oe[5] = a22), (oe[6] = a23), (oe[7] = a24);
-      (oe[8] = a31), (oe[9] = a32), (oe[10] = a33), (oe[11] = a34);
+      ((oe[0] = a11), (oe[1] = a12), (oe[2] = a13), (oe[3] = a14));
+      ((oe[4] = a21), (oe[5] = a22), (oe[6] = a23), (oe[7] = a24));
+      ((oe[8] = a31), (oe[9] = a32), (oe[10] = a33), (oe[11] = a34));
 
       oe[12] = a11 * x + a21 * y + a31 * z + me[12];
       oe[13] = a12 * x + a22 * y + a32 * z + me[13];

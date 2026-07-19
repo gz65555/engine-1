@@ -1,29 +1,29 @@
 {
   "name": "@galacean/engine-loader",
   "version": "1.6.13",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/galacean/engine.git"
   },
-  "license": "MIT",
-  "types": "types/index.d.ts",
-  "scripts": {
-    "b:types": "tsc"
-  },
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "debug": "src/index.ts",
   "files": [
     "dist/**/*",
     "types/**/*",
     "libs/**/*"
   ],
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "b:types": "tsc"
+  },
   "dependencies": {
     "@galacean/engine-core": "workspace:*",
     "@galacean/engine-math": "workspace:*",
     "@galacean/engine-rhi-webgl": "workspace:*"
-  }
+  },
+  "debug": "src/index.ts"
 }

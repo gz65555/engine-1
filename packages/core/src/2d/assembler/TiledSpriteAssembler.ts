@@ -61,9 +61,9 @@ export class TiledSpriteAssembler {
     const sy = flipY ? -1 : 1;
     let wE0: number, wE1: number, wE2: number;
     let wE4: number, wE5: number, wE6: number;
-    (wE0 = wE[0] = pWE[0] * sx), (wE1 = wE[1] = pWE[1] * sx), (wE2 = wE[2] = pWE[2] * sx);
-    (wE4 = wE[4] = pWE[4] * sy), (wE5 = wE[5] = pWE[5] * sy), (wE6 = wE[6] = pWE[6] * sy);
-    (wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]);
+    ((wE0 = wE[0] = pWE[0] * sx), (wE1 = wE[1] = pWE[1] * sx), (wE2 = wE[2] = pWE[2] * sx));
+    ((wE4 = wE[4] = pWE[4] * sy), (wE5 = wE[5] = pWE[5] * sy), (wE6 = wE[6] = pWE[6] * sy));
+    ((wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]));
     const wE12 = (wE[12] = pWE[12] - localTransX * wE0 - localTransY * wE4);
     const wE13 = (wE[13] = pWE[13] - localTransX * wE1 - localTransY * wE5);
     const wE14 = (wE[14] = pWE[14] - localTransX * wE2 - localTransY * wE6);
@@ -243,10 +243,10 @@ export class TiledSpriteAssembler {
     const vertexCount = rBlocksCount * cBlocksCount * 4;
     const maxVertexCount = renderer._getChunkManager().maxVertexCount;
     if (vertexCount > maxVertexCount) {
-      rPos.add(width * left), rPos.add(width * right);
-      cPos.add(height * bottom), cPos.add(height * top);
-      rUV.add(spriteUV0.x), rUV.add(spriteUV3.x);
-      cUV.add(spriteUV0.y), cUV.add(spriteUV3.y);
+      (rPos.add(width * left), rPos.add(width * right));
+      (cPos.add(height * bottom), cPos.add(height * top));
+      (rUV.add(spriteUV0.x), rUV.add(spriteUV3.x));
+      (cUV.add(spriteUV0.y), cUV.add(spriteUV3.y));
       Logger.warn(`The number of vertices exceeds the upper limit(${maxVertexCount}).`);
       return 4;
     }
@@ -254,28 +254,28 @@ export class TiledSpriteAssembler {
     switch (rType) {
       case TiledType.Compressed:
         const scale = width / fixedLR;
-        rPos.add(expectWidth * left * scale), rPos.add(fixedL * scale);
+        (rPos.add(expectWidth * left * scale), rPos.add(fixedL * scale));
         rPos.add(width - expectWidth * (1 - right) * scale);
-        rUV.add(spriteUV0.x), rUV.add(spriteUV1.x), rUV.add(spriteUV2.x), rUV.add(spriteUV3.x);
+        (rUV.add(spriteUV0.x), rUV.add(spriteUV1.x), rUV.add(spriteUV2.x), rUV.add(spriteUV3.x));
         break;
       case TiledType.WithoutTiled:
-        rPos.add(expectWidth * left), rPos.add(fixedL), rPos.add(width - fixedR);
+        (rPos.add(expectWidth * left), rPos.add(fixedL), rPos.add(width - fixedR));
         rPos.add(width - expectWidth * (1 - right));
-        rUV.add(spriteUV0.x), rUV.add(spriteUV1.x), rUV.add(NaN), rUV.add(NaN);
-        rUV.add(spriteUV2.x), rUV.add(spriteUV3.x);
+        (rUV.add(spriteUV0.x), rUV.add(spriteUV1.x), rUV.add(NaN), rUV.add(NaN));
+        (rUV.add(spriteUV2.x), rUV.add(spriteUV3.x));
         break;
       case TiledType.WithTiled:
         const uv1 = spriteUV1.x;
         const uv2 = spriteUV2.x;
         const repeatWidth = (width - fixedLR) / rTiledCount;
-        rPos.add(expectWidth * left), rPos.add(fixedL);
-        rUV.add(spriteUV0.x), rUV.add(uv1), rUV.add(uv1);
+        (rPos.add(expectWidth * left), rPos.add(fixedL));
+        (rUV.add(spriteUV0.x), rUV.add(uv1), rUV.add(uv1));
         for (let i = 1, l = rBlocksCount - 2; i < l; i++) {
-          rPos.add(fixedL + i * repeatWidth), rUV.add(uv2), rUV.add(uv1);
+          (rPos.add(fixedL + i * repeatWidth), rUV.add(uv2), rUV.add(uv1));
         }
-        rPos.add(width - fixedR), rPos.add(width - expectWidth * (1 - right));
+        (rPos.add(width - fixedR), rPos.add(width - expectWidth * (1 - right)));
         isAdaptive ? rUV.add(uv2) : rUV.add((rTiledCount - (Math.ceil(rTiledCount) - 1)) * (uv2 - uv1) + uv1);
-        rUV.add(uv2), rUV.add(spriteUV3.x);
+        (rUV.add(uv2), rUV.add(spriteUV3.x));
         break;
       default:
         break;
@@ -284,28 +284,28 @@ export class TiledSpriteAssembler {
     switch (cType) {
       case TiledType.Compressed:
         const scale = height / fixedTB;
-        cPos.add(expectHeight * bottom * scale), cPos.add(fixedB * scale);
+        (cPos.add(expectHeight * bottom * scale), cPos.add(fixedB * scale));
         cPos.add(height - expectHeight * (1 - top) * scale);
-        cUV.add(spriteUV0.y), cUV.add(spriteUV1.y), cUV.add(spriteUV2.y), cUV.add(spriteUV3.y);
+        (cUV.add(spriteUV0.y), cUV.add(spriteUV1.y), cUV.add(spriteUV2.y), cUV.add(spriteUV3.y));
         break;
       case TiledType.WithoutTiled:
-        cPos.add(expectHeight * bottom), cPos.add(fixedB), cPos.add(height - fixedT);
+        (cPos.add(expectHeight * bottom), cPos.add(fixedB), cPos.add(height - fixedT));
         cPos.add(height - expectHeight * (1 - top));
-        cUV.add(spriteUV0.y), cUV.add(spriteUV1.y), cUV.add(NaN), cUV.add(NaN);
-        cUV.add(spriteUV2.y), cUV.add(spriteUV3.y);
+        (cUV.add(spriteUV0.y), cUV.add(spriteUV1.y), cUV.add(NaN), cUV.add(NaN));
+        (cUV.add(spriteUV2.y), cUV.add(spriteUV3.y));
         break;
       case TiledType.WithTiled:
         const uv1 = spriteUV1.y;
         const uv2 = spriteUV2.y;
         const repeatHeight = (height - fixedTB) / cTiledCount;
-        cPos.add(expectHeight * bottom), cPos.add(fixedB);
-        cUV.add(spriteUV0.y), cUV.add(uv1), cUV.add(uv1);
+        (cPos.add(expectHeight * bottom), cPos.add(fixedB));
+        (cUV.add(spriteUV0.y), cUV.add(uv1), cUV.add(uv1));
         for (let i = 1, l = cBlocksCount - 2; i < l; i++) {
-          cPos.add(fixedB + i * repeatHeight), cUV.add(uv2), cUV.add(uv1);
+          (cPos.add(fixedB + i * repeatHeight), cUV.add(uv2), cUV.add(uv1));
         }
-        cPos.add(height - fixedT), cPos.add(height - expectHeight * (1 - top));
+        (cPos.add(height - fixedT), cPos.add(height - expectHeight * (1 - top)));
         isAdaptive ? cUV.add(uv2) : cUV.add((cTiledCount - (Math.ceil(cTiledCount) - 1)) * (uv2 - uv1) + uv1);
-        cUV.add(uv2), cUV.add(spriteUV3.y);
+        (cUV.add(uv2), cUV.add(spriteUV3.y));
         break;
       default:
         break;

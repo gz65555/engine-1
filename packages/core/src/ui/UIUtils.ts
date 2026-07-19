@@ -33,13 +33,13 @@ export class UIUtils {
     renderContext.camera = camera as unknown as Camera;
     const { elements: projectE } = virtualCamera.projectionMatrix;
     const { elements: viewE } = virtualCamera.viewMatrix;
-    (projectE[0] = 2 / canvas.width), (projectE[5] = 2 / canvas.height), (projectE[10] = 0);
+    ((projectE[0] = 2 / canvas.width), (projectE[5] = 2 / canvas.height), (projectE[10] = 0));
     renderContext.setRenderTarget(null, viewport, 0);
     for (let i = 0, n = uiCanvases.length; i < n; i++) {
       const uiCanvas = uiCanvases.get(i);
       if (uiCanvas) {
         const { position } = uiCanvas.entity.transform;
-        (viewE[12] = -position.x), (viewE[13] = -position.y);
+        ((viewE[12] = -position.x), (viewE[13] = -position.y));
         Matrix.multiply(virtualCamera.projectionMatrix, virtualCamera.viewMatrix, virtualCamera.viewProjectionMatrix);
         renderContext.applyVirtualCamera(virtualCamera, false);
         uiRenderQueue.rendererUpdateFlag |= ContextRendererUpdateFlag.ProjectionMatrix;

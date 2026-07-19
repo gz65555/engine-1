@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "preserve",
     "target": "esnext",
     "declaration": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "declarationDir": "types",
+    "rootDir": "src",
     "emitDeclarationOnly": true,
     "noImplicitOverride": true,
     "sourceMap": true,
     "incremental": false,
     "skipLibCheck": true,
-    "stripInternal": true
+    "stripInternal": true,
+    "strict": false
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

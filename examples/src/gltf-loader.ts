@@ -18,9 +18,7 @@ import {
   Logger,
   Material,
   MeshRenderer,
-  PBRBaseMaterial,
   PBRMaterial,
-  PBRSpecularMaterial,
   PrimitiveMesh,
   Renderer,
   Scene,
@@ -331,30 +329,34 @@ class Oasis {
     const folderName = {};
 
     materials.forEach((material) => {
-      if (!(material instanceof PBRBaseMaterial) && !(material instanceof UnlitMaterial)) return;
+      if (!(material instanceof PBRMaterial) && !(material instanceof UnlitMaterial)) return;
       if (!material.name) {
         material.name = "default";
       }
+
+      const isPBRMaterial = material instanceof PBRMaterial;
       const state = {
         opacity: material.baseColor.a,
         baseColor: Oasis.colorToGui(material.baseColor),
-        emissiveColor: Oasis.colorToGui((material as PBRBaseMaterial).emissiveColor),
-        specularColor: Oasis.colorToGui((material as PBRSpecularMaterial).specularColor),
+        emissiveColor: isPBRMaterial ? Oasis.colorToGui(material.emissiveColor) : [],
+        specularColor: isPBRMaterial ? Oasis.colorToGui(material.specularColor) : [],
         baseTexture: material.baseTexture ? "origin" : "",
-        roughnessMetallicTexture: (material as PBRMaterial).roughnessMetallicTexture ? "origin" : "",
-        normalTexture: (material as PBRBaseMaterial).normalTexture ? "origin" : "",
-        emissiveTexture: (material as PBRBaseMaterial).emissiveTexture ? "origin" : "",
-        occlusionTexture: (material as PBRBaseMaterial).occlusionTexture ? "origin" : "",
-        specularGlossinessTexture: (material as PBRSpecularMaterial).specularGlossinessTexture ? "origin" : ""
+        roughnessMetallicTexture: isPBRMaterial && material.roughnessMetallicTexture ? "origin" : "",
+        normalTexture: isPBRMaterial && material.normalTexture ? "origin" : "",
+        emissiveTexture: isPBRMaterial && material.emissiveTexture ? "origin" : "",
+        occlusionTexture: isPBRMaterial && material.occlusionTexture ? "origin" : "",
+        specularIntensityTexture: isPBRMaterial && material.specularIntensityTexture ? "origin" : "",
+        specularColorTexture: isPBRMaterial && material.specularColorTexture ? "origin" : ""
       };
 
       const originTexture = {
         baseTexture: material.baseTexture,
-        roughnessMetallicTexture: (material as PBRMaterial).roughnessMetallicTexture,
-        normalTexture: (material as PBRBaseMaterial).normalTexture,
-        emissiveTexture: (material as PBRBaseMaterial).emissiveTexture,
-        occlusionTexture: (material as PBRBaseMaterial).occlusionTexture,
-        specularGlossinessTexture: (material as PBRSpecularMaterial).specularGlossinessTexture
+        roughnessMetallicTexture: isPBRMaterial ? material.roughnessMetallicTexture : null,
+        normalTexture: isPBRMaterial ? material.normalTexture : null,
+        emissiveTexture: isPBRMaterial ? material.emissiveTexture : null,
+        occlusionTexture: isPBRMaterial ? material.occlusionTexture : null,
+        specularIntensityTexture: isPBRMaterial ? material.specularIntensityTexture : null,
+        specularColorTexture: isPBRMaterial ? material.specularColorTexture : null
       };
 
       const f = folder.addFolder(
@@ -363,47 +365,29 @@ class Oasis {
 
       folderName[material.name] = folderName[material.name] == null ? 1 : folderName[material.name] + 1;
 
-      // metallic
       if (material instanceof PBRMaterial) {
-        const mode1 = f.addFolder("金属模式");
-        mode1.add(material, "metallic", 0, 1).step(0.01);
-        mode1.add(material, "roughness", 0, 1).step(0.01);
-        mode1.add(material, "ior", 0, 5).step(0.01);
-
-        mode1
-          .add(state, "roughnessMetallicTexture", ["None", "origin", ...Object.keys(this.textures)])
-          .onChange((v) => {
-            material.roughnessMetallicTexture =
-              v === "None" ? null : this.textures[v] || originTexture.roughnessMetallicTexture;
-          });
-        mode1.open();
-      }
-      // specular
-      else if (material instanceof PBRSpecularMaterial) {
-        const mode2 = f.addFolder("高光模式");
-        mode2.add(material, "glossiness", 0, 1).step(0.01);
-        mode2.addColor(state, "specularColor").onChange((v) => {
+        const pbr = f.addFolder("PBR");
+        pbr.add(material, "metallic", 0, 1).step(0.01);
+        pbr.add(material, "roughness", 0, 1).step(0.01);
+        pbr.add(material, "ior", 0, 5).step(0.01);
+        pbr.add(material, "specularIntensity", 0, 2).step(0.01);
+        pbr.addColor(state, "specularColor").onChange((v) => {
           Oasis.guiToColor(v, material.specularColor);
         });
-        mode2
-          .add(state, "specularGlossinessTexture", ["None", "origin", ...Object.keys(this.textures)])
-          .onChange((v) => {
-            material.specularGlossinessTexture =
-              v === "None" ? null : this.textures[v] || originTexture.specularGlossinessTexture;
-          });
-        mode2.open();
-      } else if (material instanceof UnlitMaterial) {
-        f.add(state, "baseTexture", ["None", "origin", ...Object.keys(this.textures)]).onChange((v) => {
-          material.baseTexture = v === "None" ? null : this.textures[v] || originTexture.baseTexture;
-        });
 
-        f.addColor(state, "baseColor").onChange((v) => {
-          Oasis.guiToColor(v, material.baseColor);
+        pbr.add(state, "roughnessMetallicTexture", ["None", "origin", ...Object.keys(this.textures)]).onChange((v) => {
+          material.roughnessMetallicTexture =
+            v === "None" ? null : this.textures[v] || originTexture.roughnessMetallicTexture;
         });
-      }
+        pbr.add(state, "specularIntensityTexture", ["None", "origin", ...Object.keys(this.textures)]).onChange((v) => {
+          material.specularIntensityTexture =
+            v === "None" ? null : this.textures[v] || originTexture.specularIntensityTexture;
+        });
+        pbr.add(state, "specularColorTexture", ["None", "origin", ...Object.keys(this.textures)]).onChange((v) => {
+          material.specularColorTexture = v === "None" ? null : this.textures[v] || originTexture.specularColorTexture;
+        });
+        pbr.open();
 
-      // common
-      if (!(material instanceof UnlitMaterial)) {
         const common = f.addFolder("通用");
 
         common
@@ -434,6 +418,14 @@ class Oasis {
           material.occlusionTexture = v === "None" ? null : this.textures[v] || originTexture.occlusionTexture;
         });
         common.open();
+      } else {
+        f.add(state, "baseTexture", ["None", "origin", ...Object.keys(this.textures)]).onChange((v) => {
+          material.baseTexture = v === "None" ? null : this.textures[v] || originTexture.baseTexture;
+        });
+
+        f.addColor(state, "baseColor").onChange((v) => {
+          Oasis.guiToColor(v, material.baseColor);
+        });
       }
     });
   }

@@ -62,19 +62,19 @@ export class SlicedSpriteAssembler {
     const { _row: row, _column: column } = SlicedSpriteAssembler;
     if (fixedLeft + fixedRight > width) {
       const widthScale = width / (fixedLeft + fixedRight);
-      (row[0] = expectWidth * left * widthScale), (row[1] = row[2] = fixedLeft * widthScale);
+      ((row[0] = expectWidth * left * widthScale), (row[1] = row[2] = fixedLeft * widthScale));
       row[3] = width - expectWidth * (1 - right) * widthScale;
     } else {
-      (row[0] = expectWidth * left), (row[1] = fixedLeft), (row[2] = width - fixedRight);
+      ((row[0] = expectWidth * left), (row[1] = fixedLeft), (row[2] = width - fixedRight));
       row[3] = width - expectWidth * (1 - right);
     }
 
     if (fixedTop + fixedBottom > height) {
       const heightScale = height / (fixedTop + fixedBottom);
-      (column[0] = expectHeight * bottom * heightScale), (column[1] = column[2] = fixedBottom * heightScale);
+      ((column[0] = expectHeight * bottom * heightScale), (column[1] = column[2] = fixedBottom * heightScale));
       column[3] = height - expectHeight * (1 - top) * heightScale;
     } else {
-      (column[0] = expectHeight * bottom), (column[1] = fixedBottom), (column[2] = height - fixedTop);
+      ((column[0] = expectHeight * bottom), (column[1] = fixedBottom), (column[2] = height - fixedTop));
       column[3] = height - expectHeight * (1 - top);
     }
 
@@ -89,9 +89,9 @@ export class SlicedSpriteAssembler {
     const { elements: pWE } = worldMatrix;
     const sx = flipX ? -1 : 1;
     const sy = flipY ? -1 : 1;
-    (wE[0] = pWE[0] * sx), (wE[1] = pWE[1] * sx), (wE[2] = pWE[2] * sx);
-    (wE[4] = pWE[4] * sy), (wE[5] = pWE[5] * sy), (wE[6] = pWE[6] * sy);
-    (wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]);
+    ((wE[0] = pWE[0] * sx), (wE[1] = pWE[1] * sx), (wE[2] = pWE[2] * sx));
+    ((wE[4] = pWE[4] * sy), (wE[5] = pWE[5] * sy), (wE[6] = pWE[6] * sy));
+    ((wE[8] = pWE[8]), (wE[9] = pWE[9]), (wE[10] = pWE[10]));
     wE[12] = pWE[12] - localTransX * wE[0] - localTransY * wE[4];
     wE[13] = pWE[13] - localTransX * wE[1] - localTransY * wE[5];
     wE[14] = pWE[14] - localTransX * wE[2] - localTransY * wE[6];

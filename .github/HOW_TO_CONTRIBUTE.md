@@ -137,7 +137,7 @@ git pull --ff upstream master
 
 - All features or bug fixes **must be tested** by one or more specs (unit-tests).
 - All public API methods **must be documented**.
-- We use Prettier as an automatic code formatter. Run `npm run prettier` after making any changes to the code.
+- We use Oxfmt as an automatic code formatter. Run `pnpm format` after making any changes to the code.
 
 
 

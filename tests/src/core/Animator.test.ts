@@ -323,7 +323,7 @@ describe("Animator test", function () {
     animator.play("Walk");
 
     class TestScript extends Script {
-      event0(): void { }
+      event0(): void {}
     }
 
     const testScript = animator.entity.addComponent(TestScript);
@@ -765,8 +765,8 @@ describe("Animator test", function () {
     animator.animatorController = animatorController;
 
     class TestScript extends StateMachineScript {
-      onStateEnter(animator) { }
-      onStateExit(animator) { }
+      onStateEnter(animator) {}
+      onStateExit(animator) {}
     }
 
     const testScript = state1.addStateMachineScript(TestScript);
@@ -1017,5 +1017,5 @@ describe("Animator test", function () {
 
   it("Clone", () => {
     expect(animator.entity.clone().getComponent(Animator).animatorController).to.eq(animator.animatorController);
-  })
+  });
 });

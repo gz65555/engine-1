@@ -11,6 +11,7 @@ import {
   ParticleCurveMode,
   ParticleMaterial,
   ParticleRenderer,
+  Texture2D,
   Vector3,
   WebGLEngine,
   Vector2,
@@ -43,7 +44,7 @@ WebGLEngine.create({
   engine.run();
 
   engine.resourceManager
-    .load({
+    .load<Texture2D>({
       url: "https://mdn.alipayobjects.com/huamei_qbugvr/afts/img/A*5EyLSqmA7q0AAAAAAAAAAAAADtKFAQ/original",
       type: AssetType.Texture2D
     })

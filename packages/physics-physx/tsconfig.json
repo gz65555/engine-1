@@ -1,18 +1,20 @@
 {
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "esnext",
-        "declaration": true,
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "experimentalDecorators": true,
-        "declarationDir": "types",
-        "emitDeclarationOnly": true,
-        "noImplicitOverride": true,
-        "sourceMap": true,
-        "incremental": false,
-        "skipLibCheck": true,
-        "stripInternal": true
-    },
-    "include": ["src/**/*"]
+  "compilerOptions": {
+    "module": "preserve",
+    "target": "esnext",
+    "declaration": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "declarationDir": "types",
+    "rootDir": "src",
+    "emitDeclarationOnly": true,
+    "noImplicitOverride": true,
+    "sourceMap": true,
+    "incremental": false,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "strict": false
+  },
+  "include": ["src/**/*"]
 }

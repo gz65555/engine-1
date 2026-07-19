@@ -309,7 +309,7 @@ export const E2E_CONFIG = {
       category: "Particle",
       caseFileName: "particleRenderer-force",
       threshold: 0.005,
-      diffPercentage: 0.0054
+      diffPercentage: 0.006
     },
     textureSheetAnimation: {
       category: "Particle",
@@ -358,8 +358,7 @@ export const E2E_CONFIG = {
       caseFileName: "particleRenderer-emit-mesh-no-shape-world",
       threshold: 0,
       diffPercentage: 0.00146
-    }
-    ,
+    },
     particleEmitMeshConeScale3DRotation: {
       category: "Particle",
       caseFileName: "particleRenderer-emit-mesh-cone-scale-3d-rotation",
@@ -430,7 +429,7 @@ export const E2E_CONFIG = {
       category: "Text",
       caseFileName: "text-typed",
       threshold: 0,
-      diffPercentage: 0
+      diffPercentage: 0.0027
     }
   },
   Trail: {

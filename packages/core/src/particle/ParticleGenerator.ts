@@ -931,7 +931,7 @@ export class ParticleGenerator {
     const byteStride = ParticleBufferUtils.instanceVertexStride;
     const start = firstActiveElement * byteStride;
     const instanceBuffer = this._instanceVertexBufferBinding.buffer;
-    const dataBuffer = this._instanceVertices.buffer;
+    const dataBuffer = new Uint8Array(this._instanceVertices.buffer);
 
     if (firstActiveElement < firstFreeElement) {
       instanceBuffer.setData(

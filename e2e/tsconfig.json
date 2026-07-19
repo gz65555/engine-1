@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "lib": ["es5", "dom"],
-    "types": ["@playwright/test", "node"]
+    "types": ["@playwright/test", "node"],
+    "skipLibCheck": true,
+    "strict": false
   },
   "include": ["**/*.ts"]
 }

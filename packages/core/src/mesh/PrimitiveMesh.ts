@@ -677,87 +677,87 @@ export class PrimitiveMesh {
     const vertices = new Float32Array(24 * vertexFloatCount);
 
     // Up
-    (vertices[0] = -halfWidth), (vertices[1] = halfHeight), (vertices[2] = -halfDepth);
-    (vertices[6] = 0), (vertices[7] = 0);
-    (vertices[8] = halfWidth), (vertices[9] = halfHeight), (vertices[10] = -halfDepth);
-    (vertices[14] = 1), (vertices[15] = 0);
-    (vertices[16] = halfWidth), (vertices[17] = halfHeight), (vertices[18] = halfDepth);
-    (vertices[22] = 1), (vertices[23] = 1);
-    (vertices[24] = -halfWidth), (vertices[25] = halfHeight), (vertices[26] = halfDepth);
-    (vertices[30] = 0), (vertices[31] = 1);
+    ((vertices[0] = -halfWidth), (vertices[1] = halfHeight), (vertices[2] = -halfDepth));
+    ((vertices[6] = 0), (vertices[7] = 0));
+    ((vertices[8] = halfWidth), (vertices[9] = halfHeight), (vertices[10] = -halfDepth));
+    ((vertices[14] = 1), (vertices[15] = 0));
+    ((vertices[16] = halfWidth), (vertices[17] = halfHeight), (vertices[18] = halfDepth));
+    ((vertices[22] = 1), (vertices[23] = 1));
+    ((vertices[24] = -halfWidth), (vertices[25] = halfHeight), (vertices[26] = halfDepth));
+    ((vertices[30] = 0), (vertices[31] = 1));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 3;
-      (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 1), (vertices[normalOffset++] = 0);
+      ((vertices[normalOffset++] = 0), (vertices[normalOffset++] = 1), (vertices[normalOffset++] = 0));
     }
 
     // Down
-    (vertices[32] = -halfWidth), (vertices[33] = -halfHeight), (vertices[34] = -halfDepth);
-    (vertices[38] = 0), (vertices[39] = 1);
-    (vertices[40] = halfWidth), (vertices[41] = -halfHeight), (vertices[42] = -halfDepth);
-    (vertices[46] = 1), (vertices[47] = 1);
-    (vertices[48] = halfWidth), (vertices[49] = -halfHeight), (vertices[50] = halfDepth);
-    (vertices[54] = 1), (vertices[55] = 0);
-    (vertices[56] = -halfWidth), (vertices[57] = -halfHeight), (vertices[58] = halfDepth);
-    (vertices[62] = 0), (vertices[63] = 0);
+    ((vertices[32] = -halfWidth), (vertices[33] = -halfHeight), (vertices[34] = -halfDepth));
+    ((vertices[38] = 0), (vertices[39] = 1));
+    ((vertices[40] = halfWidth), (vertices[41] = -halfHeight), (vertices[42] = -halfDepth));
+    ((vertices[46] = 1), (vertices[47] = 1));
+    ((vertices[48] = halfWidth), (vertices[49] = -halfHeight), (vertices[50] = halfDepth));
+    ((vertices[54] = 1), (vertices[55] = 0));
+    ((vertices[56] = -halfWidth), (vertices[57] = -halfHeight), (vertices[58] = halfDepth));
+    ((vertices[62] = 0), (vertices[63] = 0));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 35;
-      (vertices[normalOffset++] = 0), (vertices[normalOffset++] = -1), (vertices[normalOffset++] = 0);
+      ((vertices[normalOffset++] = 0), (vertices[normalOffset++] = -1), (vertices[normalOffset++] = 0));
     }
 
     // Left
-    (vertices[64] = -halfWidth), (vertices[65] = halfHeight), (vertices[66] = -halfDepth);
-    (vertices[70] = 0), (vertices[71] = 0);
-    (vertices[72] = -halfWidth), (vertices[73] = halfHeight), (vertices[74] = halfDepth);
-    (vertices[78] = 1), (vertices[79] = 0);
-    (vertices[80] = -halfWidth), (vertices[81] = -halfHeight), (vertices[82] = halfDepth);
-    (vertices[86] = 1), (vertices[87] = 1);
-    (vertices[88] = -halfWidth), (vertices[89] = -halfHeight), (vertices[90] = -halfDepth);
-    (vertices[94] = 0), (vertices[95] = 1);
+    ((vertices[64] = -halfWidth), (vertices[65] = halfHeight), (vertices[66] = -halfDepth));
+    ((vertices[70] = 0), (vertices[71] = 0));
+    ((vertices[72] = -halfWidth), (vertices[73] = halfHeight), (vertices[74] = halfDepth));
+    ((vertices[78] = 1), (vertices[79] = 0));
+    ((vertices[80] = -halfWidth), (vertices[81] = -halfHeight), (vertices[82] = halfDepth));
+    ((vertices[86] = 1), (vertices[87] = 1));
+    ((vertices[88] = -halfWidth), (vertices[89] = -halfHeight), (vertices[90] = -halfDepth));
+    ((vertices[94] = 0), (vertices[95] = 1));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 67;
-      (vertices[normalOffset++] = -1), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0);
+      ((vertices[normalOffset++] = -1), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0));
     }
 
     // Right
-    (vertices[96] = halfWidth), (vertices[97] = halfHeight), (vertices[98] = -halfDepth);
-    (vertices[102] = 1), (vertices[103] = 0);
-    (vertices[104] = halfWidth), (vertices[105] = halfHeight), (vertices[106] = halfDepth);
-    (vertices[110] = 0), (vertices[111] = 0);
-    (vertices[112] = halfWidth), (vertices[113] = -halfHeight), (vertices[114] = halfDepth);
-    (vertices[118] = 0), (vertices[119] = 1);
-    (vertices[120] = halfWidth), (vertices[121] = -halfHeight), (vertices[122] = -halfDepth);
-    (vertices[126] = 1), (vertices[127] = 1);
+    ((vertices[96] = halfWidth), (vertices[97] = halfHeight), (vertices[98] = -halfDepth));
+    ((vertices[102] = 1), (vertices[103] = 0));
+    ((vertices[104] = halfWidth), (vertices[105] = halfHeight), (vertices[106] = halfDepth));
+    ((vertices[110] = 0), (vertices[111] = 0));
+    ((vertices[112] = halfWidth), (vertices[113] = -halfHeight), (vertices[114] = halfDepth));
+    ((vertices[118] = 0), (vertices[119] = 1));
+    ((vertices[120] = halfWidth), (vertices[121] = -halfHeight), (vertices[122] = -halfDepth));
+    ((vertices[126] = 1), (vertices[127] = 1));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 99;
-      (vertices[normalOffset++] = 1), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0);
+      ((vertices[normalOffset++] = 1), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0));
     }
 
     // Front
-    (vertices[128] = -halfWidth), (vertices[129] = halfHeight), (vertices[130] = halfDepth);
-    (vertices[134] = 0), (vertices[135] = 0);
-    (vertices[136] = halfWidth), (vertices[137] = halfHeight), (vertices[138] = halfDepth);
-    (vertices[142] = 1), (vertices[143] = 0);
-    (vertices[144] = halfWidth), (vertices[145] = -halfHeight), (vertices[146] = halfDepth);
-    (vertices[150] = 1), (vertices[151] = 1);
-    (vertices[152] = -halfWidth), (vertices[153] = -halfHeight), (vertices[154] = halfDepth);
-    (vertices[158] = 0), (vertices[159] = 1);
+    ((vertices[128] = -halfWidth), (vertices[129] = halfHeight), (vertices[130] = halfDepth));
+    ((vertices[134] = 0), (vertices[135] = 0));
+    ((vertices[136] = halfWidth), (vertices[137] = halfHeight), (vertices[138] = halfDepth));
+    ((vertices[142] = 1), (vertices[143] = 0));
+    ((vertices[144] = halfWidth), (vertices[145] = -halfHeight), (vertices[146] = halfDepth));
+    ((vertices[150] = 1), (vertices[151] = 1));
+    ((vertices[152] = -halfWidth), (vertices[153] = -halfHeight), (vertices[154] = halfDepth));
+    ((vertices[158] = 0), (vertices[159] = 1));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 131;
-      (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 1);
+      ((vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 1));
     }
 
     // Back
-    (vertices[160] = -halfWidth), (vertices[161] = halfHeight), (vertices[162] = -halfDepth);
-    (vertices[166] = 1), (vertices[167] = 0);
-    (vertices[168] = halfWidth), (vertices[169] = halfHeight), (vertices[170] = -halfDepth);
-    (vertices[174] = 0), (vertices[175] = 0);
-    (vertices[176] = halfWidth), (vertices[177] = -halfHeight), (vertices[178] = -halfDepth);
-    (vertices[182] = 0), (vertices[183] = 1);
-    (vertices[184] = -halfWidth), (vertices[185] = -halfHeight), (vertices[186] = -halfDepth);
-    (vertices[190] = 1), (vertices[191] = 1);
+    ((vertices[160] = -halfWidth), (vertices[161] = halfHeight), (vertices[162] = -halfDepth));
+    ((vertices[166] = 1), (vertices[167] = 0));
+    ((vertices[168] = halfWidth), (vertices[169] = halfHeight), (vertices[170] = -halfDepth));
+    ((vertices[174] = 0), (vertices[175] = 0));
+    ((vertices[176] = halfWidth), (vertices[177] = -halfHeight), (vertices[178] = -halfDepth));
+    ((vertices[182] = 0), (vertices[183] = 1));
+    ((vertices[184] = -halfWidth), (vertices[185] = -halfHeight), (vertices[186] = -halfDepth));
+    ((vertices[190] = 1), (vertices[191] = 1));
     for (let i = 0; i < 4; i++) {
       let normalOffset = vertexFloatCount * i + 163;
-      (vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = -1);
+      ((vertices[normalOffset++] = 0), (vertices[normalOffset++] = 0), (vertices[normalOffset++] = -1));
     }
 
     const indices = new Uint16Array(36);

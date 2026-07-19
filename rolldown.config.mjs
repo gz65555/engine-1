@@ -1,13 +1,16 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import { createRequire } from "node:module";
+import { fileURLToPath } from "node:url";
 
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import glsl from "./rollup-plugin-glsl";
+import glsl from "./rollup-plugin-glsl.mjs";
 import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
 import { swc, defineRollupSwcOption, minify } from "rollup-plugin-swc3";
 import jscc from "rollup-plugin-jscc";
+
+const require = createRequire(import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const { BUILD_TYPE, NODE_ENV } = process.env;
 
@@ -28,74 +31,55 @@ const shaderLabPkg = pkgs.find((item) => item.pkgJson.name === "@galacean/engine
 pkgs.push({ ...shaderLabPkg, verboseMode: true });
 
 // toGlobalName
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
-const mainFields = NODE_ENV === "development" ? ["debug", "module", "main"] : undefined;
-
-const glslPlugin = glsl({
-  include: [/\.(glsl|gs)$/],
-  compress: false
-});
-
-const commonPlugins = [
-  resolve({ extensions, preferBuiltins: true, mainFields }),
-  glslPlugin,
-  swc(
-    defineRollupSwcOption({
-      include: /\.[mc]?[jt]sx?$/,
-      exclude: /node_modules/,
-      jsc: {
-        loose: true,
-        externalHelpers: true,
-        target: "es5"
-      },
-      sourceMaps: true
-    })
-  ),
-  commonjs(),
-  NODE_ENV === "development"
-    ? serve({
-        contentBase: "packages",
-        port: 9999
+function createPlugins(pkgJson, verboseMode, compress = false) {
+  const plugins = [
+    glsl({
+      include: [/\.(glsl|gs)$/],
+      compress
+    }),
+    swc(
+      defineRollupSwcOption({
+        include: /\.[mc]?[jt]sx?$/,
+        exclude: /node_modules/,
+        jsc: {
+          loose: true,
+          externalHelpers: true,
+          target: "es5"
+        },
+        sourceMaps: true
       })
-    : null
-];
-
-function config({ location, pkgJson, verboseMode }) {
-  const input = path.join(location, "src", "index.ts");
-  const dependencies = Object.assign({}, pkgJson.dependencies ?? {}, pkgJson.peerDependencies ?? {});
-  const curPlugins = Array.from(commonPlugins);
-
-  curPlugins.push(
+    ),
+    NODE_ENV === "development"
+      ? serve({
+          contentBase: "packages",
+          port: 9999
+        })
+      : null,
     jscc({
       values: { _VERBOSE: verboseMode }
-    })
-  );
-
-  const external = Object.keys(dependencies);
-  curPlugins.push(
+    }),
     replace({
       preventAssignment: true,
       __buildVersion: pkgJson.version
     })
-  );
+  ];
+
+  if (compress) {
+    plugins.push(minify({ sourceMap: true }));
+  }
+
+  return plugins.filter(Boolean);
+}
+
+function config({ location, pkgJson, verboseMode }) {
+  const input = path.join(location, "src", "index.ts");
+  const dependencies = Object.assign({}, pkgJson.dependencies ?? {}, pkgJson.peerDependencies ?? {});
+  const external = Object.keys(dependencies);
 
   return {
     umd: (compress) => {
       const umdConfig = pkgJson.umd;
       let file = path.join(location, "dist", "browser.js");
-
-      if (compress) {
-        const glslifyPluginIdx = curPlugins.findIndex((item) => item === glslPlugin);
-        curPlugins.splice(
-          glslifyPluginIdx,
-          1,
-          glsl({
-            include: [/\.(glsl|gs)$/],
-            compress: true
-          })
-        );
-        curPlugins.push(minify({ sourceMap: true }));
-      }
 
       if (verboseMode) {
         file = path.join(location, "dist", compress ? "browser.verbose.min.js" : "browser.verbose.js");
@@ -117,7 +101,7 @@ function config({ location, pkgJson, verboseMode }) {
             globals: umdConfig.globals
           }
         ],
-        plugins: curPlugins
+        plugins: createPlugins(pkgJson, verboseMode, compress)
       };
     },
     module: () => {
@@ -142,7 +126,7 @@ function config({ location, pkgJson, verboseMode }) {
             format: "commonjs"
           }
         ],
-        plugins: curPlugins
+        plugins: createPlugins(pkgJson, verboseMode)
       };
     }
   };

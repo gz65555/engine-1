@@ -49,6 +49,7 @@ module.exports = {
     strictPort: true
   },
   resolve: {
+    mainFields: ["module", "main", "browser"],
     dedupe: ["@galacean/engine"]
   },
   optimizeDeps: {

@@ -93,6 +93,8 @@ export function initScreenshot(
       a.href = url;
       a.download = imageName;
       a.dataset.testid = "screenshot";
+      a.dataset.screenshotWidth = String(width);
+      a.dataset.screenshotHeight = String(height);
       a.textContent = "Download Screenshot";
       a.style.cssText = `
         position: fixed;

@@ -3,6 +3,7 @@
 tmp
 .idea
 /node_modules
+/.pnpm-store
 /*/node_modules
 /packages/*/node_modules
 /packages/*/types
@@ -10,6 +11,7 @@ tmp
 /tests/node_modules
 /e2e/node_modules
 /playground/node_modules
+/examples/playground
 types
 /packages/*/test/fixtures/**/node_modules
 /boilerplates/*/node_modules

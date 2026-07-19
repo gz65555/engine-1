@@ -186,8 +186,8 @@ export class Texture2DArray extends Texture {
         elementIndex,
         0,
         0,
-        this._width >> (<number>xOrMipLevelOrOut),
-        this._height >> (<number>xOrMipLevelOrOut),
+        this._width >> <number>xOrMipLevelOrOut,
+        this._height >> <number>xOrMipLevelOrOut,
         <number>xOrMipLevelOrOut,
         <ArrayBufferView>yOrMipLevel
       );

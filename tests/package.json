@@ -1,33 +1,30 @@
 {
   "name": "@galacean/engine-tests",
-  "private": true,
   "version": "1.6.13",
+  "private": true,
   "license": "MIT",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "types": "types/index.d.ts",
-  "debug": "src/index.ts",
-  "scripts": {
-    "b:types": "echo hi"
-  },
   "files": [
     "dist/**/*",
     "types/**/*"
   ],
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "b:types": "echo hi"
+  },
   "dependencies": {
     "@galacean/engine": "workspace:*",
     "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-loader": "workspace:*",
     "@galacean/engine-design": "workspace:*",
+    "@galacean/engine-loader": "workspace:*",
     "@galacean/engine-math": "workspace:*",
-    "@galacean/engine-rhi-webgl": "workspace:*",
     "@galacean/engine-physics-lite": "workspace:*",
-    "@galacean/engine-shaderlab": "workspace:*",
     "@galacean/engine-physics-physx": "workspace:*",
-    "@galacean/engine-ui": "workspace:*",
-    "@galacean/engine-shader": "workspace:*"
+    "@galacean/engine-rhi-webgl": "workspace:*",
+    "@galacean/engine-shader": "workspace:*",
+    "@galacean/engine-shaderlab": "workspace:*",
+    "@galacean/engine-ui": "workspace:*"
   },
-  "devDependencies": {
-    "@vitest/browser": "2.1.3"
-  }
+  "debug": "src/index.ts"
 }

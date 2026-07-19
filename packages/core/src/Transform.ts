@@ -553,9 +553,9 @@ export class Transform extends Component {
 
     const rotMat = Transform._tempMat41;
     const { elements: e } = rotMat;
-    (e[0] = xAxis.x), (e[1] = xAxis.y), (e[2] = xAxis.z);
-    (e[4] = yAxis.x), (e[5] = yAxis.y), (e[6] = yAxis.z);
-    (e[8] = zAxis.x), (e[9] = zAxis.y), (e[10] = zAxis.z);
+    ((e[0] = xAxis.x), (e[1] = xAxis.y), (e[2] = xAxis.z));
+    ((e[4] = yAxis.x), (e[5] = yAxis.y), (e[6] = yAxis.z));
+    ((e[8] = zAxis.x), (e[9] = zAxis.y), (e[10] = zAxis.z));
     rotMat.getRotation(this._worldRotationQuaternion);
   }
 
