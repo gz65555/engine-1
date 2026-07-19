@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 import { compare } from "odiff-bin";
+import { mkdir } from "node:fs/promises";
 import * as path from "path";
 
 export interface ScreenshotOptions {
@@ -56,6 +57,13 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
 
   console.log(`💾 [${testId}] Saving download...`);
   const downloadPath = path.join(process.cwd(), "e2e/downloads", imageName);
+  const baseImagePath = path.join(process.cwd(), "e2e/fixtures/originImage", imageName);
+  const diffImagePath = path.join(process.cwd(), "e2e/diff", `${testId}.png`);
+
+  await Promise.all([
+    mkdir(path.dirname(downloadPath), { recursive: true }),
+    mkdir(path.dirname(diffImagePath), { recursive: true })
+  ]);
 
   // 保存下载的文件
   await download.saveAs(downloadPath);
@@ -63,29 +71,26 @@ export async function screenshotWithThreshold(page: Page, options: ScreenshotOpt
   console.log(`📥 [${testId}] Downloaded (${Date.now() - pageRenderedTime}ms)`);
 
   // Compare with baseline
-  const baseImagePath = path.join(process.cwd(), "e2e/fixtures/originImage", imageName);
-  const diffImagePath = path.join(process.cwd(), "e2e/diff", imageName);
-
   const result = await compare(baseImagePath, downloadPath, diffImagePath, {
     threshold,
     antialiasing: true
   });
-  //@ts-ignore
-  if (result.match === false && result.diffPercentage <= diffPercentage) {
-    //@ts-ignore
-    result.match = true;
+
+  if (!("reason" in result)) {
+    console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
+    return result;
   }
 
-  if (!result.match) {
-    const diffPercentage = "diffPercentage" in result ? result.diffPercentage : "unknown";
-    console.log(`❌ [${testId}] Visual regression: ${diffPercentage}% (${Date.now() - startTime}ms)`);
-    throw new Error(
-      `Visual regression detected for ${imageName}. ` +
-        `Difference: ${diffPercentage}%, threshold: ${threshold}. ` +
-        `Diff saved to: ${diffImagePath}`
-    );
+  if (result.reason === "pixel-diff" && result.diffPercentage <= diffPercentage) {
+    console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
+    return result;
   }
 
-  console.log(`✅ [${testId}] Test passed (${Date.now() - startTime}ms total)`);
-  return result;
+  const actualDiffPercentage = result.reason === "pixel-diff" ? result.diffPercentage : "unknown";
+  console.log(`❌ [${testId}] Visual regression: ${actualDiffPercentage}% (${Date.now() - startTime}ms)`);
+  throw new Error(
+    `Visual regression detected for ${imageName}. ` +
+      `Difference: ${actualDiffPercentage}%, threshold: ${threshold}. ` +
+      `Diff saved to: ${diffImagePath}`
+  );
 }

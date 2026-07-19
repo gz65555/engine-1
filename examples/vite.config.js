@@ -58,6 +58,7 @@ module.exports = {
     port: 3000
   },
   resolve: {
+    mainFields: ["module", "main", "browser"],
     dedupe: ["@galacean/engine"]
   },
   optimizeDeps: {
