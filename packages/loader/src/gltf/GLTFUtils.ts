@@ -166,7 +166,7 @@ export class GLTFUtils {
             if (!bufferInfo) {
               const offset = bufferByteOffset + bufferSlice * bufferStride;
               const count = accessorCount * (bufferStride / dataElementBytes);
-              const data = new TypedArray(bufferViewData.buffer, offset, count);
+              const data = new TypedArray(bufferViewData.buffer as ArrayBuffer, offset, count);
               accessorBufferCache[bufferCacheKey] = bufferInfo = new BufferInfo(data, true, bufferStride);
               bufferInfo.restoreInfo = new BufferDataRestoreInfo(
                 new RestoreDataAccessor(bufferIndex, TypedArray, offset, count)
@@ -175,7 +175,7 @@ export class GLTFUtils {
           } else {
             const offset = bufferByteOffset + byteOffset;
             const count = accessorCount * dataElementSize;
-            const data = new TypedArray(bufferViewData.buffer, offset, count);
+            const data = new TypedArray(bufferViewData.buffer as ArrayBuffer, offset, count);
             bufferInfo = new BufferInfo(data, false, elementStride);
             bufferInfo.restoreInfo = new BufferDataRestoreInfo(
               new RestoreDataAccessor(bufferIndex, TypedArray, offset, count)
@@ -261,7 +261,11 @@ export class GLTFUtils {
 
         const IndexTypeArray = GLTFUtils.getComponentType(indices.componentType);
         const indexLength = indicesByteLength / IndexTypeArray.BYTES_PER_ELEMENT;
-        const indicesArray = new IndexTypeArray(indicesUint8Array.buffer, indicesByteOffset, indexLength);
+        const indicesArray = new IndexTypeArray(
+          indicesUint8Array.buffer as ArrayBuffer,
+          indicesByteOffset,
+          indexLength
+        );
         restoreInfo.sparseIndices = new RestoreDataAccessor(
           indicesBufferView.buffer,
           IndexTypeArray,
@@ -270,7 +274,7 @@ export class GLTFUtils {
         );
 
         const valueLength = valuesByteLength / TypedArray.BYTES_PER_ELEMENT;
-        const valuesArray = new TypedArray(valuesUin8Array.buffer, valuesByteOffset, valueLength);
+        const valuesArray = new TypedArray(valuesUin8Array.buffer as ArrayBuffer, valuesByteOffset, valueLength);
         restoreInfo.sparseValues = new RestoreDataAccessor(
           valuesBufferView.buffer,
           TypedArray,
@@ -361,7 +365,10 @@ export class GLTFUtils {
    */
   static loadImageBuffer(imageBuffer: TypedArray, type: string): Promise<HTMLImageElement> {
     return new Promise((resolve, reject) => {
-      const blob = new window.Blob([imageBuffer], { type });
+      const imageBytes = new Uint8Array(
+        new Uint8Array(imageBuffer.buffer, imageBuffer.byteOffset, imageBuffer.byteLength)
+      );
+      const blob = new window.Blob([imageBytes], { type });
       const img = new Image();
       img.onerror = function () {
         reject(new Error("Failed to load image buffer"));

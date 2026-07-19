@@ -41,7 +41,7 @@ export class Texture2DDecoder {
         engine.resourceManager._objectPool[objectId] = texture2D;
         resolve(texture2D);
       } else {
-        const blob = new window.Blob([imagesData[0]]);
+        const blob = new window.Blob([new Uint8Array(imagesData[0])]);
         const img = new Image();
         img.onload = () => {
           texture2D.setImageSource(img);
@@ -56,7 +56,7 @@ export class Texture2DDecoder {
           if (mipmap) {
             texture2D.generateMipmaps();
             for (let i = 1; i < mipCount; i++) {
-              const blob = new window.Blob([imagesData[i]]);
+              const blob = new window.Blob([new Uint8Array(imagesData[i])]);
               const img = new Image();
               img.onload = () => {
                 texture2D.setImageSource(img, i);

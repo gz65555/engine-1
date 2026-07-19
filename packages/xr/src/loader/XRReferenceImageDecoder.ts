@@ -11,7 +11,7 @@ export class XRReferenceImageDecoder {
       img.onload = () => {
         resolve(new XRReferenceImage("", img, physicalWidth));
       };
-      img.src = URL.createObjectURL(new window.Blob([bufferReader.nextImagesData(1)[0]]));
+      img.src = URL.createObjectURL(new window.Blob([new Uint8Array(bufferReader.nextImagesData(1)[0])]));
     });
   }
 }

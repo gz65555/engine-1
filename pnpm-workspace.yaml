@@ -5,3 +5,12 @@ packages:
   - 'tests'
   - 'examples'
   - 'e2e'
+
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  core-js: true
+  electron: true
+  esbuild: true
+  msw: true
+  odiff-bin: true

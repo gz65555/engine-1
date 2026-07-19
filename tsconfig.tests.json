@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
       "target": "ES2017",
-      "module": "CommonJS",
-      "moduleResolution": "node",
+      "module": "preserve",
+      "moduleResolution": "bundler",
       "experimentalDecorators": true,
       "esModuleInterop": true,
       "strict": false,
@@ -12,7 +12,8 @@
       ],
       "declaration": true,
       "inlineSourceMap": true,
-      "outDir": "lib"
+      "outDir": "lib",
+      "rootDir": "src"
   },
   "include": ["src/*.ts"]
 }
