@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "module": "preserve",
-    "target": "esnext",
+    "target": "ES2022",
+    "useDefineForClassFields": false,
     "declaration": true,
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
@@ -16,12 +17,5 @@
     "stripInternal": true,
     "strict": false
   },
-  "include": ["src/**/*"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true
-    },
-    "files": true
-  }
+  "include": ["src/**/*"]
 }

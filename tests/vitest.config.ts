@@ -2,9 +2,6 @@ import { defineProject } from "vitest/config";
 import { playwright } from "@vitest/browser-playwright";
 
 export default defineProject({
-  resolve: {
-    mainFields: ["module", "main", "browser"]
-  },
   server: {
     port: 51204
   },

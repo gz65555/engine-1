@@ -11,7 +11,7 @@ import {
   Texture2D,
   Utils
 } from "@galacean/engine-core";
-import { AtlasConfig, AtlasSprite } from "@galacean/engine-core/types/2d/atlas/types";
+import type { AtlasConfig, AtlasSprite } from "@galacean/engine-core";
 import { Rect, Vector2, Vector4 } from "@galacean/engine-math";
 
 @resourceLoader(AssetType.SpriteAtlas, ["atlas"])

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "ES2022",
+    "useDefineForClassFields": false,
     "module": "preserve",
     "moduleResolution": "bundler",
     "lib": ["es5", "dom"],

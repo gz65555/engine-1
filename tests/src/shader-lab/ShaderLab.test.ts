@@ -7,8 +7,7 @@ import {
   StencilOperation
 } from "@galacean/engine-core";
 import { PBRSource, registerIncludes } from "@galacean/engine-shader";
-import { ShaderLab as ShaderLabRelease } from "@galacean/engine-shaderlab";
-import { ShaderLab as ShaderLabVerbose } from "@galacean/engine-shaderlab/verbose";
+import { ShaderLab } from "@galacean/engine-shaderlab";
 import { glslValidate } from "./ShaderValidate";
 
 import { Logger, WebGLEngine } from "@galacean/engine";
@@ -18,20 +17,19 @@ const { readFile } = server.commands;
 Logger.enable();
 registerIncludes();
 
-const shaderLabVerbose = new ShaderLabVerbose();
-const shaderLabRelease = new ShaderLabRelease();
+const shaderLab = new ShaderLab();
+const shaderLabParser = new ShaderLab();
 
 describe("ShaderLab", async () => {
   const canvas = document.createElement("canvas");
   const engine = await WebGLEngine.create({ canvas: canvas });
 
   it("create shaderLab", async () => {
-    expect(shaderLabVerbose).not.be.null;
-    expect(shaderLabRelease).not.be.null;
+    expect(shaderLab).not.be.null;
   });
 
   it("PBR", async () => {
-    const shader = shaderLabVerbose._parseShaderSource(PBRSource);
+    const shader = shaderLabParser._parseShaderSource(PBRSource);
     const subShader = shader.subShaders[0];
     const passList = subShader.passes;
     const pass1 = passList[1];
@@ -70,11 +68,10 @@ describe("ShaderLab", async () => {
     });
 
     // Compile test
-    glslValidate(engine, PBRSource, shaderLabVerbose);
-    glslValidate(engine, PBRSource, shaderLabRelease);
+    glslValidate(engine, PBRSource, shaderLab);
 
     // some material variants
-    glslValidate(engine, PBRSource, shaderLabRelease, [
+    glslValidate(engine, PBRSource, shaderLab, [
       { name: "MATERIAL_HAS_ROUGHNESS_METALLIC_TEXTURE" },
       { name: "MATERIAL_ENABLE_IRIDESCENCE" },
       { name: "MATERIAL_ENABLE_ANISOTROPY" },
@@ -88,7 +85,7 @@ describe("ShaderLab", async () => {
 
   it("render state", async () => {
     const demoShader = await readFile("./src/shader-lab/shaders/render-state.shader");
-    const shader = shaderLabRelease._parseShaderSource(demoShader);
+    const shader = shaderLab._parseShaderSource(demoShader);
     const subShader = shader.subShaders[0];
     const passList = subShader.passes;
 
@@ -177,26 +174,26 @@ describe("ShaderLab", async () => {
 
   it("No frag shader args", async () => {
     const demoShader = await readFile("./src/shader-lab/shaders/noFragArgs.shader");
-    glslValidate(engine, demoShader, shaderLabRelease);
+    glslValidate(engine, demoShader, shaderLab);
   });
 
   it("water full shader(complex)", async () => {
     const demoShader = await readFile("./src/shader-lab/shaders/waterfull.shader");
-    glslValidate(engine, demoShader, shaderLabRelease);
+    glslValidate(engine, demoShader, shaderLab);
   });
 
   it("multi-pass", async () => {
     const shaderSource = await readFile("./src/shader-lab/shaders/multi-pass.shader");
-    glslValidate(engine, shaderSource, shaderLabRelease);
+    glslValidate(engine, shaderSource, shaderLab);
   });
 
   it("macro-with-preprocessor", async () => {
     const shaderSource = await readFile("./src/shader-lab/shaders/macro-pre.shader");
-    glslValidate(engine, shaderSource, shaderLabRelease);
+    glslValidate(engine, shaderSource, shaderLab);
   });
 
   it("mrt-struct", async () => {
     const shaderSource = await readFile("./src/shader-lab/shaders/mrt-struct.shader");
-    glslValidate(engine, shaderSource, shaderLabRelease);
+    glslValidate(engine, shaderSource, shaderLab);
   });
 });

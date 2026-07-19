@@ -4,8 +4,6 @@
  * Remove use `glslify` to compile GLSL files, cause it is not necessary for shaderlab.
  */
 
-import { createFilter } from "@rollup/pluginutils";
-
 function compressShader(code) {
   // Based on https://github.com/vwochnik/rollup-plugin-glsl
   // Modified to remove multiline comments. See #16
@@ -35,12 +33,12 @@ function compressShader(code) {
 export default function glsl(userOptions = {}) {
   const options = Object.assign(
     {
-      include: ["**/*.vs", "**/*.fs", "**/*.vert", "**/*.frag", "**/*.glsl"]
+      include: /\.(vs|fs|vert|frag|glsl)$/
     },
     userOptions
   );
 
-  const filter = createFilter(options.include, options.exclude);
+  const filter = (id) => options.include.test(id) && !options.exclude?.test(id);
 
   return {
     name: "glsl",

@@ -1,5 +1,7 @@
-import * as fs from "fs-extra";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
+
+import { E2E_CONFIG } from "./config";
 
 // Wait for server to be ready
 async function waitForServer(url: string, timeout: number = 120000): Promise<void> {
@@ -32,7 +34,8 @@ export default async function globalSetup() {
   const downloadsPath = path.join(process.cwd(), "e2e/downloads");
   if (fs.existsSync(downloadsPath)) {
     const files = fs.readdirSync(downloadsPath);
-    fs.emptyDirSync(downloadsPath);
+    fs.rmSync(downloadsPath, { recursive: true, force: true });
+    fs.mkdirSync(downloadsPath, { recursive: true });
     console.log(`   ✅ Cleaned ${files.length} files from e2e/downloads`);
   } else {
     console.log("   ℹ️  Downloads directory is empty");
@@ -41,14 +44,10 @@ export default async function globalSetup() {
   // Count test cases from config
   let testCount = 0;
   try {
-    const configPath = path.join(process.cwd(), "e2e/config.ts");
-    if (fs.existsSync(configPath)) {
-      const { E2E_CONFIG } = require(configPath);
-      testCount = Object.values(E2E_CONFIG).reduce((total: number, category: any) => {
-        return total + Object.keys(category).length;
-      }, 0) as number;
-      console.log(`🧪 Found ${testCount} test cases`);
-    }
+    testCount = Object.values(E2E_CONFIG).reduce((total: number, category: any) => {
+      return total + Object.keys(category).length;
+    }, 0) as number;
+    console.log(`🧪 Found ${testCount} test cases`);
   } catch (error) {
     console.log("⚠️  Could not read test configuration");
   }

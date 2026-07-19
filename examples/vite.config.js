@@ -1,8 +1,16 @@
-const path = require("path");
-const fs = require("fs-extra");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const GENERATED_PATH = "playground";
 const generatedPath = path.join(__dirname, GENERATED_PATH);
 const templateStr = fs.readFileSync(path.join(__dirname, "template/iframe.ejs"), "utf8");
+
+const outputFile = (file, content) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, content);
+};
 
 const replaceTemplateValue = (template, key, value) => template.replace(new RegExp(`<%=\\s*${key}\\s*%>`, "g"), value);
 
@@ -25,14 +33,15 @@ const demoList = fs
     };
   });
 
-fs.emptyDirSync(generatedPath);
+fs.rmSync(generatedPath, { recursive: true, force: true });
+fs.mkdirSync(generatedPath, { recursive: true });
 
 demoList.forEach(({ title, file }) => {
   const titledTemplate = replaceTemplateValue(templateStr, "title", title);
   const html = replaceTemplateValue(titledTemplate, "url", `./${file}.ts`);
 
-  fs.outputFileSync(path.resolve(generatedPath, file + ".ts"), `import "../src/${file}"`);
-  fs.outputFileSync(path.resolve(generatedPath, file + ".html"), html);
+  outputFile(path.resolve(generatedPath, file + ".ts"), `import "../src/${file}"`);
+  outputFile(path.resolve(generatedPath, file + ".html"), html);
 });
 
 // output demolist
@@ -47,9 +56,9 @@ demoList.forEach(({ title, category, file }) => {
   });
 });
 
-fs.outputJSONSync(path.join(generatedPath, ".demoList.json"), demoSorted);
+outputFile(path.join(generatedPath, ".demoList.json"), JSON.stringify(demoSorted));
 
-module.exports = {
+export default {
   root: __dirname,
   server: {
     open: true,
@@ -57,7 +66,6 @@ module.exports = {
     port: 3000
   },
   resolve: {
-    mainFields: ["module", "main", "browser"],
     dedupe: ["@galacean/engine"]
   },
   optimizeDeps: {
@@ -92,6 +100,7 @@ module.exports = {
     ]
   },
   build: {
+    target: "es2022",
     rolldownOptions: {
       input: [
         path.resolve(__dirname, "index.html"),

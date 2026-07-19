@@ -3,30 +3,19 @@
   "version": "1.6.13",
   "private": true,
   "license": "MIT",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "types": "types/index.d.ts",
+  "type": "module",
   "scripts": {
     "b:types": "tsc",
     "build": "vite build . --config vite.config.js",
     "dev": "vite serve . --config vite.config.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "@galacean/engine": "workspace:*",
-    "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-design": "workspace:*",
-    "@galacean/engine-loader": "workspace:*",
-    "@galacean/engine-math": "workspace:*",
-    "@galacean/engine-physics-lite": "workspace:*",
-    "@galacean/engine-rhi-webgl": "workspace:*",
     "@galacean/engine-shader": "workspace:*",
     "@galacean/engine-shaderlab": "workspace:*",
-    "@galacean/engine-toolkit": "latest",
-    "@galacean/engine-ui": "workspace:*"
-  },
-  "devDependencies": {
-    "dat.gui": "^0.7.9",
-    "vite": "8.1.5"
+    "@galacean/engine-toolkit": "catalog:",
+    "dat.gui": "catalog:",
+    "vite": "catalog:"
   },
   "debug": "src/index.ts"
 }
