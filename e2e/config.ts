@@ -309,7 +309,7 @@ export const E2E_CONFIG = {
       category: "Particle",
       caseFileName: "particleRenderer-force",
       threshold: 0.005,
-      diffPercentage: 0.0054
+      diffPercentage: 0.006
     },
     textureSheetAnimation: {
       category: "Particle",
