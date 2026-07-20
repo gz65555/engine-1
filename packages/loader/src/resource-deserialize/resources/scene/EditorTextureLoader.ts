@@ -7,7 +7,7 @@ import {
   ResourceManager,
   Texture2D
 } from "@galacean/engine-core";
-import { RequestConfig } from "@galacean/engine-core/types/asset/request";
+import type { RequestConfig } from "@galacean/engine-core";
 import { decode } from "../..";
 
 @resourceLoader("EditorTexture2D", ["prefab"], true)

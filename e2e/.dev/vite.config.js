@@ -1,7 +1,15 @@
-const path = require("path");
-const fs = require("fs-extra");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = "mpa";
 const templateStr = fs.readFileSync(path.join(__dirname, "template/iframe.ejs"), "utf8");
+
+const outputFile = (file, content) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, content);
+};
 
 // 替换 ejs 模版格式的字符串，如 <%= title %>: templateStr.replaceEJS("title","replaced title");
 String.prototype.replaceEJS = function (regStr, replaceStr) {
@@ -9,7 +17,8 @@ String.prototype.replaceEJS = function (regStr, replaceStr) {
 };
 
 // clear mpa
-fs.emptyDirSync(path.resolve(__dirname, OUT_PATH));
+fs.rmSync(path.resolve(__dirname, OUT_PATH), { recursive: true, force: true });
+fs.mkdirSync(path.resolve(__dirname, OUT_PATH), { recursive: true });
 
 // create mpa
 const demoList = fs
@@ -24,8 +33,8 @@ const demoList = fs
 demoList.forEach(({ file }) => {
   const ejs = templateStr.replaceEJS("url", `./${file}.ts`);
 
-  fs.outputFileSync(path.resolve(__dirname, OUT_PATH, file + ".ts"), `import "../../case/${file}"`);
-  fs.outputFileSync(path.resolve(__dirname, OUT_PATH, file + ".html"), ejs);
+  outputFile(path.resolve(__dirname, OUT_PATH, file + ".ts"), `import "../../case/${file}"`);
+  outputFile(path.resolve(__dirname, OUT_PATH, file + ".html"), ejs);
 });
 
 // output demolist
@@ -39,9 +48,9 @@ demoList.forEach(({ file }) => {
   });
 });
 
-fs.outputJSONSync(path.join(__dirname, OUT_PATH, ".demoList.json"), demoSorted);
+outputFile(path.join(__dirname, OUT_PATH, ".demoList.json"), JSON.stringify(demoSorted));
 
-module.exports = {
+export default {
   server: {
     open: true,
     host: "0.0.0.0",
@@ -49,7 +58,6 @@ module.exports = {
     strictPort: true
   },
   resolve: {
-    mainFields: ["module", "main", "browser"],
     dedupe: ["@galacean/engine"]
   },
   optimizeDeps: {
@@ -59,21 +67,7 @@ module.exports = {
       "@galacean/engine-lottie",
       "@galacean/engine-spine",
       "@galacean/engine-shaderlab",
-      "@galacean/tools-baker",
-      "@galacean/engine-toolkit",
-      "@galacean/engine-toolkit-auxiliary-lines",
-      "@galacean/engine-toolkit-controls",
-      "@galacean/engine-toolkit-framebuffer-picker",
-      "@galacean/engine-toolkit-gizmo",
-      "@galacean/engine-toolkit-lines",
-      "@galacean/engine-toolkit-outline",
-      "@galacean/engine-toolkit-planar-shadow-material",
-      "@galacean/engine-toolkit-skeleton-viewer",
-      "@galacean/engine-toolkit-grid-material",
-      "@galacean/engine-toolkit-navigation-gizmo",
-      "@galacean/engine-toolkit-geometry-sketch",
-      "@galacean/engine-toolkit-stats",
-      "@galacean/engine-toolkit-input-logger"
+      "@galacean/tools-baker"
     ]
   }
 };

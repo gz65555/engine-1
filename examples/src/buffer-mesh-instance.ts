@@ -3,7 +3,7 @@
  * @category Mesh
  * @thumbnail https://mdn.alipayobjects.com/merchant_appfe/afts/img/A*jjZMTrp-vU8AAAAAAAAAAAAADiR2AQ/original
  */
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./controls/OrbitControl";
 import {
   Buffer,
   BufferBindFlag,

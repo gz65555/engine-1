@@ -43,13 +43,13 @@ jobs:
 
       - name: Make scripts executable
         run: |
-          chmod +x ./scripts/build-editor-preload.js
-          chmod +x ./scripts/build-official-preload.js
+          chmod +x ./scripts/build-editor-preload.mjs
+          chmod +x ./scripts/build-official-preload.mjs
 
       # Build and publish official preload package
       - name: Build official preload package
         if: ${{ github.event.inputs.build_official_preload == '' || github.event.inputs.build_official_preload == 'true' }}
-        run: ./scripts/build-official-preload.js
+        run: ./scripts/build-official-preload.mjs
 
       - name: Release engine packages and Sync to CDN
         uses: galacean/publish@main
@@ -80,5 +80,5 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: editor-preload-official
-          path: editor-preload-official/dist/browser.js
+          path: editor-preload-official/dist/index.js
           retention-days: 7

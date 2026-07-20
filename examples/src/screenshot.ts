@@ -4,7 +4,7 @@
  * @thumbnail https://mdn.alipayobjects.com/merchant_appfe/afts/img/A*0OXcQYHlwzQAAAAAAAAAAAAADiR2AQ/original
  */
 
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./controls/OrbitControl";
 import * as dat from "dat.gui";
 import {
   AmbientLight,

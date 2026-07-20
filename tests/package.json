@@ -7,16 +7,13 @@
     "dist/**/*",
     "types/**/*"
   ],
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "types": "types/index.d.ts",
+  "type": "module",
   "scripts": {
     "b:types": "echo hi"
   },
-  "dependencies": {
+  "devDependencies": {
     "@galacean/engine": "workspace:*",
     "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-design": "workspace:*",
     "@galacean/engine-loader": "workspace:*",
     "@galacean/engine-math": "workspace:*",
     "@galacean/engine-physics-lite": "workspace:*",

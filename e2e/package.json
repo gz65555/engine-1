@@ -4,25 +4,20 @@
   "private": true,
   "license": "MIT",
   "files": [],
+  "type": "module",
   "scripts": {
     "case": "vite serve .dev --config .dev/vite.config.js",
     "b:types": "tsc --noEmit"
   },
-  "dependencies": {
+  "devDependencies": {
     "@galacean/engine": "workspace:*",
     "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-design": "workspace:*",
-    "@galacean/engine-loader": "workspace:*",
-    "@galacean/engine-math": "workspace:*",
     "@galacean/engine-physics-lite": "workspace:*",
     "@galacean/engine-physics-physx": "workspace:*",
     "@galacean/engine-rhi-webgl": "workspace:*",
     "@galacean/engine-shader": "workspace:*",
     "@galacean/engine-shaderlab": "workspace:*",
-    "@galacean/engine-toolkit": "^1.6.0",
-    "@galacean/engine-ui": "workspace:*",
-    "dat.gui": "^0.7.9",
-    "sass": "^1.101.0",
-    "vite": "8.1.5"
+    "dat.gui": "catalog:",
+    "vite": "catalog:"
   }
 }

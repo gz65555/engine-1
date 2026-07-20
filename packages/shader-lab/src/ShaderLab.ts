@@ -1,6 +1,5 @@
 import { Logger, ShaderMacro, ShaderLanguage } from "@galacean/engine";
-import { IShaderLab, IShaderSource } from "@galacean/engine-design";
-import { IShaderProgramSource } from "@galacean/engine-design/types/shader-lab/IShaderProgramSource";
+import type { IShaderLab, IShaderProgramSource, IShaderSource } from "@galacean/engine-design";
 import { GLES100Visitor, GLES300Visitor } from "./codeGen";
 import { ShaderPosition, ShaderRange } from "./common";
 import { Lexer } from "./lexer";

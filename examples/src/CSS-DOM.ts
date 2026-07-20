@@ -15,7 +15,7 @@ import {
   WebGLEngine,
   WebGLMode
 } from "@galacean/engine";
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./controls/OrbitControl";
 
 async function main() {
   // Create engine

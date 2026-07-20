@@ -41,8 +41,8 @@ jobs:
 
       - name: Make scripts executable
         run: |
-          chmod +x ./scripts/build-editor-preload.js
-          chmod +x ./scripts/build-official-preload.js
+          chmod +x ./scripts/build-editor-preload.mjs
+          chmod +x ./scripts/build-official-preload.mjs
 
       - name: Build editor-preload packages
         run: |
@@ -56,7 +56,7 @@ jobs:
             BUILD_OFFICIAL_ARG="--build-official"
           fi
 
-          ./scripts/build-editor-preload.js --version=${{ github.event.inputs.version }} $USE_NPM_ARG $BUILD_OFFICIAL_ARG
+          ./scripts/build-editor-preload.mjs --version=${{ github.event.inputs.version }} $USE_NPM_ARG $BUILD_OFFICIAL_ARG
 
       - name: Release packages and Sync to CDN
         uses: galacean/publish@main
@@ -77,6 +77,6 @@ jobs:
         with:
           name: editor-preload-packages
           path: |
-            editor-preload-ecosystem/dist/browser.js
-            ${{ github.event.inputs.build_official == 'true' && 'editor-preload-official/dist/browser.js' || '' }}
+            editor-preload-ecosystem/dist/index.js
+            ${{ github.event.inputs.build_official == 'true' && 'editor-preload-official/dist/index.js' || '' }}
           retention-days: 7

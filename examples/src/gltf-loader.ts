@@ -28,7 +28,7 @@ import {
   Vector3,
   WebGLEngine
 } from "@galacean/engine";
-import { OrbitControl } from "@galacean/engine-toolkit";
+import { OrbitControl } from "./controls/OrbitControl";
 import * as dat from "dat.gui";
 
 Logger.enable();

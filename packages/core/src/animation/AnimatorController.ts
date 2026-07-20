@@ -38,15 +38,8 @@ export class AnimatorController extends ReferResource {
    * Create an AnimatorController.
    * @param engine - Engine to which the animatorController belongs
    */
-  constructor(engine: Engine);
-
-  /**
-   * @deprecated
-   */
-  constructor();
-
-  constructor(engine?: Engine) {
-    engine && super(engine);
+  constructor(engine: Engine) {
+    super(engine);
   }
 
   /**

@@ -6,9 +6,18 @@ packages:
   - "examples"
   - "e2e"
 
+autoInstallPeers: false
+
+catalog:
+  dat.gui: 0.7.9
+  vite: 8.1.5
+
+overrides:
+  defu: 6.1.5
+  js-yaml: 4.3.0
+
 allowBuilds:
   "@parcel/watcher": true
-  "@swc/core": true
   core-js: true
   electron: false
   esbuild: true

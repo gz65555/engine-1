@@ -9,10 +9,15 @@
     "dist/**/*",
     "types/**/*"
   ],
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "browser": "dist/browser.js",
+  "type": "module",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"

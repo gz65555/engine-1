@@ -7,17 +7,15 @@
   },
   "files": [
     "dist/**/*",
-    "types/**/*",
-    "verbose/package.json"
+    "types/**/*"
   ],
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "browser": "dist/browser.min.js",
+  "type": "module",
   "types": "types/index.d.ts",
-  "umd": {
-    "name": "Galacean.ShaderLab",
-    "globals": {
-      "@galacean/engine": "Galacean"
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "publishConfig": {

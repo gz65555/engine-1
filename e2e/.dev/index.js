@@ -1,4 +1,4 @@
-import './index.sass';
+import "./index.css";
 import demoList from './mpa/.demoList.json';
 const itemListDOM = document.getElementById('itemList');
 const searchBarDOM = document.getElementById('searchBar');

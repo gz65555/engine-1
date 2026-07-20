@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  user-select: none;
+}
+
+.container .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3.5rem;
+  padding: 1rem 2rem;
+}
+
+.container .header .logo {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+
+.container .header .logo img {
+  height: 100%;
+}
+
+.container .header .logo span {
+  padding-left: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.container .search-bar {
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  display: inline-block;
+  width: 10rem;
+  height: 2rem;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  color: #666;
+  cursor: text;
+  background: #fff url("//gw-office.alipayobjects.com/basement_prod/225a73b9-1281-4388-9555-1e671899bc25.svg")
+    0.6rem 0.55rem no-repeat;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  outline: none;
+}
+
+.container .nav-left {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin-top: 5.5rem;
+  overflow: auto;
+}
+
+.container .nav-left .item-list .hide {
+  height: 0;
+}
+
+.container .nav-left .item-list ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.container .nav-left .item-list .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: default;
+}
+
+.container .nav-left .item-list a {
+  display: block;
+  height: 2rem;
+  overflow: hidden;
+  line-height: 2rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: color, height;
+}
+
+.container .nav-left .item-list a.active {
+  color: #096dd9;
+  text-decoration: underline;
+}
+
+.container .nav-left .item-list a:hover {
+  color: #096dd9;
+}
+
+.container .nav-right {
+  flex: 1;
+  box-shadow: rgb(125 121 121) -2px 0 8px;
+}
+
+.container .nav-right iframe {
+  width: 100%;
+  height: 100%;
+}

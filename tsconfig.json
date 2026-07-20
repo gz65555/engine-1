@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "module": "preserve",
-    "target": "esnext",
+    "target": "ES2022",
+    "useDefineForClassFields": false,
     "skipDefaultLibCheck": true,
     "declaration": true,
     "moduleResolution": "bundler",
