@@ -1,4 +1,4 @@
-import { AssetPromise, SystemInfo, Texture2D } from "@galacean/engine-core";
+import { AssetPromise, SystemInfo, Texture2D } from "@oasishub/engine-core";
 import type { ITexture } from "../GLTFSchema";
 import { registerGLTFExtension } from "../parser/GLTFParser";
 import { GLTFParserContext } from "../parser/GLTFParserContext";

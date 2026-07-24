@@ -12,8 +12,8 @@ import {
   SkinnedMeshRenderer,
   Transform,
   TypedArray
-} from "@galacean/engine-core";
-import { Quaternion, Vector3, Vector4 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Quaternion, Vector3, Vector4 } from "@oasishub/engine-math";
 import {
   AccessorType,
   AnimationChannelTargetPath,

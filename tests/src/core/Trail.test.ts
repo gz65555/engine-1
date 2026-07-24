@@ -1,4 +1,4 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import {
   TrailRenderer,
   TrailMaterial,
@@ -10,8 +10,8 @@ import {
   GradientAlphaKey,
   BlendMode,
   Camera
-} from "@galacean/engine-core";
-import { Color, Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Color, Vector3 } from "@oasishub/engine-math";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Trail", async () => {

@@ -8,17 +8,17 @@ label: Graphics/2D
 
 **[Lottie](https://airbnb.io/lottie/)** is a cross-platform animation solution released by Airbnb around 2017, supporting iOS, Android, React Native, and web. It uses the Bodymovin plugin to parse [Adobe After Effects (AE)](https://www.adobe.com/products/aftereffects.html) animations and exports JSON files for rendering animations on mobile and web platforms. Designers create animations in AE, export JSON files via Bodymovin, and developers use these JSON files to achieve 100% faithful animation reproduction.
 
-In Galacean, users can easily handle Lottie assets and add components.
+In Oasishub, users can easily handle Lottie assets and add components.
 
 <Callout type="warning">Vector animations and masks are currently not supported.</Callout>
 
 ### **Asset Upload**
 
-Designers are advised to export Lottie files with images embedded in Base64 format within the JSON file. Developers should upload the `.json` file to Galacean Editor via the **Assets Panel**:
+Designers are advised to export Lottie files with images embedded in Base64 format within the JSON file. Developers should upload the `.json` file to Oasishub Editor via the **Assets Panel**:
 
 1. Click the **Upload** button in the Assets Panel.  
 2. Select **Lottie** as the asset type.  
-3. Choose a local [Lottie JSON file](https://github.com/galacean/galacean.github.io/files/14106485/_Lottie.3.json) and upload it.  
+3. Choose a local Lottie JSON file and upload it.  
 
 <Image src="https://mdn.alipayobjects.com/huamei_w6ifet/afts/img/A*UQ1LTI_mYv4AAAAAAAAAAAAADjCHAQ/original" />  
 
@@ -91,14 +91,14 @@ The editor supports slicing animations into segments by defining `name`, `start`
 ### **Dependency Installation**  
 Install the required package:  
 ```bash
-npm i @galacean/engine-lottie --save
+npm i @oasishub/engine-lottie --save
 ```
 
 ### **Pro Code Development**  
-For Pro Code workflows, use [tools-atlas-lottie](https://www.npmjs.com/package/@galacean/tools-atlas-lottie) to generate an `.atlas` file from the JSON:  
+For Pro Code workflows, use tools-atlas-lottie to generate an `.atlas` file from the JSON:  
 
 ```typescript
-import { LottieAnimation } from "@galacean/engine-lottie";
+import { LottieAnimation } from "@oasishub/engine-lottie";
 
 engine.resourceManager.load({
   urls: [
@@ -116,7 +116,7 @@ engine.resourceManager.load({
 ```
 
 ### **3D Transformations**  
-Galacean supports 3D rotations (X/Y/Z axes), unlike traditional `lottie-web` solutions limited to Z-axis rotations.  
+Oasishub supports 3D rotations (X/Y/Z axes), unlike traditional `lottie-web` solutions limited to Z-axis rotations.  
 
 <Image src="https://gw.alipayobjects.com/mdn/rms_d27172/afts/img/A*qVYxTaEdVBgAAAAAAAAAAAAAARQnAQ" alt="3D rotation" style={{zoom:"50%"}} />  
 

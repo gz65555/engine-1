@@ -7,12 +7,12 @@ import {
   SphereColliderShape,
   DynamicCollider,
   PhysicsMaterial
-} from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+} from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 import { describe, beforeAll, beforeEach, expect, it } from "vitest";
-import { LitePhysics } from "@galacean/engine-physics-lite";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 
 describe("ColliderShape PhysX", () => {
   let dynamicCollider: DynamicCollider;

@@ -1,4 +1,4 @@
-import { Matrix } from "@galacean/engine-math";
+import { Matrix } from "@oasishub/engine-math";
 import { BoolUpdateFlag } from "./BoolUpdateFlag";
 import { Component } from "./Component";
 import { ComponentsDependencies } from "./ComponentsDependencies";

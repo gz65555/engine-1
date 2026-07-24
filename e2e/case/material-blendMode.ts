@@ -2,7 +2,7 @@
  * @title Blend Mode
  * @category Material
  */
-import { Camera, GLTFResource, Vector3, WebGLEngine } from "@galacean/engine";
+import { Camera, GLTFResource, Vector3, WebGLEngine } from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 // Create engine

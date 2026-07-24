@@ -1,4 +1,4 @@
-import { Quaternion, Vector3, Vector4 } from "@galacean/engine-math";
+import { Quaternion, Vector3, Vector4 } from "@oasishub/engine-math";
 import { IPhysicsMaterial } from "../IPhysicsMaterial";
 
 /**

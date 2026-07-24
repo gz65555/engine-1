@@ -5,7 +5,7 @@ import {
   TextureCube,
   TextureCubeFace,
   request
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 /**
  * @internal

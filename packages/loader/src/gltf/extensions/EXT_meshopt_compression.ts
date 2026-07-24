@@ -1,4 +1,4 @@
-import { AssetPromise, Logger } from "@galacean/engine-core";
+import { AssetPromise, Logger } from "@oasishub/engine-core";
 import { registerGLTFExtension } from "../parser/GLTFParser";
 import { GLTFParserContext, GLTFParserType } from "../parser/GLTFParserContext";
 import { GLTFExtensionMode, GLTFExtensionParser } from "./GLTFExtensionParser";
@@ -27,7 +27,7 @@ class EXT_meshopt_compression extends GLTFExtensionParser {
   }
 }
 
-declare module "@galacean/engine-core" {
+declare module "@oasishub/engine-core" {
   interface EngineConfiguration {
     glTFLoader?: {
       /** Meshopt options. If set this option and workCount is great than 0, workers will be created. */

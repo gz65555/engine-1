@@ -6,8 +6,8 @@ import {
   BufferUsage,
   ModelMesh,
   VertexElement
-} from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
 import {
   BlendShapeDataRestoreInfo,
   BlendShapeRestoreInfo,

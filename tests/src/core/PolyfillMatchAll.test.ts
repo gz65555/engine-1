@@ -13,7 +13,7 @@ describe("Polyfill", () => {
 
     String.prototype.matchAll = null;
 
-    await import("@galacean/engine-core");
+    await import("@oasishub/engine-core");
 
     const regexTest = /noGlobal/;
     const contentTest = "test";

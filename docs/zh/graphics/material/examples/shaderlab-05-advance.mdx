@@ -33,7 +33,7 @@ title: 高级特性与代码复用
 
 ## 引擎内置代码片段
 
-Galacean 引擎提供了丰富的内置代码片段：
+Oasishub 引擎提供了丰富的内置代码片段：
 
 <Callout type="info">
 编辑器默认注册了这些片段，前往 [Shader API](/docs/graphics/material/shaderAPI) 了解更多 API
@@ -167,7 +167,7 @@ Shader "Tutorial/05-SkinnedUnlit" {
 
 ### 注册自定义片段
 ```typescript
-import { ShaderFactory } from '@galacean/engine';
+import { ShaderFactory } from '@oasishub/engine';
 
 const customShaderCode = `
 vec3 customLighting(vec3 normal, vec3 lightDir) {

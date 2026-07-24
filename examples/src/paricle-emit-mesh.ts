@@ -23,7 +23,7 @@ import {
   UnlitMaterial,
   Vector3,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
 Logger.enable();
 main();

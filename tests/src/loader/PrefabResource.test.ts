@@ -1,6 +1,6 @@
 import { expect, beforeAll, afterAll, describe, it } from "vitest";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import type { IHierarchyFile } from "@galacean/engine-loader";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import type { IHierarchyFile } from "@oasishub/engine-loader";
 import { PrefabParser } from "../../../packages/loader/src/prefab/PrefabParser";
 
 let engine: WebGLEngine;

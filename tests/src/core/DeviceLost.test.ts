@@ -8,9 +8,9 @@ import {
   PrimitiveMesh,
   Texture2D,
   TextureCube
-} from "@galacean/engine-core";
-import "@galacean/engine-loader";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import "@oasishub/engine-loader";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, expect, it } from "vitest";
 
 const canvasDOM = document.createElement("canvas");

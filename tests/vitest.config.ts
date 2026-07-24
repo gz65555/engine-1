@@ -7,11 +7,11 @@ export default defineProject({
   },
   optimizeDeps: {
     exclude: [
-      "@galacean/engine",
-      "@galacean/engine-loader",
-      "@galacean/engine-rhi-webgl",
-      "@galacean/engine-math",
-      "@galacean/engine-core"
+      "@oasishub/engine",
+      "@oasishub/engine-loader",
+      "@oasishub/engine-rhi-webgl",
+      "@oasishub/engine-math",
+      "@oasishub/engine-core"
     ]
   },
   test: {

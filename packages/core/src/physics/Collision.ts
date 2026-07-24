@@ -1,6 +1,6 @@
 import { ContactPoint } from "./ContactPoint";
 import { ColliderShape } from "./shape";
-import { ICollision } from "@galacean/engine-design";
+import { ICollision } from "@oasishub/engine-design";
 
 /**
  * Collision information between two shapes when they collide.

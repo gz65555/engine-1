@@ -19,7 +19,7 @@ const engineVersion = enginePackageJson.version;
 const finalVersion = packageVersion || engineVersion;
 
 // Fixed package name
-const packageName = "@galacean/editor-preload-official";
+const packageName = "@oasishub/editor-preload-official";
 
 console.log(`Engine version: ${engineVersion}`);
 console.log(`Package name: ${packageName}`);
@@ -35,7 +35,7 @@ const outputOfficialFile = path.join(outputOfficialDir, "dist", "index.js");
 const officialPackageJson = {
   name: packageName,
   version: finalVersion,
-  description: "Official packages preloaded for Galacean Editor",
+  description: "Official packages preloaded for Oasishub Editor",
   type: "module",
   exports: {
     ".": {
@@ -45,7 +45,7 @@ const officialPackageJson = {
   },
   files: ["dist"],
   peerDependencies: {
-    "@galacean/engine": engineVersion
+    "@oasishub/engine": engineVersion
   }
 };
 
@@ -55,7 +55,7 @@ const entries = config.firstParty.map((pkg) => readPackageEntry(path.join(rootDi
 await bundlePreload({
   entries,
   outputFile: outputOfficialFile,
-  external: (id) => id === "@galacean/engine" || id.startsWith("@galacean/engine/")
+  external: (id) => id === "@oasishub/engine" || id.startsWith("@oasishub/engine/")
 });
 
 // Output file stats

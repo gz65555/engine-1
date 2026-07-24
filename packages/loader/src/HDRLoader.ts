@@ -10,8 +10,8 @@ import {
   TextureCube,
   TextureCubeFace,
   resourceLoader
-} from "@galacean/engine-core";
-import { Color, Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Color, Vector3 } from "@oasishub/engine-math";
 
 const PI = Math.PI;
 

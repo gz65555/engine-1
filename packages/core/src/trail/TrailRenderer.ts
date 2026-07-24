@@ -1,4 +1,4 @@
-import { BoundingBox, Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { BoundingBox, Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { Entity } from "../Entity";
 import { RenderContext } from "../RenderPipeline/RenderContext";
 import { RenderElement } from "../RenderPipeline/RenderElement";

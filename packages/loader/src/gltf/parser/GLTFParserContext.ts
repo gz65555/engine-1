@@ -12,7 +12,7 @@ import {
   Skin,
   Texture2D,
   TypedArray
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { BufferDataRestoreInfo, GLTFContentRestorer } from "../../GLTFContentRestorer";
 import { GLTFParams } from "../../GLTFLoader";
 import { GLTFResource } from "../GLTFResource";

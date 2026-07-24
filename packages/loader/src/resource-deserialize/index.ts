@@ -1,4 +1,4 @@
-import { AssetPromise, Engine } from "@galacean/engine-core";
+import { AssetPromise, Engine } from "@oasishub/engine-core";
 import { BufferReader } from "./utils/BufferReader";
 import { decoderMap } from "./utils/Decorator";
 import { FileHeader } from "./utils/FileHeader";

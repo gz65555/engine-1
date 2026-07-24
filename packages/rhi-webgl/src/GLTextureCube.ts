@@ -1,4 +1,4 @@
-import { IPlatformTextureCube, TextureCube, TextureCubeFace } from "@galacean/engine-core";
+import { IPlatformTextureCube, TextureCube, TextureCubeFace } from "@oasishub/engine-core";
 import { GLTexture } from "./GLTexture";
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
 

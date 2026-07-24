@@ -1,5 +1,5 @@
-import { IHardwareRenderer } from "@galacean/engine-design";
-import { Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { IHardwareRenderer } from "@oasishub/engine-design";
+import { Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { Logger } from "../base/Logger";
 import { Texture } from "../texture";

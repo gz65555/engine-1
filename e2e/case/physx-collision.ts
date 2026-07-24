@@ -21,10 +21,10 @@ import {
   BlinnPhongMaterial,
   Entity,
   BaseMaterial
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { WireframeManager } from "./.WireframeManager";
 
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 function addBox(rootEntity: Entity, cubeSize: number, x: number, y: number, z: number, index: number) {

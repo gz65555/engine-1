@@ -1,4 +1,4 @@
-import { Rand, Vector3 } from "@galacean/engine-math";
+import { Rand, Vector3 } from "@oasishub/engine-math";
 import { deepClone } from "../../../clone/CloneManager";
 import { BaseShape } from "./BaseShape";
 import { ShapeUtils } from "./ShapeUtils";

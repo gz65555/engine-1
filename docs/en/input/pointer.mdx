@@ -5,11 +5,11 @@ type: Interact
 label: Interact
 ---
 
-Galacean's touch is based on [Pointer](https://www.w3.org/TR/pointerevents3/), which smooths out the differences between [Mouse](https://developer.mozilla.org/zh-CN/docs/Web/API/MouseEvent) and [Touch](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent), making touch unified in both concept and interface.
+Oasishub's touch is based on [Pointer](https://www.w3.org/TR/pointerevents3/), which smooths out the differences between [Mouse](https://developer.mozilla.org/zh-CN/docs/Web/API/MouseEvent) and [Touch](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent), making touch unified in both concept and interface.
 
 ## Pointer
 
-In Galacean, whether it's a mouse on a PC, a stylus or a finger on a mobile device, when it performs the corresponding behavior within the touch range (**Down**, **Move**, etc.), it will be instantiated as a [Pointer](/apis/core/#Pointer). You can get all the currently active touch points in the [InputManager](/apis/core/#InputManager).
+In Oasishub, whether it's a mouse on a PC, a stylus or a finger on a mobile device, when it performs the corresponding behavior within the touch range (**Down**, **Move**, etc.), it will be instantiated as a [Pointer](/apis/core/#Pointer). You can get all the currently active touch points in the [InputManager](/apis/core/#InputManager).
 
 <img src="https://mdn.alipayobjects.com/huamei_yo47yq/afts/img/A*k6_aRKNVxGkAAAAAAAAAAAAADhuCAQ/original" alt="image.png"  />
 
@@ -17,7 +17,7 @@ In Galacean, whether it's a mouse on a PC, a stylus or a finger on a mobile devi
 
 ### Lifecycle
 
-Each touch point will start its life in **PointerDown** or **PointerMove**, and leave the stage in **PointerLeave** or **PointerCancel**. In Galacean, you can get the real-time status of this touch point through `Pointer.phase`.
+Each touch point will start its life in **PointerDown** or **PointerMove**, and leave the stage in **PointerLeave** or **PointerCancel**. In Oasishub, you can get the real-time status of this touch point through `Pointer.phase`.
 
 ```mermaid
 timeline
@@ -38,7 +38,7 @@ timeline
 
 ### Touch Buttons
 
-Referring to the [W3C standard](https://www.w3.org/TR/uievents/#dom-mouseevent-button) and [Microsoft related documentation](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mousebutton?view=windowsdesktop-6.0), Galacean defines touch buttons as follows:
+Referring to the [W3C standard](https://www.w3.org/TR/uievents/#dom-mouseevent-button) and [Microsoft related documentation](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mousebutton?view=windowsdesktop-6.0), Oasishub defines touch buttons as follows:
 
 | Enumeration                                      | Explanation                                                      |
 | :---------------------------------------------- | :--------------------------------------------------------------- |
@@ -99,7 +99,7 @@ if (scene.physics.raycast(ray, 100, hitResult)) {
 As of February 2024, the compatibility of PointerEvent across different platforms has reached [96.35%](https://caniuse.com/?search=PointerEvent).
 
 <Callout type="info">
-️ If you encounter compatibility issues on a platform, you can raise an issue at https://github.com/galacean/polyfill-pointer-event.
+️ If you encounter compatibility issues on a platform, you can raise an issue at 
 </Callout>
 
 ## QA

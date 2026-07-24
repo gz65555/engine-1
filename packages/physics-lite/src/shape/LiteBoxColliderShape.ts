@@ -1,5 +1,5 @@
-import { BoundingBox, Matrix, Quaternion, Ray, Vector3, Vector4 } from "@galacean/engine";
-import { IBoxColliderShape } from "@galacean/engine-design";
+import { BoundingBox, Matrix, Quaternion, Ray, Vector3, Vector4 } from "@oasishub/engine";
+import { IBoxColliderShape } from "@oasishub/engine-design";
 import { LiteHitResult } from "../LiteHitResult";
 import { LitePhysicsMaterial } from "../LitePhysicsMaterial";
 import { LiteColliderShape } from "./LiteColliderShape";

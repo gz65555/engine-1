@@ -19,13 +19,13 @@ label: Graphics/Model
 glTF 的导出产物一般分为两种：
 
 - **(.gltf + .bin + png)**：适合图片体积大的场景，所以将图片和模型拆分开来，可以异步加载模型和纹理
-- **(.glb)**：适合模型文件较大的场景，会将所有数据进行二进制保存，需要等所有数据解析完毕才能展示模型，Galacean 对这两种产物
+- **(.glb)**：适合模型文件较大的场景，会将所有数据进行二进制保存，需要等所有数据解析完毕才能展示模型，Oasishub 对这两种产物
 
-以上两种产物在 Galacean 中都已支持，如何选择产物的导出类型可以按照项目实际情况决定。
+以上两种产物在 Oasishub 中都已支持，如何选择产物的导出类型可以按照项目实际情况决定。
 
-## Galacean 对 glTF 的支持
+## Oasishub 对 glTF 的支持
 
-**glTF2.0** 是目前 Galacean 推荐的首选 3D 场景传输格式，Galacean 对 **glTF2.0** 的核心功能和插件都做了很好的支持：
+**glTF2.0** 是目前 Oasishub 推荐的首选 3D 场景传输格式，Oasishub 对 **glTF2.0** 的核心功能和插件都做了很好的支持：
 
 - 支持 glTF 中的网格，材质和纹理信息，并将它编译为运行时的网格资产，材质资产与纹理资产。
 - 支持 glTF 中的动画（包含骨骼动画和 BlendShape ）
@@ -37,7 +37,7 @@ glTF 拥有非常多的特性，官网提供了大量的[示例](https://github.
 
 ### 插件支持
 
-Galacean 目前支持以下 glTF 插件，若 glTF 文件中包含相应插件，则会自动加载相应功能：
+Oasishub 目前支持以下 glTF 插件，若 glTF 文件中包含相应插件，则会自动加载相应功能：
 
 | 插件 | 功能 |
 | :-- | :-- |
@@ -52,7 +52,7 @@ Galacean 目前支持以下 glTF 插件，若 glTF 文件中包含相应插件�
 | [KHR_materials_clearcoat](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_clearcoat) | 支持材质的透明清漆度拓展，可以参考 [Clearcoat](/embed/pbr-clearcoat) 案例 |
 | [KHR_materials_ior](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_ior) | 支持材质的折射率设置 |
 | [KHR_materials_anisotropy](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_anisotropy) | 支持材质的各向异性设置，可以参考 [各向异性](/embed/pbr-anisotropy) 案例 |
-| [GALACEAN_materials_remap](https://github.com/galacean/engine/blob/main/packages/loader/src/gltf/extensions/GALACEAN_materials_remap.ts) | 支持编辑器材质映射 |
+| GALACEAN_materials_remap | 支持编辑器材质映射 |
 
 ### 插件拓展
 

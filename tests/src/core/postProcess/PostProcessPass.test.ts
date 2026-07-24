@@ -7,8 +7,8 @@ import {
   RenderTarget,
   Scene,
   Texture2D
-} from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 class CustomPass extends PostProcessPass {

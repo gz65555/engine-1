@@ -1,4 +1,4 @@
-import { IPhysicsMaterial } from "@galacean/engine-design";
+import { IPhysicsMaterial } from "@oasishub/engine-design";
 import { Engine } from "../Engine";
 import { PhysicsMaterialCombineMode } from "./enums/PhysicsMaterialCombineMode";
 

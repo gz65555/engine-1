@@ -59,7 +59,7 @@ jobs:
           ./scripts/build-editor-preload.mjs --version=${{ github.event.inputs.version }} $USE_NPM_ARG $BUILD_OFFICIAL_ARG
 
       - name: Release packages and Sync to CDN
-        uses: galacean/publish@main
+        uses: oasishub/publish@main
         with:
           publish: false
           packages: |

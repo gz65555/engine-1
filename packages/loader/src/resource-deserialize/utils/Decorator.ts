@@ -1,4 +1,4 @@
-import { AssetPromise, Engine } from "@galacean/engine-core";
+import { AssetPromise, Engine } from "@oasishub/engine-core";
 import type { BufferReader } from "./BufferReader";
 
 export const decoderMap: Record<

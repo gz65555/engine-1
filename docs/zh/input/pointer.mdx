@@ -5,11 +5,11 @@ type: 交互
 label: Interact
 ---
 
-Galacean 的触控是基于 [Pointer](https://www.w3.org/TR/pointerevents3/) 实现的，它抹平了 [Mouse](https://developer.mozilla.org/zh-CN/docs/Web/API/MouseEvent) 与 [Touch](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) 的差异，使得触控在概念和接口上都得到了统一。
+Oasishub 的触控是基于 [Pointer](https://www.w3.org/TR/pointerevents3/) 实现的，它抹平了 [Mouse](https://developer.mozilla.org/zh-CN/docs/Web/API/MouseEvent) 与 [Touch](https://developer.mozilla.org/zh-CN/docs/Web/API/TouchEvent) 的差异，使得触控在概念和接口上都得到了统一。
 
 ## Pointer
 
-在 Galacean 中，无论是 PC 上的鼠标，移动端的触控笔或是指头，当他在触控范围内发生对应行为时（ **Down**, **Move**, etc），都会被实例化为 [Pointer](/apis/core/#Pointer)，您可以在 [InputManager](/apis/core/#InputManager) 里获取到当前活动着的所有触控点。
+在 Oasishub 中，无论是 PC 上的鼠标，移动端的触控笔或是指头，当他在触控范围内发生对应行为时（ **Down**, **Move**, etc），都会被实例化为 [Pointer](/apis/core/#Pointer)，您可以在 [InputManager](/apis/core/#InputManager) 里获取到当前活动着的所有触控点。
 
 <img src="https://mdn.alipayobjects.com/huamei_yo47yq/afts/img/A*k6_aRKNVxGkAAAAAAAAAAAAADhuCAQ/original" alt="image.png"  />
 
@@ -17,7 +17,7 @@ Galacean 的触控是基于 [Pointer](https://www.w3.org/TR/pointerevents3/) 实
 
 ### 生命周期
 
-每个触控点都会在 **PointerDown** 或者 **PointerMove** 中开启自己的一生，在 **PointerLeave** 或者 **PointerCancel** 后黯然离场，在 Galacean 中，您可以通过 `Pointer.phase` 获取这个触控点的即时状态。
+每个触控点都会在 **PointerDown** 或者 **PointerMove** 中开启自己的一生，在 **PointerLeave** 或者 **PointerCancel** 后黯然离场，在 Oasishub 中，您可以通过 `Pointer.phase` 获取这个触控点的即时状态。
 
 ```mermaid
 timeline
@@ -38,7 +38,7 @@ timeline
 
 ### 触控按键
 
-参照 [W3C 标准](https://www.w3.org/TR/uievents/#dom-mouseevent-button) 与[微软相关文档](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mousebutton?view=windowsdesktop-6.0)，Galacean 对触控按键的定义如下：
+参照 [W3C 标准](https://www.w3.org/TR/uievents/#dom-mouseevent-button) 与[微软相关文档](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.mousebutton?view=windowsdesktop-6.0)，Oasishub 对触控按键的定义如下：
 
 | 枚举                                            | 解释                                                             |
 | :---------------------------------------------- | :--------------------------------------------------------------- |
@@ -101,7 +101,7 @@ if (scene.physics.raycast(ray, 100, hitResult)) {
 截止 2024 年 2 月，不同平台对 PointerEvent 的兼容性已经达到了 [96.35%](https://caniuse.com/?search=PointerEvent) 。
 
 <Callout type="info">
-若遇到平台的兼容性问题，可以在 https://github.com/galacean/polyfill-pointer-event 提 issue 。
+若遇到平台的兼容性问题，可以在  提 issue 。
 </Callout>
 
 ## QA

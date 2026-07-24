@@ -13,10 +13,10 @@ import {
   ParticleCurveMode,
   Engine,
   ParticleStopMode
-} from "@galacean/engine-core";
-import { Color, Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { LitePhysics } from "@galacean/engine-physics-lite";
+} from "@oasishub/engine-core";
+import { Color, Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 import { describe, beforeAll, beforeEach, expect, it } from "vitest";
 
 const delta = 0.2;

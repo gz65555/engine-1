@@ -1,4 +1,4 @@
-import { MathUtil, Rand, Vector3 } from "@galacean/engine-math";
+import { MathUtil, Rand, Vector3 } from "@oasishub/engine-math";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 import { ShaderData } from "../../shader/ShaderData";
 import { ShaderMacro } from "../../shader/ShaderMacro";

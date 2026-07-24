@@ -1,6 +1,6 @@
-import { RendererUpdateFlags, Sprite, SpriteMask, SpriteMaskLayer, Texture2D } from "@galacean/engine-core";
-import { Rect, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { RendererUpdateFlags, Sprite, SpriteMask, SpriteMaskLayer, Texture2D } from "@oasishub/engine-core";
+import { Rect, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeEach, describe, expect, it } from "vitest";
 
 describe("SpriteMask", async () => {

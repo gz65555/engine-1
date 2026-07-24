@@ -1,4 +1,4 @@
-import { Utils } from "@galacean/engine-core";
+import { Utils } from "@oasishub/engine-core";
 import { BufferReader } from "../resource-deserialize/utils/BufferReader";
 
 export enum DFDTransferFunction {

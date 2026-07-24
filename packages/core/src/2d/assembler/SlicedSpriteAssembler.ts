@@ -1,4 +1,4 @@
-import { Matrix, Vector2 } from "@galacean/engine-math";
+import { Matrix, Vector2 } from "@oasishub/engine-math";
 import { StaticInterfaceImplement } from "../../base/StaticInterfaceImplement";
 import { ISpriteAssembler } from "./ISpriteAssembler";
 import { ISpriteRenderer } from "./ISpriteRenderer";

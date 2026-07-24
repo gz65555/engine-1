@@ -2,7 +2,7 @@
  * @title Animation Play Backwards
  * @category Animation
  */
-import { Animator, Camera, Color, DirectLight, GLTFResource, Logger, Vector3, WebGLEngine } from "@galacean/engine";
+import { Animator, Camera, Color, DirectLight, GLTFResource, Logger, Vector3, WebGLEngine } from "@oasishub/engine";
 import { OrbitControl } from "./.OrbitControl";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 

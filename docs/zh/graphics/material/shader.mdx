@@ -2,7 +2,7 @@
 title: Shader 介绍
 ---
 
-`ShaderLab` 是 Galacean 针对 Shader 自主研发的一套描述语言，它提供了一套完整的语法来定义着色器的结构、属性、渲染状态和着色器代码。通过 ShaderLab，开发者可以创建从简单到复杂的各种视觉效果。
+`ShaderLab` 是 Oasishub 针对 Shader 自主研发的一套描述语言，它提供了一套完整的语法来定义着色器的结构、属性、渲染状态和着色器代码。通过 ShaderLab，开发者可以创建从简单到复杂的各种视觉效果。
 
 ## 什么是 ShaderLab
 
@@ -249,7 +249,7 @@ Pass "PassName" {
 
 ### 1. 类型
 
-渲染状态变量和引擎枚举类型保持一致，比如 `BlendOperation.Add` 对应引擎的 [API](/apis/galacean/#BlendOperation)。
+渲染状态变量和引擎枚举类型保持一致，比如 `BlendOperation.Add` 对应引擎的 [API](/apis/oasishub/#BlendOperation)。
 
 #### 1.1 BlendState 混合状态
 
@@ -379,7 +379,7 @@ MRT frag(Varyings input) {
 官方提供了很多内置代码段，开发者可以直接注册后使用:
 
 ```ts showLineNumbers {4} filename="Typescript"
-import { registerIncludes } from "@galacean/engine-shader";
+import { registerIncludes } from "@oasishub/engine-shader";
 
 // 对内置 ShaderLab 代码段注册。
 registerIncludes();
@@ -387,7 +387,7 @@ registerIncludes();
 
 如果是自定义的片段，可以通过接口进行手动注册:
 ```ts
-import { ShaderFactory } from '@galacean/engine';
+import { ShaderFactory } from '@oasishub/engine';
  
 const shaderSource = `{{Your shader code}}`;
 ShaderFactory.registerInclude('YourKey', shaderSource);
@@ -399,7 +399,7 @@ ShaderFactory.registerInclude('YourKey', shaderSource);
 `UIScript` 是 `ShaderLab` 的核心特性之一，允许通过 TypeScript 脚本实现智能的属性面板交互，包括设置宏开关、渲染状态等：
 
 ```ts showLineNumbers {}
-import { ShaderUIScript, Material } from "@galacean/engine";
+import { ShaderUIScript, Material } from "@oasishub/engine";
 
 export default class MyShaderScript extends ShaderUIScript {
   constructor() {

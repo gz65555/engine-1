@@ -9,7 +9,7 @@ import {
   PlaneIntersectionType,
   Ray,
   Vector3
-} from "@galacean/engine-math";
+} from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("CollisionUtil", () => {

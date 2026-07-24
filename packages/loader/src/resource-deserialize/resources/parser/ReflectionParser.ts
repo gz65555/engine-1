@@ -1,4 +1,4 @@
-import { EngineObject, Entity, Loader, Transform } from "@galacean/engine-core";
+import { EngineObject, Entity, Loader, Transform } from "@oasishub/engine-core";
 import type {
   IAssetRef,
   IBasicType,

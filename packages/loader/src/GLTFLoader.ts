@@ -7,7 +7,7 @@ import {
   LoadItem,
   resourceLoader,
   ResourceManager
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { getMeshoptDecoder, ready } from "./gltf/extensions/MeshoptDecoder";
 import { GLTFResource } from "./gltf/GLTFResource";
 import { GLTFParserContext } from "./gltf/parser";

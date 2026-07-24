@@ -10,8 +10,8 @@ import {
   TextureUsage,
   TextureUtils,
   TextureWrapMode
-} from "@galacean/engine-core";
-import { MathUtil } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { MathUtil } from "@oasishub/engine-math";
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
 import { GLCompressedTextureInternalFormat, TextureFormatDetail } from "./type";
 
@@ -303,7 +303,7 @@ export class GLTexture implements IPlatformTexture {
           attachment: gl.DEPTH_STENCIL_ATTACHMENT
         };
       default:
-        throw new Error(`this TextureFormat is not supported in Galacean Engine: ${format}`);
+        throw new Error(`this TextureFormat is not supported in Oasishub Engine: ${format}`);
     }
   }
 
@@ -383,7 +383,7 @@ export class GLTexture implements IPlatformTexture {
           attachment: gl.DEPTH_STENCIL_ATTACHMENT
         };
       default:
-        throw new Error(`this TextureFormat is not supported in Galacean Engine: ${format}`);
+        throw new Error(`this TextureFormat is not supported in Oasishub Engine: ${format}`);
     }
   }
 

@@ -7,7 +7,7 @@ import {
   PrimitiveMesh,
   ResourceManager,
   resourceLoader
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 @resourceLoader(AssetType.PrimitiveMesh, ["mesh"], false)
 class PrimitiveMeshLoader extends Loader<ModelMesh> {

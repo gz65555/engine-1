@@ -1,4 +1,4 @@
-import { BoundingBox, Color, MathUtil, Matrix, Quaternion, Vector2, Vector3 } from "@galacean/engine-math";
+import { BoundingBox, Color, MathUtil, Matrix, Quaternion, Vector2, Vector3 } from "@oasishub/engine-math";
 import { Transform } from "../Transform";
 import { deepClone, ignoreClone } from "../clone/CloneManager";
 import { Primitive } from "../graphic/Primitive";

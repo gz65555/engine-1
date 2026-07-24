@@ -1,4 +1,4 @@
-import { Matrix, Quaternion, Vector3 } from "@galacean/engine-math";
+import { Matrix, Quaternion, Vector3 } from "@oasishub/engine-math";
 
 /**
  * Data interface for describing gestures in the XR space.

@@ -8,10 +8,10 @@ import {
   PointerPhase,
   Script,
   StaticCollider
-} from "@galacean/engine-core";
-import { Vector2, Vector3 } from "@galacean/engine-math";
-import { LitePhysics } from "@galacean/engine-physics-lite";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { Vector2, Vector3 } from "@oasishub/engine-math";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { vi, describe, expect, it } from "vitest";
 
 const body = document.getElementsByTagName("body")[0];

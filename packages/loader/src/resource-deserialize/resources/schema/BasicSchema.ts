@@ -1,4 +1,4 @@
-import { Layer } from "@galacean/engine-core";
+import { Layer } from "@oasishub/engine-core";
 
 export interface IVector3 {
   x: number;

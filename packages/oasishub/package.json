@@ -1,11 +1,7 @@
 {
-  "name": "@galacean/engine",
+  "name": "@oasishub/engine",
   "version": "1.6.13",
-  "homepage": "https://galacean.antgroup.com/",
   "license": "MIT",
-  "repository": {
-    "url": "https://github.com/galacean/engine"
-  },
   "files": [
     "dist/**/*",
     "types/**/*"
@@ -27,9 +23,9 @@
     "b:types": "tsc"
   },
   "dependencies": {
-    "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-loader": "workspace:*",
-    "@galacean/engine-math": "workspace:*",
-    "@galacean/engine-rhi-webgl": "workspace:*"
+    "@oasishub/engine-core": "workspace:*",
+    "@oasishub/engine-loader": "workspace:*",
+    "@oasishub/engine-math": "workspace:*",
+    "@oasishub/engine-rhi-webgl": "workspace:*"
   }
 }

@@ -7,7 +7,7 @@ import {
   ReferResource,
   ResourceManager,
   Scene
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import type { IEntity, IHierarchyFile } from "../schema";
 
 export enum ParserType {

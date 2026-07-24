@@ -7,7 +7,7 @@ import {
   ResourceManager,
   AnimationClip,
   ReferResource
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { decode } from "./resource-deserialize";
 
 @resourceLoader(AssetType.AnimationClip, ["ani"])

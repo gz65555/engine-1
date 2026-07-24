@@ -1,6 +1,6 @@
-import { GLCapabilityType, Logger, Primitive } from "@galacean/engine-core";
-import type { SubPrimitive } from "@galacean/engine-core";
-import { IPlatformPrimitive, IPlatformShaderProgram } from "@galacean/engine-design";
+import { GLCapabilityType, Logger, Primitive } from "@oasishub/engine-core";
+import type { SubPrimitive } from "@oasishub/engine-core";
+import { IPlatformPrimitive, IPlatformShaderProgram } from "@oasishub/engine-design";
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
 import { WebGLExtension } from "./type";
 

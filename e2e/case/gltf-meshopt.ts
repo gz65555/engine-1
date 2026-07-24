@@ -3,7 +3,7 @@
  * @category Animation
  */
 import { OrbitControl } from "./.OrbitControl";
-import { Camera, Color, DirectLight, GLTFLoader, GLTFResource, Logger, Vector3, WebGLEngine } from "@galacean/engine";
+import { Camera, Color, DirectLight, GLTFLoader, GLTFResource, Logger, Vector3, WebGLEngine } from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 Logger.enable();

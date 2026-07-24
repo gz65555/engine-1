@@ -1,8 +1,6 @@
-import { registerGUI } from "@galacean/engine-ui";
-registerGUI();
-import "@galacean/engine-loader";
-import { AssetType } from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import "@oasishub/engine-loader";
+import { AssetType } from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, afterAll, expect, it } from "vitest";
 
 let engine: WebGLEngine;

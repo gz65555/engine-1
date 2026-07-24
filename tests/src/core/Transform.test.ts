@@ -1,6 +1,6 @@
-import { deepClone, Entity, Scene, Transform } from "@galacean/engine-core";
-import { Vector2, Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { deepClone, Entity, Scene, Transform } from "@oasishub/engine-core";
+import { Vector2, Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeAll, describe, expect, it } from "vitest";
 
 const canvasDOM = document.createElement("canvas");

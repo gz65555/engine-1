@@ -79,16 +79,16 @@ label: Graphics/2D
 ### 命令行打包工具
 ```bash
 # 全局安装工具包
-npm i @galacean/tools-atlas -g
+npm i @oasishub/tools-atlas -g
 
 # 执行打包（示例：输入目录为assets，输出名为ui_atlas）
-galacean-tool-atlas p assets -o ui_atlas
+oasishub-tool-atlas p assets -o ui_atlas
 ```
 
 | 属性           | 解释                                         |
 | -------------- | -------------------------------------------- |
-| f/format       | 打包输出的精灵图集格式 (默认: "galacean")    |
-| o/output       | 打包输出的精灵图集文件名 (默认: "galacean")  |
+| f/format       | 打包输出的精灵图集格式 (默认: "oasishub")    |
+| o/output       | 打包输出的精灵图集文件名 (默认: "oasishub")  |
 | a/algorithm    | 打包精灵图集的算法 (默认: "maxrects")        |
 | ar/allowRotate | 打包精灵图集是否支持旋转 (默认: false)       |
 | p/padding      | 图集中每个精灵和这个精灵边框的距离 (默认: 1) |
@@ -97,7 +97,7 @@ galacean-tool-atlas p assets -o ui_atlas
 | s/square       | 强制打包成正方形 (默认: false)               |
 | pot            | 宽高强制打包成 2 的幂 (默认: false)          |
 
-> 📘 [完整参数文档](https://github.com/galacean/tools/blob/main/packages/atlas/README.md)
+> 📘 完整参数文档
 
 ### 运行时加载使用
 ```typescript

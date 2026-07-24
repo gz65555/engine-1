@@ -1,4 +1,4 @@
-import { Ray } from "@galacean/engine-math";
+import { Ray } from "@oasishub/engine-math";
 import { Entity } from "../../../Entity";
 import { Scene } from "../../../Scene";
 import { Script } from "../../../Script";

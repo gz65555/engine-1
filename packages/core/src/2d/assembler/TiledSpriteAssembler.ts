@@ -1,4 +1,4 @@
-import { MathUtil, Matrix, Vector2 } from "@galacean/engine-math";
+import { MathUtil, Matrix, Vector2 } from "@oasishub/engine-math";
 import { Logger } from "../../base";
 import { StaticInterfaceImplement } from "../../base/StaticInterfaceImplement";
 import { DisorderedArray } from "../../utils/DisorderedArray";

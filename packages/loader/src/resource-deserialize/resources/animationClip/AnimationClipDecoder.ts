@@ -19,8 +19,8 @@ import {
   KeyframeValueType,
   Loader,
   ReferResource
-} from "@galacean/engine-core";
-import { Color, Quaternion, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Color, Quaternion, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import type { BufferReader } from "../../utils/BufferReader";
 import { decoder } from "../../utils/Decorator";
 

@@ -1,5 +1,5 @@
-import { Ray, Vector3, DisorderedArray, Quaternion } from "@galacean/engine";
-import { ICollision, IPhysicsScene } from "@galacean/engine-design";
+import { Ray, Vector3, DisorderedArray, Quaternion } from "@oasishub/engine";
+import { ICollision, IPhysicsScene } from "@oasishub/engine-design";
 import { PhysXCharacterController } from "./PhysXCharacterController";
 import { PhysXCollider } from "./PhysXCollider";
 import { PhysXPhysics } from "./PhysXPhysics";

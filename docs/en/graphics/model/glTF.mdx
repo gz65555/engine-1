@@ -19,13 +19,13 @@ label: Graphics/Model
 The exported products of glTF are generally divided into two types:
 
 - **(.gltf + .bin + png)**: Suitable for scenarios with large image sizes, so images and models are separated, allowing asynchronous loading of models and textures.
-- **(.glb)**: Suitable for scenarios with large model files, where all data is saved in binary format. The model can only be displayed after all data is parsed. Galacean supports both types of products.
+- **(.glb)**: Suitable for scenarios with large model files, where all data is saved in binary format. The model can only be displayed after all data is parsed. Oasishub supports both types of products.
 
-Both types of products are supported in Galacean. The choice of export type can be decided based on the actual project requirements.
+Both types of products are supported in Oasishub. The choice of export type can be decided based on the actual project requirements.
 
-## Galacean's Support for glTF
+## Oasishub's Support for glTF
 
-**glTF2.0** is currently the recommended 3D scene transmission format for Galacean. Galacean provides good support for the core functionalities and plugins of **glTF2.0**:
+**glTF2.0** is currently the recommended 3D scene transmission format for Oasishub. Oasishub provides good support for the core functionalities and plugins of **glTF2.0**:
 
 - Supports meshes, materials, and texture information in glTF, compiling them into runtime mesh assets, material assets, and texture assets.
 - Supports animations in glTF (including skeletal animations and BlendShape).
@@ -37,7 +37,7 @@ glTF has many features, and the official website provides a large number of [exa
 
 ### Plugin Support
 
-Galacean currently supports the following glTF plugins. If the glTF file contains the corresponding plugins, the respective functionalities will be automatically loaded:
+Oasishub currently supports the following glTF plugins. If the glTF file contains the corresponding plugins, the respective functionalities will be automatically loaded:
 
 | Plugin | Functionality |
 | :-- | :-- |
@@ -52,7 +52,7 @@ Galacean currently supports the following glTF plugins. If the glTF file contain
 | [KHR_materials_clearcoat](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_clearcoat) | Supports the clear coat extension of materials. See the [Clearcoat](/en/embed/pbr-clearcoat) example for reference |
 | [KHR_materials_ior](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_ior) | Supports setting the index of refraction for materials |
 | [KHR_materials_anisotropy](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Khronos/KHR_materials_anisotropy) | Supports setting anisotropy for materials. See the [Anisotropy](/en/embed/pbr-anisotropy) example for reference |
-| [GALACEAN_materials_remap](https://github.com/galacean/engine/blob/main/packages/loader/src/gltf/extensions/GALACEAN_materials_remap.ts) | Supports editor material mapping |
+| GALACEAN_materials_remap | Supports editor material mapping |
 
 ### Plugin Extensions
 

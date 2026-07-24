@@ -1,4 +1,4 @@
-import { Rand } from "@galacean/engine-math";
+import { Rand } from "@oasishub/engine-math";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 import { ShaderMacro } from "../../shader/ShaderMacro";
 import { ParticleRandomSubSeeds } from "../enums/ParticleRandomSubSeeds";

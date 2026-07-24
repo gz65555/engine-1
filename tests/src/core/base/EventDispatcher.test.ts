@@ -1,4 +1,4 @@
-import { EventDispatcher } from "@galacean/engine-core";
+import { EventDispatcher } from "@oasishub/engine-core";
 import { vi, describe, expect, it } from "vitest";
 
 describe("EventDispatcher test", function () {

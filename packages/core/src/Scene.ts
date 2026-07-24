@@ -1,4 +1,4 @@
-import { Color, Vector3, Vector4 } from "@galacean/engine-math";
+import { Color, Vector3, Vector4 } from "@oasishub/engine-math";
 import { Background } from "./Background";
 import { ComponentsManager } from "./ComponentsManager";
 import { Engine } from "./Engine";

@@ -1,6 +1,6 @@
-import { Sprite, SpriteRenderer, Texture2D, SpriteMask } from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { Rect, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { Sprite, SpriteRenderer, Texture2D, SpriteMask } from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { Rect, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { describe, beforeEach, expect, it } from "vitest";
 
 describe("Sprite", async () => {

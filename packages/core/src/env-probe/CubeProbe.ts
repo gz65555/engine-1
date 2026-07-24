@@ -1,4 +1,4 @@
-import { Matrix, Vector3 } from "@galacean/engine-math";
+import { Matrix, Vector3 } from "@oasishub/engine-math";
 import { Camera } from "../Camera";
 import { TextureCubeFace } from "../texture";
 import { Probe } from "./Probe";

@@ -18,7 +18,7 @@ import {
   AnimatorStateMachine,
   AnimationClip,
   AnimationFloatArrayCurve
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 Logger.enable();

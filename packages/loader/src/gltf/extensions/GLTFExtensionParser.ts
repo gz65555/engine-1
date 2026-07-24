@@ -1,4 +1,4 @@
-import { AssetPromise, EngineObject } from "@galacean/engine-core";
+import { AssetPromise, EngineObject } from "@oasishub/engine-core";
 import { GLTFExtensionOwnerSchema } from "../GLTFSchema";
 import { GLTFParserContext } from "../parser/GLTFParserContext";
 import { GLTFExtensionSchema } from "./GLTFExtensionSchema";

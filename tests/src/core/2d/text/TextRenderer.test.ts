@@ -1,4 +1,4 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import {
   TextRenderer,
   Entity,
@@ -10,8 +10,8 @@ import {
   OverflowMode,
   SpriteMaskInteraction,
   SpriteMaskLayer
-} from "@galacean/engine-core";
-import { BoundingBox, Color, Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { BoundingBox, Color, Vector3 } from "@oasishub/engine-math";
 import { describe, beforeAll, expect, it, afterAll } from "vitest";
 
 describe("TextRenderer", () => {

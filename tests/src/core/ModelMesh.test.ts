@@ -9,9 +9,9 @@ import {
   VertexAttribute,
   VertexElement,
   VertexElementFormat
-} from "@galacean/engine-core";
-import { Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("ModelMesh Test", async function () {

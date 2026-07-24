@@ -1,7 +1,7 @@
-import { Quaternion } from "@galacean/engine";
-import { DynamicCollider, Entity, EntityModifyFlags, Scene, Script } from "@galacean/engine-core";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Quaternion } from "@oasishub/engine";
+import { DynamicCollider, Entity, EntityModifyFlags, Scene, Script } from "@oasishub/engine-core";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 class TestComponent extends Script {}

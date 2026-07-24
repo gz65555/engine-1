@@ -18,9 +18,9 @@ import {
   PBRMaterial,
   Entity,
   Layer
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 class CheckScript extends Script {

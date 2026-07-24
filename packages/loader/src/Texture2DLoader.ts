@@ -11,7 +11,7 @@ import {
   TextureUtils,
   TextureWrapMode,
   resourceLoader
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { Texture2DContentRestorer } from "./Texture2DContentRestorer";
 
 @resourceLoader(AssetType.Texture2D, ["png", "jpg", "webp", "jpeg"])

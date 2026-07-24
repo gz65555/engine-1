@@ -1,4 +1,4 @@
-import { RequestConfig, Utils } from "@galacean/engine-core";
+import { RequestConfig, Utils } from "@oasishub/engine-core";
 import { BufferRequestInfo } from "../../GLTFContentRestorer";
 import { IGLTF } from "../GLTFSchema";
 import { GLTFUtils } from "../GLTFUtils";

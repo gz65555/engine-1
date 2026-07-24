@@ -1,4 +1,4 @@
-import { Matrix3x3, Matrix, Quaternion, Vector2 } from "@galacean/engine-math";
+import { Matrix3x3, Matrix, Quaternion, Vector2 } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("Matrix3x3 test", () => {

@@ -1,4 +1,4 @@
-import { BoundingBox, Color, MathUtil } from "@galacean/engine-math";
+import { BoundingBox, Color, MathUtil } from "@oasishub/engine-math";
 import { Entity } from "../../Entity";
 import { BatchUtils } from "../../RenderPipeline/BatchUtils";
 import { PrimitiveChunkManager } from "../../RenderPipeline/PrimitiveChunkManager";

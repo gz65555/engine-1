@@ -1,4 +1,4 @@
-import { Camera, Engine, RenderTarget, Texture2D, TextureFormat } from "@galacean/engine-core";
+import { Camera, Engine, RenderTarget, Texture2D, TextureFormat } from "@oasishub/engine-core";
 
 export const updateForE2E = (engine, deltaTime = 100, loopTime = 10) => {
   engine._vSyncCount = Infinity;

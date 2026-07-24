@@ -1,6 +1,6 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { Camera, Font, TextRenderer, Entity } from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { Camera, Font, TextRenderer, Entity } from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
 import { describe, beforeAll, expect, it, afterAll } from "vitest";
 
 describe("Font", function () {

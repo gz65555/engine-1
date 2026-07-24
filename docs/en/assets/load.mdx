@@ -5,7 +5,7 @@ type: Asset Workflow
 label: Resource
 ---
 
-In Galacean, asset loading is generally divided into three situations based on its usage:
+In Oasishub, asset loading is generally divided into three situations based on its usage:
 
 - The asset is imported into the editor and used in a scene
 - The asset is imported into the editor but not used in a scene
@@ -93,7 +93,7 @@ this.engine.resourceManager.load<GLTFResource>("Assets/texture.png");
 `ResourceManger` currently also supports setting `baseUrl`:
 
 ```typescript
-engine.resourceManager.baseUrl = "https://cdn.galacean.com";
+engine.resourceManager.baseUrl = "";
 ```
 
 If `baseUrl` is set, the relative path loaded will be combined with `baseUrl`:
@@ -102,7 +102,7 @@ If `baseUrl` is set, the relative path loaded will be combined with `baseUrl`:
 engine.resourceManager.load("img/2d.png");
 ```
 
-The actual loading path from the above two lines of code will be `https://cdn.galacean.com/img/2d.png`.
+The actual loading path from the above two lines of code will be `
 
 ## Loading Progress
 

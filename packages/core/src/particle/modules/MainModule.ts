@@ -1,4 +1,4 @@
-import { Color, Rand, Vector3, Vector4 } from "@galacean/engine-math";
+import { Color, Rand, Vector3, Vector4 } from "@oasishub/engine-math";
 import { TransformModifyFlags } from "../../Transform";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 import { ICustomClone } from "../../clone/ComponentCloner";

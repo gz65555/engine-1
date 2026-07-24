@@ -1,4 +1,4 @@
-import { Color } from "@galacean/engine";
+import { Color } from "@oasishub/engine";
 import {
   BloomDownScaleMode,
   BloomEffect,
@@ -16,10 +16,10 @@ import {
   StaticCollider,
   Texture2D,
   TonemappingEffect
-} from "@galacean/engine-core";
-import { MathUtil } from "@galacean/engine-math";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { MathUtil } from "@oasishub/engine-math";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from "vitest";
 
 class CustomPass extends PostProcessPass {

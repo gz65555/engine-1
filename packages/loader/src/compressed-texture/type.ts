@@ -1,5 +1,5 @@
-import { TextureFormat } from "@galacean/engine-core";
-import { GLCompressedTextureInternalFormat } from "@galacean/engine-rhi-webgl";
+import { TextureFormat } from "@oasishub/engine-core";
+import { GLCompressedTextureInternalFormat } from "@oasishub/engine-rhi-webgl";
 
 export type CompressedTextureData = {
   internalFormat: GLCompressedTextureInternalFormat;
@@ -85,7 +85,7 @@ export type KTXContainer = {
    */
   mipmaps?: Mipmap[];
   /**
-   * Galacean Engine native TextureFormat
+   * Oasishub Engine native TextureFormat
    */
   engineFormat?: TextureFormat;
 };

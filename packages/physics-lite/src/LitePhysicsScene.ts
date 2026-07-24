@@ -6,8 +6,8 @@ import {
   Quaternion,
   Ray,
   Vector3
-} from "@galacean/engine";
-import { ICharacterController, ICollision, IPhysicsScene } from "@galacean/engine-design";
+} from "@oasishub/engine";
+import { ICharacterController, ICollision, IPhysicsScene } from "@oasishub/engine-design";
 import { LiteCollider } from "./LiteCollider";
 import { LiteDynamicCollider } from "./LiteDynamicCollider";
 import { LiteHitResult } from "./LiteHitResult";

@@ -1,4 +1,4 @@
-import { MeshTopology } from "@galacean/engine-core";
+import { MeshTopology } from "@oasishub/engine-core";
 import type { IColor, IVector2, IVector3, IVector4 } from "../schema/BasicSchema";
 
 export interface IEncodedModelMesh {

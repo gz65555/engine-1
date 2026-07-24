@@ -1,4 +1,4 @@
-import { BackgroundMode, DiffuseMode, Scene } from "@galacean/engine-core";
+import { BackgroundMode, DiffuseMode, Scene } from "@oasishub/engine-core";
 import { HierarchyParser } from "../parser/HierarchyParser";
 import { ParserContext } from "../parser/ParserContext";
 import { ReflectionParser } from "../parser/ReflectionParser";

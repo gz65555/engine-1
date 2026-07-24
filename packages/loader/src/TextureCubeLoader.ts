@@ -10,7 +10,7 @@ import {
   TextureFormat,
   TextureUtils,
   resourceLoader
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { TextureCubeContentRestorer } from "./TextureCubeContentRestorer";
 
 @resourceLoader(AssetType.TextureCube, [""])

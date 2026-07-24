@@ -2,7 +2,7 @@
  * @title Bloom + HDR + ACES Tonemapping
  * @category PostProcess
  */
-import { BloomEffect, Camera, PostProcess, TonemappingEffect, TonemappingMode } from "@galacean/engine";
+import { BloomEffect, Camera, PostProcess, TonemappingEffect, TonemappingMode } from "@oasishub/engine";
 import { initPostProcessEnv } from "./.initPostProcessEnv";
 
 initPostProcessEnv((camera: Camera, resArray) => {

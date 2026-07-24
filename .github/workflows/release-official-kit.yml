@@ -42,7 +42,7 @@ jobs:
         run: ./scripts/build-official-preload.mjs --version=${{ github.event.inputs.version }}
 
       - name: Release official preload package and Sync to CDN
-        uses: galacean/publish@main
+        uses: oasishub/publish@main
         with:
           publish: false
           packages: |

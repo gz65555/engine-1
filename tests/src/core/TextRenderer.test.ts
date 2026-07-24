@@ -1,5 +1,5 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { TextRenderer } from "@galacean/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { TextRenderer } from "@oasishub/engine-core";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("TextRenderer", async () => {

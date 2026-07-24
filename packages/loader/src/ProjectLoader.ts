@@ -6,7 +6,7 @@ import {
   resourceLoader,
   ResourceManager,
   Scene
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { IProject } from "./resource-deserialize";
 
 @resourceLoader(AssetType.Project, ["proj"], false)

@@ -1,5 +1,5 @@
 // @ts-ignore
-import { BoundingBox, Matrix, Vector3, Vector4 } from "@galacean/engine-math";
+import { BoundingBox, Matrix, Vector3, Vector4 } from "@oasishub/engine-math";
 import { SpriteMaskInteraction } from "./2d/enums/SpriteMaskInteraction";
 import { Component } from "./Component";
 import { DependentMode, dependentComponents } from "./ComponentsDependencies";

@@ -1,5 +1,5 @@
-import { ICharacterController } from "@galacean/engine-design";
-import { Vector3 } from "@galacean/engine";
+import { ICharacterController } from "@oasishub/engine-design";
+import { Vector3 } from "@oasishub/engine";
 import { PhysXPhysics } from "./PhysXPhysics";
 import { PhysXPhysicsScene } from "./PhysXPhysicsScene";
 import { PhysXBoxColliderShape } from "./shape/PhysXBoxColliderShape";

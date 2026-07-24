@@ -1,4 +1,4 @@
-import { UnlitMaterial } from "@galacean/engine-core";
+import { UnlitMaterial } from "@oasishub/engine-core";
 import type { IMaterial } from "../GLTFSchema";
 import { GLTFMaterialParser } from "../parser/GLTFMaterialParser";
 import { registerGLTFExtension } from "../parser/GLTFParser";

@@ -1,5 +1,5 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { Texture2D, PBRMaterial } from "@galacean/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { Texture2D, PBRMaterial } from "@oasishub/engine-core";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("PBRMaterial", () => {

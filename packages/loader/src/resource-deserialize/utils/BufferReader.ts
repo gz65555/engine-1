@@ -1,4 +1,4 @@
-import { Utils } from "@galacean/engine-core";
+import { Utils } from "@oasishub/engine-core";
 export class BufferReader {
   private _dataView: DataView;
   private _littleEndian: boolean;

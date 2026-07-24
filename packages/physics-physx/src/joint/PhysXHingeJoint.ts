@@ -1,5 +1,5 @@
-import { IHingeJoint } from "@galacean/engine-design";
-import { MathUtil, Quaternion, Vector3 } from "@galacean/engine";
+import { IHingeJoint } from "@oasishub/engine-design";
+import { MathUtil, Quaternion, Vector3 } from "@oasishub/engine";
 import { PhysXCollider } from "../PhysXCollider";
 import { PhysXPhysics } from "../PhysXPhysics";
 import { PhysXJoint } from "./PhysXJoint";

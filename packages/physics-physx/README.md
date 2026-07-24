@@ -3,19 +3,19 @@
 To install, use:
 
 ```sh
-npm install @galacean/engine-physics-physx
+npm install @oasishub/engine-physics-physx
 ```
 
 This will allow you to import engine entirely using:
 
 ```javascript
-import * as PHYSICS_PHYSX from "@galacean/engine-physics-physx";
+import * as PHYSICS_PHYSX from "@oasishub/engine-physics-physx";
 ```
 
 or individual classes using:
 
 ```javascript
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 ```
 
 ## Usage

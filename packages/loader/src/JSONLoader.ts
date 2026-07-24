@@ -1,4 +1,4 @@
-import { resourceLoader, Loader, AssetPromise, AssetType, LoadItem, ResourceManager } from "@galacean/engine-core";
+import { resourceLoader, Loader, AssetPromise, AssetType, LoadItem, ResourceManager } from "@oasishub/engine-core";
 
 @resourceLoader(AssetType.JSON, ["json"], false)
 class JSONLoader extends Loader<string> {

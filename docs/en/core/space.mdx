@@ -5,17 +5,17 @@ type: Core
 label: Core
 ---
 
-The coordinate system plays a crucial role in a rendering engine, ensuring the accuracy of rendering results and interactions. By reading this document, you can understand most of the coordinate systems involved in Galacean. It is important to note that the definitions of various spaces differ between rendering engines; this document discusses only the spatial standards within Galacean.
+The coordinate system plays a crucial role in a rendering engine, ensuring the accuracy of rendering results and interactions. By reading this document, you can understand most of the coordinate systems involved in Oasishub. It is important to note that the definitions of various spaces differ between rendering engines; this document discusses only the spatial standards within Oasishub.
 
 This document will compare various coordinate spaces in terms of `definition of space` and `coordinate system type`. The `coordinate system type` specifically refers to the `left-handed coordinate system` and `right-handed coordinate system`, as shown in the image below:
 
 <Image src="https://mdn.alipayobjects.com/huamei_jvf0dp/afts/img/A*YBAmSamxy_0AAAAAAAAAAAAADleLAQ/original"  />
 
-Defining a system as `left-handed` or `right-handed` affects the direction of `forward` and the direction of rotation (clockwise or counterclockwise). For the definition of direction, you can imagine overlapping your right hand with `+X`, and the top of your head with `+Y`. The direction your face points is `forward`. You can compare the differences between Galacean and Unity:
+Defining a system as `left-handed` or `right-handed` affects the direction of `forward` and the direction of rotation (clockwise or counterclockwise). For the definition of direction, you can imagine overlapping your right hand with `+X`, and the top of your head with `+Y`. The direction your face points is `forward`. You can compare the differences between Oasishub and Unity:
 
 - Unity's local and world coordinate systems are `left-handed`. Rotation during transformations is done clockwise, and the `forward` direction corresponds to `+Z`. Therefore, the camera's direction (viewing direction) is `+Z`.
 
-- Galacean's local and world coordinate systems are `right-handed`. Rotation during transformations is done counterclockwise, and the `forward` direction corresponds to `-Z`. Therefore, the camera's direction (viewing direction) is `-Z`.
+- Oasishub's local and world coordinate systems are `right-handed`. Rotation during transformations is done counterclockwise, and the `forward` direction corresponds to `-Z`. Therefore, the camera's direction (viewing direction) is `-Z`.
 
 ## Local Space
 

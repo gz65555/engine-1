@@ -7,8 +7,8 @@ import {
   TypedArray,
   Utils,
   VertexElementFormat
-} from "@galacean/engine-core";
-import { Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { BufferDataRestoreInfo, RestoreDataAccessor } from "../GLTFContentRestorer";
 import {
   AccessorComponentType,
@@ -126,7 +126,7 @@ export class GLTFUtils {
       case AccessorComponentType.UNSIGNED_SHORT:
         return 1 / 65535;
       default:
-        throw new Error("Galacean.GLTFLoader: Unsupported normalized accessor component type.");
+        throw new Error("Oasishub.GLTFLoader: Unsupported normalized accessor component type.");
     }
   }
 

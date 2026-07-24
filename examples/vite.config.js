@@ -66,22 +66,19 @@ export default {
     port: 3000
   },
   resolve: {
-    dedupe: ["@galacean/engine"]
+    dedupe: ["@oasishub/engine"]
   },
   optimizeDeps: {
     exclude: [
-      "@galacean/engine",
-      "@galacean/engine-physics-physx",
-      "@galacean/engine-physics-lite",
-      "@galacean/engine-draco",
-      "@galacean/engine-lottie",
-      "@galacean/engine-spine",
-      "@galacean/engine-shaderlab",
-      "@galacean/engine-shader",
-      "@galacean/engine-ui",
-      "@galacean/engine-xr",
-      "@galacean/engine-xr-webxr",
-      "@galacean/tools-baker"
+      "@oasishub/engine",
+      "@oasishub/engine-physics-physx",
+      "@oasishub/engine-physics-lite",
+      "@oasishub/engine-draco",
+      "@oasishub/engine-lottie",
+      "@oasishub/engine-spine",
+      "@oasishub/engine-xr",
+      "@oasishub/engine-xr-webxr",
+      "@oasishub/tools-baker"
     ]
   },
   build: {

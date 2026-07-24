@@ -11,7 +11,7 @@ describe("Polyfill", () => {
       expect("actualBoundingBoxLeft" in TextMetrics.prototype).to.be.false;
       expect("actualBoundingBoxRight" in TextMetrics.prototype).to.be.false;
 
-      await import("@galacean/engine-core");
+      await import("@oasishub/engine-core");
 
       expect("actualBoundingBoxLeft" in TextMetrics.prototype).to.be.true;
       expect("actualBoundingBoxRight" in TextMetrics.prototype).to.be.true;

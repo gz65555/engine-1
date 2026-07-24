@@ -1,4 +1,4 @@
-import { AssetPromise, RequestConfig, Utils } from "@galacean/engine-core";
+import { AssetPromise, RequestConfig, Utils } from "@oasishub/engine-core";
 import { BufferRequestInfo } from "../../GLTFContentRestorer";
 import type { IBuffer } from "../GLTFSchema";
 import { GLTFParser } from "./GLTFParser";

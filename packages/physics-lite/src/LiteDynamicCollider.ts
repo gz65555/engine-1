@@ -1,6 +1,6 @@
 import { LiteCollider } from "./LiteCollider";
-import { IDynamicCollider } from "@galacean/engine-design";
-import { Logger, Quaternion, Vector3 } from "@galacean/engine";
+import { IDynamicCollider } from "@oasishub/engine-design";
+import { Logger, Quaternion, Vector3 } from "@oasishub/engine";
 import { LitePhysics } from "./LitePhysics";
 
 /**

@@ -1,4 +1,4 @@
-import { CurveKey, ParticleCompositeCurve, ParticleCurve, ParticleCurveMode } from "@galacean/engine-core";
+import { CurveKey, ParticleCompositeCurve, ParticleCurve, ParticleCurveMode } from "@oasishub/engine-core";
 import { describe, expect, it } from "vitest";
 
 describe("ParticleCurve tests", () => {

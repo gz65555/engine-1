@@ -1,4 +1,4 @@
-import { GLCapabilityType } from "@galacean/engine-core";
+import { GLCapabilityType } from "@oasishub/engine-core";
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
 import { GLCompressedTextureInternalFormat } from "./type";
 

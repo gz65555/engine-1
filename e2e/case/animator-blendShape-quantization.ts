@@ -12,7 +12,7 @@ import {
   SkinnedMeshRenderer,
   Vector3,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 WebGLEngine.create({

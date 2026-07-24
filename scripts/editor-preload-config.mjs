@@ -1,61 +1,61 @@
 export default {
   firstParty: [
     {
-      name: "@galacean/engine-xr",
+      name: "@oasishub/engine-xr",
       path: "packages/xr"
     },
     {
-      name: "@galacean/engine-xr-webxr",
+      name: "@oasishub/engine-xr-webxr",
       path: "packages/xr-webxr"
     },
     {
-      name: "@galacean/engine-ui",
+      name: "@oasishub/engine-ui",
       path: "packages/ui"
     },
     {
-      name: "@galacean/engine-physics-lite",
+      name: "@oasishub/engine-physics-lite",
       path: "packages/physics-lite"
     },
     {
-      name: "@galacean/engine-physics-physx",
+      name: "@oasishub/engine-physics-physx",
       path: "packages/physics-physx"
     },
     {
-      name: "@galacean/engine-shaderlab",
+      name: "@oasishub/engine-shaderlab",
       path: "packages/shader-lab"
     },
     {
-      name: "@galacean/engine-shader",
+      name: "@oasishub/engine-shader",
       path: "packages/shader"
     }
   ],
 
   secondParty: [
     {
-      name: "@galacean/engine-toolkit",
-      repo: "https://github.com/galacean/engine-toolkit.git",
+      name: "@oasishub/engine-toolkit",
+      repo: "https://github.com/oasishub/engine-toolkit.git",
       isMonorepo: true,
       buildCommand: "pnpm b:all",
       packages: [
         {
-          name: "@galacean/engine-toolkit",
-          packagePath: "packages/galacean-engine-toolkit"
+          name: "@oasishub/engine-toolkit",
+          packagePath: "packages/oasishub-engine-toolkit"
         },
         {
-          name: "@galacean/engine-toolkit-xr",
+          name: "@oasishub/engine-toolkit-xr",
           packagePath: "packages/xr"
         }
       ]
     },
     {
-      name: "@galacean/engine-lottie",
-      repo: "https://github.com/galacean/engine-lottie.git",
+      name: "@oasishub/engine-lottie",
+      repo: "https://github.com/oasishub/engine-lottie.git",
       packagePath: ".",
       buildCommand: "pnpm build"
     },
     {
-      name: "@galacean/engine-spine",
-      repo: "https://github.com/galacean/engine-spine.git",
+      name: "@oasishub/engine-spine",
+      repo: "https://github.com/oasishub/engine-spine.git",
       branch: "4.2",
       packagePath: ".",
       buildCommand: "pnpm build"

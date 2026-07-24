@@ -15,9 +15,9 @@ import {
   SphereColliderShape,
   Transform,
   Vector3
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
-// Adapted from @galacean/engine-toolkit auxiliary-lines/custom-material 1.6.0 (MIT).
+// Adapted from @oasishub/engine-toolkit auxiliary-lines/custom-material 1.6.0 (MIT).
 class PlainColorMaterial extends BaseMaterial {
   get baseColor(): Color {
     return this.shaderData.getColor(PlainColorMaterial._baseColorProp);

@@ -1,5 +1,5 @@
-import { ParticleGradient, GradientColorKey, GradientAlphaKey } from "@galacean/engine-core";
-import { Color } from "@galacean/engine-math";
+import { ParticleGradient, GradientColorKey, GradientAlphaKey } from "@oasishub/engine-core";
+import { Color } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("ParticleGradient tests", () => {

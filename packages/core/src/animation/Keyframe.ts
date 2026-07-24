@@ -1,4 +1,4 @@
-import { Color, Quaternion, Rect, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { Color, Quaternion, Rect, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { ReferResource } from "../asset/ReferResource";
 
 /**

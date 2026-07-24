@@ -1,4 +1,4 @@
-import { Rand, Vector3, Vector4 } from "@galacean/engine-math";
+import { Rand, Vector3, Vector4 } from "@oasishub/engine-math";
 import { TypedArray } from "../../../base";
 import { ignoreClone } from "../../../clone/CloneManager";
 import { Entity } from "../../../Entity";

@@ -1,4 +1,4 @@
-import { MathUtil, Matrix, Matrix3x3, Quaternion, Vector3 } from "@galacean/engine-math";
+import { MathUtil, Matrix, Matrix3x3, Quaternion, Vector3 } from "@oasishub/engine-math";
 import { BoolUpdateFlag } from "./BoolUpdateFlag";
 import { Component } from "./Component";
 import { Entity } from "./Entity";

@@ -8,9 +8,9 @@ import {
   Scene,
   TextRenderer,
   TextUtils
-} from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 describe("TextUtils", () => {

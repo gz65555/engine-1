@@ -1,13 +1,12 @@
 {
-  "name": "@galacean/engine-root",
+  "name": "@oasishub/engine-root",
   "version": "1.6.13",
   "private": true,
-  "repository": "git@github.com:galacean/runtime.git",
   "scripts": {
     "test": "vitest",
     "coverage": "vitest --coverage --browser.headless",
     "browsers:install": "playwright install --with-deps chromium",
-    "examples": "pnpm --filter @galacean/engine-examples dev",
+    "examples": "pnpm --filter @oasishub/engine-examples dev",
     "build": "pnpm b:esm && pnpm b:types && pnpm b:examples",
     "lint": "oxlint --quiet packages/*/src",
     "lint:fix": "oxlint --fix --quiet packages/*/src",

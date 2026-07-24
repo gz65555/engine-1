@@ -20,7 +20,7 @@ import {
   VertexElement,
   VertexElementFormat,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
 // Create engine
 WebGLEngine.create({ canvas: "canvas" }).then((engine) => {

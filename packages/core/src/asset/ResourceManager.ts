@@ -1,4 +1,4 @@
-import { IClone } from "@galacean/engine-design";
+import { IClone } from "@oasishub/engine-design";
 import { ContentRestorer, Engine, EngineObject, Logger, Utils } from "..";
 import { AssetPromise } from "./AssetPromise";
 import { GraphicsResource } from "./GraphicsResource";

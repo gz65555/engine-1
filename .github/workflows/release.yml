@@ -52,7 +52,7 @@ jobs:
         run: ./scripts/build-official-preload.mjs
 
       - name: Release engine packages and Sync to CDN
-        uses: galacean/publish@main
+        uses: oasishub/publish@main
         if: success() || failure()
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -63,7 +63,7 @@ jobs:
 
       - name: Release official preload package and Sync to CDN
         if: ${{ github.event.inputs.build_official_preload == '' || github.event.inputs.build_official_preload == 'true' }}
-        uses: galacean/publish@main
+        uses: oasishub/publish@main
         with:
           publish: false
           packages: |

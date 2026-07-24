@@ -2,7 +2,7 @@
 title: Shader Introduction
 ---
 
-ShaderLab is a proprietary shader description language developed by Galacean. It provides a complete syntax for defining the structure, properties, rendering states, and shader code of a shader. With ShaderLab, developers can create a wide range of visual effects, from simple to complex.
+ShaderLab is a proprietary shader description language developed by Oasishub. It provides a complete syntax for defining the structure, properties, rendering states, and shader code of a shader. With ShaderLab, developers can create a wide range of visual effects, from simple to complex.
 
 ## What is ShaderLab?
 
@@ -247,7 +247,7 @@ Each `Pass` can set rendering states, such as transparency and depth writing.
 
 ### 1. Type
 
-The rendering state variables are consistent with the engine's enumeration types. For example, `BlendOperation.Add` corresponds to the engine's [API](/apis/galacean/#BlendOperation). #### 1.1 BlendState - Blending State
+The rendering state variables are consistent with the engine's enumeration types. For example, `BlendOperation.Add` corresponds to the engine's [API](/apis/oasishub/#BlendOperation). #### 1.1 BlendState - Blending State
 
 ```glsl showLineNumbers
 BlendState {
@@ -375,7 +375,7 @@ Include code snippets using the `#include` directive:
 The framework provides many built-in code snippets; developers can register them directly for use:
 
 ```ts showLineNumbers {4} filename="Typescript"
-import { registerIncludes } from "@galacean/engine-shader";
+import { registerIncludes } from "@oasishub/engine-shader";
 
 // Register the built-in ShaderLab code snippets.
 registerIncludes();
@@ -385,7 +385,7 @@ For custom snippets, you can register them manually through an interface...
 
 Dynamic Registration:
 ```ts
-import { ShaderFactory } from '@galacean/engine';
+import { ShaderFactory } from '@oasishub/engine';
 
 const shaderSource = `{{Your shader code}}`;
 ShaderFactory.registerInclude('YourKey', shaderSource);
@@ -397,7 +397,7 @@ ShaderFactory.registerInclude('YourKey', shaderSource);
 `UIScript` is one of the core features of `ShaderLab`, allowing you to implement intelligent property panel interactions via TypeScript scripts, including setting macro switches and rendering states:
 
 ```ts showLineNumbers {}
-import { ShaderUIScript, Material } from "@galacean/engine";
+import { ShaderUIScript, Material } from "@oasishub/engine";
 
 export default class MyShaderScript extends ShaderUIScript {
 constructor() {

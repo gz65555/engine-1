@@ -17,11 +17,11 @@ import {
   StateMachineScript,
   Transform,
   WrapMode
-} from "@galacean/engine-core";
-import "@galacean/engine-loader";
-import type { GLTFResource } from "@galacean/engine-loader";
-import { Quaternion } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import "@oasishub/engine-loader";
+import type { GLTFResource } from "@oasishub/engine-loader";
+import { Quaternion } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { glbResource } from "./model/fox";
 const canvasDOM = document.createElement("canvas");

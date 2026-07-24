@@ -1,4 +1,4 @@
-import { MathUtil, Matrix } from "@galacean/engine-math";
+import { MathUtil, Matrix } from "@oasishub/engine-math";
 import { RenderContext } from "../RenderPipeline/RenderContext";
 import { Logger } from "../base/Logger";
 import { Mesh } from "../graphic/Mesh";

@@ -9,8 +9,8 @@ import {
   ModelMesh,
   Skin,
   SkinnedMeshRenderer
-} from "@galacean/engine-core";
-import { BoundingBox, Matrix } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { BoundingBox, Matrix } from "@oasishub/engine-math";
 import { GLTFResource } from "../GLTFResource";
 import { CameraType, ICamera, INode } from "../GLTFSchema";
 import { GLTFParser } from "./GLTFParser";

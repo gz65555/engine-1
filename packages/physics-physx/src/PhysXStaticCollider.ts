@@ -1,5 +1,5 @@
-import { IStaticCollider } from "@galacean/engine-design";
-import { Quaternion, Vector3 } from "@galacean/engine";
+import { IStaticCollider } from "@oasishub/engine-design";
+import { Quaternion, Vector3 } from "@oasishub/engine";
 import { PhysXCollider } from "./PhysXCollider";
 import { PhysXPhysics } from "./PhysXPhysics";
 

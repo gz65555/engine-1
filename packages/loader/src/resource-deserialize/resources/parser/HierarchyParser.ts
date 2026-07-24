@@ -1,4 +1,4 @@
-import { Component, Engine, Entity, Loader, Scene, Transform } from "@galacean/engine-core";
+import { Component, Engine, Entity, Loader, Scene, Transform } from "@oasishub/engine-core";
 import { GLTFResource } from "../../../gltf";
 import { PrefabResource } from "../../../prefab/PrefabResource";
 import type { IEntity, IHierarchyFile, IRefEntity, IStrippedEntity } from "../schema";

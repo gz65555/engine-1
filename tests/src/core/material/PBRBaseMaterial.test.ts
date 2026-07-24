@@ -1,6 +1,6 @@
-import { Color, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { PBRMaterial, Texture2D } from "@galacean/engine-core";
+import { Color, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { PBRMaterial, Texture2D } from "@oasishub/engine-core";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("PBRBaseMaterial", () => {

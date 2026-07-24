@@ -1,4 +1,4 @@
-import { Color, Rand, Vector4 } from "@galacean/engine-math";
+import { Color, Rand, Vector4 } from "@oasishub/engine-math";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 import { ShaderData } from "../../shader/ShaderData";
 import { ShaderMacro } from "../../shader/ShaderMacro";

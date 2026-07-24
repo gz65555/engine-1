@@ -1,4 +1,4 @@
-import { BoundingSphere, Matrix, Plane, Vector3 } from "@galacean/engine-math";
+import { BoundingSphere, Matrix, Plane, Vector3 } from "@oasishub/engine-math";
 import { VirtualCamera } from "../VirtualCamera";
 
 /**

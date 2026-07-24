@@ -42,7 +42,7 @@ if (useNpm) {
   fs.mkdirSync(tempDir, { recursive: true });
   fs.writeFileSync(
     path.join(tempDir, "package.json"),
-    `${JSON.stringify({ name: "galacean-preload-temp", private: true, dependencies }, null, 2)}\n`
+    `${JSON.stringify({ name: "oasishub-preload-temp", private: true, dependencies }, null, 2)}\n`
   );
   execFileSync("npm", ["install", "--legacy-peer-deps"], { stdio: "inherit", cwd: tempDir });
 
@@ -62,7 +62,7 @@ if (useNpm) {
       execFileSync("git", cloneArgs, { stdio: "inherit" });
     }
 
-    execFileSync("pnpm", ["link", "../packages/galacean"], { stdio: "inherit", cwd: repoDir });
+    execFileSync("pnpm", ["link", "../packages/oasishub"], { stdio: "inherit", cwd: repoDir });
     execFileSync("pnpm", ["install"], { stdio: "inherit", cwd: repoDir });
     const [buildCommand, ...buildArgs] = pkg.buildCommand.split(" ");
     execFileSync(buildCommand, buildArgs, { stdio: "inherit", cwd: repoDir });
@@ -78,9 +78,9 @@ if (useNpm) {
 }
 
 const packageJson = {
-  name: "@galacean/editor-preload-ecosystem",
+  name: "@oasishub/editor-preload-ecosystem",
   version: ecosystemVersion,
-  description: "ESM ecosystem packages preloaded for Galacean Editor",
+  description: "ESM ecosystem packages preloaded for Oasishub Editor",
   type: "module",
   exports: {
     ".": {
@@ -90,13 +90,13 @@ const packageJson = {
   },
   files: ["dist"],
   peerDependencies: {
-    "@galacean/engine": rootPackageJson.version
+    "@oasishub/engine": rootPackageJson.version
   }
 };
 
 writePackageManifest(outputDir, packageJson);
 
-const firstPartyNames = new Set(["@galacean/engine", ...config.firstParty.map((pkg) => pkg.name)]);
+const firstPartyNames = new Set(["@oasishub/engine", ...config.firstParty.map((pkg) => pkg.name)]);
 await bundlePreload({
   entries,
   outputFile,

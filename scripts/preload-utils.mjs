@@ -19,7 +19,7 @@ export function readPackageEntry(packageDir) {
 }
 
 export async function bundlePreload({ entries, outputFile, external }) {
-  const virtualId = "\0galacean-preload-entry";
+  const virtualId = "\0oasishub-preload-entry";
   const bundle = await rolldown({
     input: virtualId,
     external,
@@ -28,7 +28,7 @@ export async function bundlePreload({ entries, outputFile, external }) {
     },
     plugins: [
       {
-        name: "galacean-preload-entry",
+        name: "oasishub-preload-entry",
         resolveId(id) {
           if (id === virtualId) {
             return virtualId;

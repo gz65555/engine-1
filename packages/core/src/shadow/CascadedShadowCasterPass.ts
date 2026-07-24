@@ -1,4 +1,4 @@
-import { Color, MathUtil, Matrix, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { Color, MathUtil, Matrix, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { Camera } from "../Camera";
 import { PipelinePass } from "../RenderPipeline/PipelinePass";
 import { PipelineUtils } from "../RenderPipeline/PipelineUtils";

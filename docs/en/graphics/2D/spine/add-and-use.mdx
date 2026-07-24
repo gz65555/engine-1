@@ -35,8 +35,8 @@ If you want to dynamically load Spine animations or perform advanced operations 
 ### Dynamic Creation
 Spine assets can be loaded and animations created at runtime via scripts. Recommended workflow:
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -69,8 +69,8 @@ The `AnimationState` object enables more complex animation operations.
 
 To access the `AnimationState` object in scripts:
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -111,8 +111,8 @@ state.setAnimation(1, 'shoot', true);
 #### **Animation Transitions**
 Calling `setAnimation` immediately switches the current track's animation. For transitions between animations, set a transition duration using [AnimationStateData](https://zh.esotericsoftware.com/spine-api-reference#AnimationStateData):
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 

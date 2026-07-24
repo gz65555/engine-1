@@ -1,4 +1,4 @@
-import { Vector3 } from "@galacean/engine-math";
+import { Vector3 } from "@oasishub/engine-math";
 import { IXRTracked } from "../IXRTracked";
 
 export interface IXRTrackedPlane extends IXRTracked {

@@ -7,7 +7,7 @@ import {
   ShadowCascadesMode,
   ShadowResolution,
   TonemappingMode
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import type { IAssetRef, IColor, IHierarchyFile, IVector3 } from "./BasicSchema";
 
 export enum SpecularMode {

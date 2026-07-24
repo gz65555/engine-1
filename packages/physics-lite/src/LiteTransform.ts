@@ -1,4 +1,4 @@
-import { MathUtil, Matrix, Quaternion, Vector3 } from "@galacean/engine";
+import { MathUtil, Matrix, Quaternion, Vector3 } from "@oasishub/engine";
 import { LiteCollider } from "./LiteCollider";
 import { LiteUpdateFlag } from "./LiteUpdateFlag";
 import { LiteUpdateFlagManager } from "./LiteUpdateFlagManager";

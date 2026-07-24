@@ -1,5 +1,5 @@
-import { Logger, PBRMaterial, Texture2D } from "@galacean/engine-core";
-import { Color } from "@galacean/engine-math";
+import { Logger, PBRMaterial, Texture2D } from "@oasishub/engine-core";
+import { Color } from "@oasishub/engine-math";
 import { GLTFMaterialParser } from "../parser/GLTFMaterialParser";
 import { registerGLTFExtension } from "../parser/GLTFParser";
 import { GLTFParserContext, GLTFParserType } from "../parser/GLTFParserContext";

@@ -1,6 +1,6 @@
-import { IColliderShape } from "@galacean/engine-design";
+import { IColliderShape } from "@oasishub/engine-design";
 import { PhysicsMaterial } from "../PhysicsMaterial";
-import { Vector3 } from "@galacean/engine-math";
+import { Vector3 } from "@oasishub/engine-math";
 import { Collider } from "../Collider";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 import { ICustomClone } from "../../clone/ComponentCloner";

@@ -1,5 +1,5 @@
-import { AssetPromise, BlendShape, Engine, ModelMesh } from "@galacean/engine-core";
-import { Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { AssetPromise, BlendShape, Engine, ModelMesh } from "@oasishub/engine-core";
+import { Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import type { BufferReader } from "../../utils/BufferReader";
 import { decoder } from "../../utils/Decorator";
 import type { IEncodedModelMesh } from "./IModelMesh";

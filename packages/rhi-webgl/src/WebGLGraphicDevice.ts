@@ -21,9 +21,9 @@ import {
   TextureCube,
   TextureCubeFace,
   TextureFormat
-} from "@galacean/engine-core";
-import { IHardwareRenderer, IPlatformPrimitive, IPlatformShaderProgram } from "@galacean/engine-design";
-import { Color, Vector4 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { IHardwareRenderer, IPlatformPrimitive, IPlatformShaderProgram } from "@oasishub/engine-design";
+import { Color, Vector4 } from "@oasishub/engine-math";
 import { GLBuffer } from "./GLBuffer";
 import { GLCapability } from "./GLCapability";
 import { GLExtensions } from "./GLExtensions";

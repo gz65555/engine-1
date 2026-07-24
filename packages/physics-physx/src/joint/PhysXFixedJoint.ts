@@ -1,4 +1,4 @@
-import { IFixedJoint } from "@galacean/engine-design";
+import { IFixedJoint } from "@oasishub/engine-design";
 import { PhysXCollider } from "../PhysXCollider";
 import { PhysXPhysics } from "../PhysXPhysics";
 import { PhysXJoint } from "./PhysXJoint";

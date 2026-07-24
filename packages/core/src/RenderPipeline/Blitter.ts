@@ -1,4 +1,4 @@
-import { Vector4 } from "@galacean/engine-math";
+import { Vector4 } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { Material } from "../material";
 import { ShaderProperty } from "../shader";

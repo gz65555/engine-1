@@ -14,7 +14,7 @@ import {
   Vector3,
   WebGLEngine,
   WebGLMode
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { OrbitControl } from "./controls/OrbitControl";
 
 async function main() {

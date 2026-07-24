@@ -27,7 +27,7 @@ async function waitForServer(url: string, timeout: number = 120000): Promise<voi
 }
 
 export default async function globalSetup() {
-  console.log("🚀 Galacean Engine E2E Test Setup");
+  console.log("🚀 Oasishub Engine E2E Test Setup");
   console.log("📁 Cleaning downloads directory...");
 
   // Clean downloads directory before tests

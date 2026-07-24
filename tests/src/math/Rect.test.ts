@@ -1,4 +1,4 @@
-import { Rect } from "@galacean/engine-math";
+import { Rect } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("Rect test", () => {

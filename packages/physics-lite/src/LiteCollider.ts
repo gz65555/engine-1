@@ -1,5 +1,5 @@
-import { ICollider } from "@galacean/engine-design";
-import { Layer, Quaternion, Ray, Vector3 } from "@galacean/engine";
+import { ICollider } from "@oasishub/engine-design";
+import { Layer, Quaternion, Ray, Vector3 } from "@oasishub/engine";
 import { LiteHitResult } from "./LiteHitResult";
 import { LiteColliderShape } from "./shape/LiteColliderShape";
 import { LiteTransform } from "./LiteTransform";
