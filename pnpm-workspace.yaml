@@ -19,7 +19,6 @@ overrides:
 allowBuilds:
   "@parcel/watcher": true
   core-js: true
-  electron: false
   esbuild: true
   msw: true
   odiff-bin: true
