@@ -5,7 +5,7 @@ import {
   IPhysicsManager,
   IShaderLab,
   IXRDevice
-} from "@galacean/engine-design";
+} from "@oasishub/engine-design";
 import { CharRenderInfo } from "./2d/text/CharRenderInfo";
 import { Font } from "./2d/text/Font";
 import { BasicResources } from "./BasicResources";

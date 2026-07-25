@@ -1,4 +1,4 @@
-import { BoundingBox, BoundingSphere, Matrix, Vector3 } from "@galacean/engine-math";
+import { BoundingBox, BoundingSphere, Matrix, Vector3 } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("BoundingBox test", () => {

@@ -1,4 +1,4 @@
-import { Quaternion, Vector3 } from "@galacean/engine";
+import { Quaternion, Vector3 } from "@oasishub/engine";
 import {
   IBoxColliderShape,
   ICapsuleColliderShape,
@@ -15,7 +15,7 @@ import {
   ISphereColliderShape,
   ISpringJoint,
   IStaticCollider
-} from "@galacean/engine-design";
+} from "@oasishub/engine-design";
 import { PhysXCharacterController } from "./PhysXCharacterController";
 import { PhysXCollider } from "./PhysXCollider";
 import { PhysXDynamicCollider } from "./PhysXDynamicCollider";

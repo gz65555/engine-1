@@ -1,4 +1,4 @@
-import { BoundingBox } from "@galacean/engine-math";
+import { BoundingBox } from "@oasishub/engine-math";
 import { Entity } from "../../Entity";
 import { RenderQueueFlags } from "../../RenderPipeline/BasicRenderPipeline";
 import { BatchUtils } from "../../RenderPipeline/BatchUtils";

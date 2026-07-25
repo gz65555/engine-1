@@ -15,8 +15,8 @@ import {
   TextureCubeFace,
   TextureFormat,
   resourceLoader
-} from "@galacean/engine-core";
-import { MathUtil } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { MathUtil } from "@oasishub/engine-math";
 import { ColorModel, DFDTransferFunction, KTX2Container } from "./KTX2Container";
 import { KTX2TargetFormat } from "./KTX2TargetFormat";
 import { TranscodeResult } from "./transcoder/AbstractTranscoder";
@@ -303,7 +303,7 @@ export interface KTX2Params {
   priorityFormats: KTX2TargetFormat[];
 }
 
-declare module "@galacean/engine-core" {
+declare module "@oasishub/engine-core" {
   interface EngineConfiguration {
     /** KTX2 loader options. If set this option and workCount is great than 0, workers will be created. */
     ktx2Loader?: {

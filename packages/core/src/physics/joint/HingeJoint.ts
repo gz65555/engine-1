@@ -1,5 +1,5 @@
-import { IHingeJoint } from "@galacean/engine-design";
-import { Vector3 } from "@galacean/engine-math";
+import { IHingeJoint } from "@oasishub/engine-design";
+import { Vector3 } from "@oasishub/engine-math";
 import { Engine } from "../../Engine";
 import { Collider } from "../Collider";
 import { HingeJointFlag } from "../enums/HingeJointFlag";

@@ -1,4 +1,4 @@
-import { MathUtil, Rand, Vector2, Vector3 } from "@galacean/engine-math";
+import { MathUtil, Rand, Vector2, Vector3 } from "@oasishub/engine-math";
 import { BaseShape } from "./BaseShape";
 import { ShapeUtils } from "./ShapeUtils";
 import { ParticleShapeArcMode } from "./enums/ParticleShapeArcMode";

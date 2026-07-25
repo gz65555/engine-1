@@ -1,4 +1,4 @@
-import { MathUtil, Vector2 } from "@galacean/engine-math";
+import { MathUtil, Vector2 } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 function toString(v: Vector2): string {

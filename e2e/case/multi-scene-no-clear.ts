@@ -17,7 +17,7 @@ import {
   TonemappingEffect,
   WebGLEngine,
   WebGLMode
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 Logger.enable();

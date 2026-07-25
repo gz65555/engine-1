@@ -8,9 +8,9 @@ import {
   SpriteTileMode,
   Texture2D,
   TextureFormat
-} from "@galacean/engine-core";
-import { Color, Rect, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { Color, Rect, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { debug } from "console";
 import { beforeEach, describe, expect, it } from "vitest";
 

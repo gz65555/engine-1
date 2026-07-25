@@ -1,5 +1,5 @@
-import { AssetPromise, Entity, Skin } from "@galacean/engine-core";
-import { Matrix } from "@galacean/engine-math";
+import { AssetPromise, Entity, Skin } from "@oasishub/engine-core";
+import { Matrix } from "@oasishub/engine-math";
 import { GLTFUtils } from "../GLTFUtils";
 import { GLTFParser } from "./GLTFParser";
 import { GLTFParserContext, GLTFParserType, registerGLTFParser } from "./GLTFParserContext";

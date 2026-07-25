@@ -1,4 +1,4 @@
-import { Color } from "@galacean/engine-math";
+import { Color } from "@oasishub/engine-math";
 import { Shader, ShaderMacro, ShaderPass, ShaderProperty } from "../../shader";
 import blitVs from "../../shaderlib/extra/Blit.vs.glsl";
 

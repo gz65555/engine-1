@@ -12,7 +12,7 @@ import {
   AnimatorConditionMode,
   AnimatorControllerParameterValue,
   WrapMode
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 @resourceLoader(AssetType.AnimatorController, ["json"], false)
 class AnimatorControllerLoader extends Loader<AnimatorController> {

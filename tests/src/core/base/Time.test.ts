@@ -1,4 +1,4 @@
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("Time", function () {

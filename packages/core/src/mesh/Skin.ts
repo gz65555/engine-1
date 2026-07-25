@@ -1,4 +1,4 @@
-import { Matrix } from "@galacean/engine-math";
+import { Matrix } from "@oasishub/engine-math";
 import { Entity } from "../Entity";
 import { UpdateFlagManager } from "../UpdateFlagManager";
 import { Utils } from "../Utils";

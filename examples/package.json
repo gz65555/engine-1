@@ -1,5 +1,5 @@
 {
-  "name": "@galacean/engine-examples",
+  "name": "@oasishub/engine-examples",
   "version": "1.6.13",
   "private": true,
   "license": "MIT",
@@ -10,9 +10,7 @@
     "dev": "vite serve . --config vite.config.js"
   },
   "devDependencies": {
-    "@galacean/engine": "workspace:*",
-    "@galacean/engine-shader": "workspace:*",
-    "@galacean/engine-shaderlab": "workspace:*",
+    "@oasishub/engine": "workspace:*",
     "dat.gui": "catalog:",
     "vite": "catalog:"
   },

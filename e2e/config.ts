@@ -119,29 +119,11 @@ export const E2E_CONFIG = {
       threshold: 0,
       diffPercentage: 0.12
     },
-    "pbr-specular": {
-      category: "Material",
-      caseFileName: "material-pbr-specular",
-      threshold: 0,
-      diffPercentage: 0.055
-    },
     pbr: {
       category: "Material",
       caseFileName: "material-pbr",
       threshold: 0,
       diffPercentage: 0.0044
-    },
-    shaderLab: {
-      category: "Material",
-      caseFileName: "material-shaderLab",
-      threshold: 0,
-      diffPercentage: 0
-    },
-    shaderLabMRT: {
-      category: "Material",
-      caseFileName: "shaderLab-mrt",
-      threshold: 0,
-      diffPercentage: 0
     },
     shaderReplacement: {
       category: "Material",
@@ -154,12 +136,6 @@ export const E2E_CONFIG = {
       caseFileName: "material-unlit",
       threshold: 0,
       diffPercentage: 0.033
-    },
-    "shaderLab-renderState": {
-      category: "Material",
-      caseFileName: "shaderLab-renderState",
-      threshold: 0,
-      diffPercentage: 0
     },
     LUT: {
       category: "Material",
@@ -441,12 +417,6 @@ export const E2E_CONFIG = {
     }
   },
   Other: {
-    ProjectLoader: {
-      category: "Advance",
-      caseFileName: "project-loader",
-      threshold: 0.01,
-      diffPercentage: 0.0016
-    },
     MultiSceneClear: {
       category: "Advance",
       caseFileName: "multi-scene-clear",

@@ -2,7 +2,7 @@
  * Module for glTF 2.0 Interface
  */
 
-import type { MeshTopology, TextureFilterMode, TextureWrapMode as EngineTextureWrapMode } from "@galacean/engine-core";
+import type { MeshTopology, TextureFilterMode, TextureWrapMode as EngineTextureWrapMode } from "@oasishub/engine-core";
 
 /**
  * The datatype of the components in the attribute

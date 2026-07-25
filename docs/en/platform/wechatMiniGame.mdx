@@ -44,7 +44,7 @@ After selecting the WeChat Mini Game platform, click the download button at the 
 | game.ts           | Entry file where all initialization logic is placed |
 | package.json      | Mainly stores project dependencies |
 | project.config.json | Corresponds to the [project.config.json](https://developers.weixin.qq.com/minigame/dev/devtools/projectconfig.html) required for the WeChat Mini Game project |
-| project.ts        | Galacean project file, containing initialization-related information |
+| project.ts        | Oasishub project file, containing initialization-related information |
 
 2. After exporting the project locally, navigate to the root directory and run the following command to install dependencies:
 
@@ -87,9 +87,9 @@ After running this command, the output compared to `dev` will remove the source 
 
 As mini-games become increasingly complex with more content, the package size grows, affecting loading speed. WeChat Mini Games provide a subpackage feature that splits the game content into a main package and subpackages according to rules. The main package contains resources necessary for the initial launch, while subpackages are loaded as needed, allowing users to quickly enter the game.
 
-### Subpackage Configuration in Galacean Editor
+### Subpackage Configuration in Oasishub Editor
 
-In the Galacean editor, folders are the unit for subpackage division. Content not in subpackages will go into the main package. When exporting the mini-game, add subpackages in the subpackage list of the export panel and associate them with folders to complete the subpackage configuration.
+In the Oasishub editor, folders are the unit for subpackage division. Content not in subpackages will go into the main package. When exporting the mini-game, add subpackages in the subpackage list of the export panel and associate them with folders to complete the subpackage configuration.
 
 ### Subpackage Configuration Steps
 

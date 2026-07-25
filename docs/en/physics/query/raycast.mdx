@@ -57,8 +57,8 @@ Using raycasting requires the following steps:
 ### Example 1: Basic Raycasting
 
 ```typescript
-import { WebGLEngine, HitResult, Ray, Vector3, Vector2 } from "@galacean/engine";
-import { LitePhysics } from "@galacean/engine-physics-lite";
+import { WebGLEngine, HitResult, Ray, Vector3, Vector2 } from "@oasishub/engine";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 
 const engine = await WebGLEngine.create({
   canvas: "canvas",
@@ -260,7 +260,7 @@ It's recommended to use [InputManager](/en/docs/input/input/) for handling input
 ### Method 1: Handling Input Events in Scripts
 
 ```typescript
-import { Script, PointerEventData, Ray, HitResult, Layer } from "@galacean/engine";
+import { Script, PointerEventData, Ray, HitResult, Layer } from "@oasishub/engine";
 
 export class ClickDetectionScript extends Script {
   onPointerUp(eventData: PointerEventData): void {
@@ -286,7 +286,7 @@ export class ClickDetectionScript extends Script {
 ### Method 2: Polling InputManager State
 
 ```typescript
-import { Script, PointerButton, Ray, HitResult, Layer, Vector2 } from "@galacean/engine";
+import { Script, PointerButton, Ray, HitResult, Layer, Vector2 } from "@oasishub/engine";
 
 export class InputPollingScript extends Script {
   onUpdate(): void {

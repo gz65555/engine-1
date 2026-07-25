@@ -14,11 +14,11 @@ import {
   SphereColliderShape,
   StaticCollider,
   OverlapHitResult
-} from "@galacean/engine-core";
-import { Ray, Vector3, Quaternion } from "@galacean/engine-math";
-import { LitePhysics } from "@galacean/engine-physics-lite";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { Ray, Vector3, Quaternion } from "@oasishub/engine-math";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { vi, describe, beforeAll, expect, it, afterEach } from "vitest";
 
 class CollisionTestScript extends Script {

@@ -11,12 +11,12 @@ import {
   Scene,
   SkyBoxMaterial,
   SpotLight
-} from "@galacean/engine-core";
-import "@galacean/engine-loader";
-import { Color, SphericalHarmonics3, Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import "@oasishub/engine-loader";
+import { Color, SphericalHarmonics3, Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 
-import { ShadowType } from "@galacean/engine-core";
+import { ShadowType } from "@oasishub/engine-core";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { lightResource } from "./model/ambientLight";
 

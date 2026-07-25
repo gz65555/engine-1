@@ -1,4 +1,4 @@
-import { Color } from "@galacean/engine-math";
+import { Color } from "@oasishub/engine-math";
 import { deepClone, ignoreClone } from "../../clone/CloneManager";
 
 /**

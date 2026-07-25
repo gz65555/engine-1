@@ -9,7 +9,7 @@ import {
   Vector2,
   Vector3,
   Vector4
-} from "@galacean/engine-math";
+} from "@oasishub/engine-math";
 import { Camera } from "../Camera";
 import { RenderContext } from "../RenderPipeline/RenderContext";
 import { Renderer } from "../Renderer";

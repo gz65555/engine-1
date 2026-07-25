@@ -1,5 +1,5 @@
-import { IJoint } from "@galacean/engine-design";
-import { Matrix, Quaternion, Vector3 } from "@galacean/engine-math";
+import { IJoint } from "@oasishub/engine-design";
+import { Matrix, Quaternion, Vector3 } from "@oasishub/engine-math";
 import { Component } from "../../Component";
 import { DependentMode, dependentComponents } from "../../ComponentsDependencies";
 import { Entity } from "../../Entity";

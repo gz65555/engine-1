@@ -1,4 +1,4 @@
-import { Engine, Entity, ReferResource } from "@galacean/engine-core";
+import { Engine, Entity, ReferResource } from "@oasishub/engine-core";
 
 /**
  * The Prefab resource.

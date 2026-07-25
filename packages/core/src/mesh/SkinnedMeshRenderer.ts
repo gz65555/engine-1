@@ -1,4 +1,4 @@
-import { BoundingBox, Vector2 } from "@galacean/engine-math";
+import { BoundingBox, Vector2 } from "@oasishub/engine-math";
 import { Entity } from "../Entity";
 import { RenderContext } from "../RenderPipeline/RenderContext";
 import { RendererUpdateFlags } from "../Renderer";

@@ -2,7 +2,7 @@
  * @title Unlit Material
  * @category Material
  */
-import { Camera, GLTFResource, Vector3, WebGLEngine, Logger } from "@galacean/engine";
+import { Camera, GLTFResource, Vector3, WebGLEngine, Logger } from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 Logger.enable();
 

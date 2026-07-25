@@ -10,8 +10,8 @@ import {
   MeshRenderer,
   VertexElement,
   VertexElementFormat
-} from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("BufferMesh", () => {

@@ -8,7 +8,7 @@ import {
   // @ts-ignore
   ShaderLib,
   Utils
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 @resourceLoader("ShaderChunk", ["glsl"])
 export class ShaderChunkLoader extends Loader<void[]> {

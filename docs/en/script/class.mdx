@@ -11,7 +11,7 @@ Scripts are the bridge between engine capabilities and game logic. They can be u
 - Conveniently obtaining node instances and component instances
 - Following the disable and destroy rules of components
 
-Additionally, it provides a rich set of lifecycle callback functions. As long as specific callback functions are overridden in the script, you don't need to manually call them; Galacean will automatically execute the relevant scripts at specific times.
+Additionally, it provides a rich set of lifecycle callback functions. As long as specific callback functions are overridden in the script, you don't need to manually call them; Oasishub will automatically execute the relevant scripts at specific times.
 
 ## Script Lifecycle
 
@@ -56,7 +56,7 @@ onUpdate() {
 }
 ```
 
-It is important to note that Galacean executes the `onStart` callbacks in bulk before executing the `onUpdate` callbacks in bulk. The benefit of this approach is that you can access the initialized values of other entities in `onUpdate`.
+It is important to note that Oasishub executes the `onStart` callbacks in bulk before executing the `onUpdate` callbacks in bulk. The benefit of this approach is that you can access the initialized values of other entities in `onUpdate`.
 
 ```typescript
 import { TheScript } from './TheScript'

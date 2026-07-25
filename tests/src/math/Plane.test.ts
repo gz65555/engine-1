@@ -1,4 +1,4 @@
-import { Plane, Vector3 } from "@galacean/engine-math";
+import { Plane, Vector3 } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("Plane test", () => {

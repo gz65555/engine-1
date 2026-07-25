@@ -26,13 +26,13 @@ const engine = await WebGLEngine.create({
 });
 ```
 
-Below is a description of the [configuration](/apis/galacean/#WebGLEngineConfiguration) types passed when creating the engine:
+Below is a description of the [configuration](/apis/oasishub/#WebGLEngineConfiguration) types passed when creating the engine:
 
 | Configuration                                                  | Description                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | canvas                                                       | Can be a canvas ID (`string`) or a canvas object (`HTMLCanvasElement | OffscreenCanvas`) |
-| [graphicDeviceOptions](/apis/galacean/#WebGLGraphicDeviceOptions) | Configuration related to the graphics device, e.g., `webGLMode` can control WebGL1/2. Properties other than `webGLMode` will be passed to the context, more details can be found in [getContext parameters explanation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext#parameters). |
-| [colorSpace](/apis/galacean/#ColorSpace)                     | Color space, `ColorSpace.Gamma` or `ColorSpace.Linear`.        |
+| [graphicDeviceOptions](/apis/oasishub/#WebGLGraphicDeviceOptions) | Configuration related to the graphics device, e.g., `webGLMode` can control WebGL1/2. Properties other than `webGLMode` will be passed to the context, more details can be found in [getContext parameters explanation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext#parameters). |
+| [colorSpace](/apis/oasishub/#ColorSpace)                     | Color space, `ColorSpace.Gamma` or `ColorSpace.Linear`.        |
 | gltf                                                         | GLTF Loader configuration, `workerCount` is used to configure the number of workers for meshOpt: `{ meshOpt: { workerCount: number } }`. |
 | ktx2Loader                                                   | KTX2 Loader configuration, `workerCount` is used to configure the number of workers for the ktx2 decoder: `{ priorityFormats: Array<KTX2TargetFormat>; transcoder: KTX2Transcoder; workerCount: number }`. If workerCount is greater than 0, worker threads will be created; if it equals 0, only the main thread will be used. |
 
@@ -45,7 +45,7 @@ For more related configuration information, please refer to [Physics System](/en
 | [time](/apis/core/#Engine-time) | Engine time-related information, more details can be found in [Time](/en/docs/core/time/) |
 | [vSyncCount](/apis/core/#Engine-vSyncCount) | Vertical sync refresh rate. The engine defaults to enable [vertical sync](https://baike.baidu.com/item/%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5/7263524?fromtitle=V-Sync&fromid=691778) with a refresh rate `vSyncCount` of `1` (same as the screen refresh rate). If `vSyncCount` is set to `2`, the engine updates once every 2 screen refresh frames. |
 | [resourceManager](/apis/core/#Engine-resourceManager) | Resource manager, generally used for [loading](/en/docs/assets/load/) and [releasing](/en/docs/assets/gc/) assets. |
-| [sceneManager](/apis/core/#Engine-sceneManager) | Scene manager. Galacean supports rendering multiple scenes simultaneously, and the scene manager allows convenient management of scene additions, deletions, modifications, and queries. More details can be found in [Scene](/en/docs/core/scene/). |
+| [sceneManager](/apis/core/#Engine-sceneManager) | Scene manager. Oasishub supports rendering multiple scenes simultaneously, and the scene manager allows convenient management of scene additions, deletions, modifications, and queries. More details can be found in [Scene](/en/docs/core/scene/). |
 | [inputManager](/apis/core/#Engine-inputManager) | Interaction manager, generally used to get information about keyboards, touch, and wheel inputs. More details can be found in [Interaction](/en/docs/input/input/). |
 
 ### Refresh Rate

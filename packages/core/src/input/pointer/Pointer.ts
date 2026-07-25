@@ -1,4 +1,4 @@
-import { Vector2 } from "@galacean/engine-math";
+import { Vector2 } from "@oasishub/engine-math";
 import { ClearableObjectPool } from "../../utils/ClearableObjectPool";
 import { DisorderedArray } from "../../utils/DisorderedArray";
 import { PointerButton } from "../enums/PointerButton";

@@ -10,7 +10,7 @@ import {
   ReferResource,
   Skin,
   Texture2D
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 /**
  * The glTF resource.

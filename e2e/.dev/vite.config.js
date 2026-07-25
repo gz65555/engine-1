@@ -58,16 +58,15 @@ export default {
     strictPort: true
   },
   resolve: {
-    dedupe: ["@galacean/engine"]
+    dedupe: ["@oasishub/engine"]
   },
   optimizeDeps: {
     exclude: [
-      "@galacean/engine",
-      "@galacean/engine-draco",
-      "@galacean/engine-lottie",
-      "@galacean/engine-spine",
-      "@galacean/engine-shaderlab",
-      "@galacean/tools-baker"
+      "@oasishub/engine",
+      "@oasishub/engine-draco",
+      "@oasishub/engine-lottie",
+      "@oasishub/engine-spine",
+      "@oasishub/tools-baker"
     ]
   }
 };

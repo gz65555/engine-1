@@ -5,16 +5,16 @@ type: 脚本
 label: Script
 ---
 
-使用 Galacean Engine 开发的项目，通常还需要与外部环境进行通信，比如将项目运行时的信息发送到外部，或从外部环境或许某些配置信息。此时，你可以使用 Galacean Engine 的事件系统来实现此类功能。
+使用 Oasishub Engine 开发的项目，通常还需要与外部环境进行通信，比如将项目运行时的信息发送到外部，或从外部环境或许某些配置信息。此时，你可以使用 Oasishub Engine 的事件系统来实现此类功能。
 
 ## 添加事件
 
-Galacean Engine 提供了 [EventDispatcher](/apis/core/#EventDispatcher) 作为事件类，[Engine](/apis/core/#Engine) 继承自 [EventDispatcher](/apis/core/#EventDispatcher)，因此我们直接在代码中使用 `engine` 来作为内外部通信的媒介。
+Oasishub Engine 提供了 [EventDispatcher](/apis/core/#EventDispatcher) 作为事件类，[Engine](/apis/core/#Engine) 继承自 [EventDispatcher](/apis/core/#EventDispatcher)，因此我们直接在代码中使用 `engine` 来作为内外部通信的媒介。
 
 **使用 `engine.on` 添加事件**
 
 ```ts
-import { Script } from "@galacean/engine";
+import { Script } from "@oasishub/engine";
 
 class MyScript extends Script {
   onAwake() {
@@ -30,7 +30,7 @@ class MyScript extends Script {
 使用 `engine.once` 添加的事件只会触发一次回调函数。
 
 ```ts
-import { Script } from "@galacean/engine";
+import { Script } from "@oasishub/engine";
 
 class MyScript extends Script {
   onAwake() {

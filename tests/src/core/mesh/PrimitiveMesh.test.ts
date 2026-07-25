@@ -1,6 +1,6 @@
-import { Camera, GLCapabilityType, PrimitiveMesh } from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { Vector3 } from "@galacean/engine-math";
+import { Camera, GLCapabilityType, PrimitiveMesh } from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { Vector3 } from "@oasishub/engine-math";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("PrimitiveMesh", () => {

@@ -34,8 +34,8 @@ label: Graphics/2D/Spine/add-and-use
 ### 动态创建
 通过脚本可实现 Spine 资源的运行时加载与动画创建，推荐流程如下：
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -69,8 +69,8 @@ SpineAnimationRenderer 组件通过 state 属性暴露了
 
 在脚本中，你能够通过以下方式获取到 AnimationState 对象：
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -107,8 +107,8 @@ state.setAnimation(1, 'shoot', true);
 #### **动画过渡**
 调用 setAnimation 方法后，会立即切换当前轨道的动画。如果你需要动画切换时有过渡效果，需要设置过渡的持续时间。可以通过 [AnimationStateData](https://zh.esotericsoftware.com/spine-api-reference#AnimationStateData) 的 API 来进行设置：
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -185,8 +185,8 @@ setAnimation 和 addAnimation 方法都会返回一个对象：TrackEntry。Trac
 
 这些事件能够通过 [AnimationState.addListener](https://zh.esotericsoftware.com/spine-api-reference#AnimationState-addListener) 进行监听。
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -223,8 +223,8 @@ SpineAnimationRenderer 组件通过 skeleton 属性暴露了[Skeleton API](https
 
 在脚本中，你能够通过以下方式获取到 Skeleton 对象，来访问骨骼、插槽、附件等，并进行骨架操作。
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -239,8 +239,8 @@ class YourAmazingScript extends Script {
 #### **修改骨骼位置**
 通过 Skeleton API 能够修改 Spine 骨骼的位置，比较常见的应用是：可以通过设置 IK 的目标骨骼，来实现瞄准/跟随效果。
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -258,8 +258,8 @@ class YourAmazingScript extends Script {
 #### **附件更换**
 通过 Skeleton API 能够替换[插槽](https://zh.esotericsoftware.com/spine-slots)内的[附件](https://zh.esotericsoftware.com/spine-attachments)。通过切换附件，能够实现局部换装的效果。
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -283,8 +283,8 @@ class YourAmazingScript extends Script {
 
 通过 Skeleton 的 [setSkin](https://zh.esotericsoftware.com/spine-api-reference#Skeleton-setSkin) API 能够根据皮肤名称实现整体换肤。
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -303,8 +303,8 @@ class YourAmazingScript extends Script {
 
 在 Spine 编辑器中，设计师可以为每一个外观和装备准备皮肤，然后在运行时把他们组合成一个新的皮肤。下面的代码展示了如果通过 addSkin 来添加选定的皮肤的：
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class YourAmazingScript extends Script {
 
@@ -336,8 +336,8 @@ class YourAmazingScript extends Script {
 比如，我们可以把不同皮肤的武器，头饰，眼镜等配件打包到一个额外的图集中，在运行时进行替换。
 
 ```typescript
-import { Script } from '@galacean/engine';
-import { SpineAnimationRenderer } from '@galacean/engine-spine';
+import { Script } from '@oasishub/engine';
+import { SpineAnimationRenderer } from '@oasishub/engine-spine';
 
 class extends YourAmazingScript {
   async onStart() 

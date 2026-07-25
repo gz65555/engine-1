@@ -6,9 +6,9 @@ import {
   PrimitiveMesh,
   BlendShapeFrame,
   UnlitMaterial
-} from "@galacean/engine-core";
-import { WebGLEngine, WebGLMode } from "@galacean/engine-rhi-webgl";
-import { Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { WebGLEngine, WebGLMode } from "@oasishub/engine-rhi-webgl";
+import { Vector3 } from "@oasishub/engine-math";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("BlendShapeManager", () => {

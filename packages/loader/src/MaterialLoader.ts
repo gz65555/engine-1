@@ -9,8 +9,8 @@ import {
   Shader,
   Texture2D,
   resourceLoader
-} from "@galacean/engine-core";
-import { Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import {
   MaterialLoaderType,
   type IAssetRef,

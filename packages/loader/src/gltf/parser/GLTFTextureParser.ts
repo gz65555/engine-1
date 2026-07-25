@@ -8,7 +8,7 @@ import {
   TextureUtils,
   TextureWrapMode,
   Utils
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { BufferTextureRestoreInfo } from "../../GLTFContentRestorer";
 import { TextureWrapMode as GLTFTextureWrapMode, IMaterial } from "../GLTFSchema";
 import { GLTFUtils } from "../GLTFUtils";

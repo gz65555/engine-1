@@ -1,5 +1,5 @@
 import { ColliderShape } from "./ColliderShape";
-import { ISphereColliderShape } from "@galacean/engine-design";
+import { ISphereColliderShape } from "@oasishub/engine-design";
 import { Engine } from "../../Engine";
 
 /**

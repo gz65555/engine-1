@@ -1,4 +1,4 @@
-import { AssetPromise, AssetType, Logger, Texture2D, Utils } from "@galacean/engine-core";
+import { AssetPromise, AssetType, Logger, Texture2D, Utils } from "@oasishub/engine-core";
 import { BufferTextureRestoreInfo } from "../../GLTFContentRestorer";
 import { KTX2Loader } from "../../ktx2/KTX2Loader";
 import type { ITexture } from "../GLTFSchema";

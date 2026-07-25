@@ -1,6 +1,6 @@
-import { IStaticCollider } from "@galacean/engine-design";
+import { IStaticCollider } from "@oasishub/engine-design";
 import { LiteCollider } from "./LiteCollider";
-import { Quaternion, Vector3 } from "@galacean/engine";
+import { Quaternion, Vector3 } from "@oasishub/engine";
 import { LitePhysics } from "./LitePhysics";
 
 /**

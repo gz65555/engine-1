@@ -1,4 +1,4 @@
-import { Rect } from "@galacean/engine-math";
+import { Rect } from "@oasishub/engine-math";
 import { StaticInterfaceImplement } from "../../base/StaticInterfaceImplement";
 import { AnimationCurveLayerOwner } from "../internal/AnimationCurveLayerOwner";
 import { AnimationCurveOwner } from "../internal/animationCurveOwner/AnimationCurveOwner";

@@ -1,6 +1,6 @@
-import { BlendShape, BlendShapeFrame, PrimitiveMesh } from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { BlendShape, BlendShapeFrame, PrimitiveMesh } from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("BlendShape", () => {

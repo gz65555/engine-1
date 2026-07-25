@@ -2,7 +2,7 @@
  * @title LUT Test
  * @category Material
  */
-import { Camera, Material, MeshRenderer, PrimitiveMesh, Shader, Vector3, WebGLEngine } from "@galacean/engine";
+import { Camera, Material, MeshRenderer, PrimitiveMesh, Shader, Vector3, WebGLEngine } from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 // Create engine

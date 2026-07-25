@@ -1,5 +1,5 @@
-import { IHardwareRenderer } from "@galacean/engine-design";
-import { Color } from "@galacean/engine-math";
+import { IHardwareRenderer } from "@oasishub/engine-design";
+import { Color } from "@oasishub/engine-math";
 import { RenderStateElementMap } from "../../BasicResources";
 import { GLCapabilityType } from "../../base/Constant";
 import { deepClone } from "../../clone/CloneManager";

@@ -17,7 +17,7 @@ import {
   Vector2,
   BoxShape,
   Entity
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 
 // Create engine

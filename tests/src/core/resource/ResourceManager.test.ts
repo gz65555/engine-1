@@ -1,6 +1,6 @@
-import { AssetType, ResourceManager, Texture2D } from "@galacean/engine";
-import "@galacean/engine-loader";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { AssetType, ResourceManager, Texture2D } from "@oasishub/engine";
+import "@oasishub/engine-loader";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("ResourceManager", () => {

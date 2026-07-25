@@ -1,8 +1,8 @@
 import { PhysXPhysics } from "../PhysXPhysics";
 import { PhysXJoint } from "./PhysXJoint";
-import { ISpringJoint } from "@galacean/engine-design";
+import { ISpringJoint } from "@oasishub/engine-design";
 import { PhysXCollider } from "../PhysXCollider";
-import { Vector3 } from "@galacean/engine";
+import { Vector3 } from "@oasishub/engine";
 
 /**
  * a joint that maintains an upper or lower bound (or both) on the distance between two points on different objects

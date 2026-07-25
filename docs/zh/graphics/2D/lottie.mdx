@@ -8,7 +8,7 @@ label: Graphics/2D
 
 [lottie](https://airbnb.io/lottie/) 是 Airbnb 于 2017 年前后发布的一款跨平台的动画解决方案，可应用于 iOS，Android，React Native 和 web，通过 Bodymovin 插件解析 [AE](https://www.adobe.com/products/aftereffects.html) 动画，并导出可在移动端和 web 端渲染动画的 json 文件。设计师通过 AE 来制作动画，再用 Bodymovin 导出相应的 json 文件给到前端，前端可以使用这个 json 文件直接生成 100% 还原的动画。
 
-用户可以在 Galacean 中轻松完成 Lottie 资产的处理和组件添加。
+用户可以在 Oasishub 中轻松完成 Lottie 资产的处理和组件添加。
 
 <Callout type="warning">暂不支持矢量动画与遮罩</Callout>
 
@@ -16,7 +16,7 @@ label: Graphics/2D
 
 建议设计师在 AE 中导出 lottie 文件的时候，图片采用 base64 格式写入 lottie 的 json 文件中。
 
-开发者拿到 `.json` 文件后，首先需要把 `.json` 文件上传到 Galacean Editor。通过资产面板的上传按钮选择 “lottie” 资产，选择本地一个 [lottie json](https://github.com/galacean/galacean.github.io/files/14106485/_Lottie.3.json) 文件，然后上传：
+开发者拿到 `.json` 文件后，首先需要把 `.json` 文件上传到 Oasishub Editor。通过资产面板的上传按钮选择 “lottie” 资产，选择本地一个 lottie json 文件，然后上传：
 
 <Image src="https://mdn.alipayobjects.com/huamei_w6ifet/afts/img/A*UQ1LTI_mYv4AAAAAAAAAAAAADjCHAQ/original"   />
 
@@ -99,18 +99,18 @@ await lottie.play();
 
 ### 安装依赖包
 
-<a href="https://www.npmjs.com/package/@galacean/engine-lottie" target="_blank">@galacean/engine-lottie</a> 是 Galacean Engine 的二方包，项目中用到了 Lottie 的时候，需要确保项目中安装了该包：
+@oasishub/engine-lottie 是 Oasishub Engine 的二方包，项目中用到了 Lottie 的时候，需要确保项目中安装了该包：
 
 ```bash
-npm i @galacean/engine-lottie --save
+npm i @oasishub/engine-lottie --save
 ```
 
 ### pro code 开发模式
 
-在进行 `Pro Code` 开发的时候，需要一个 `json` 文件和一个 `atlas` 文件来实现 `lottie` 动画，通常美术同学通过 `AE` 导出的给到开发的只有 `json` 文件，此时需要使用 [tools-atlas-lottie](https://www.npmjs.com/package/@galacean/tools-atlas-lottie) `CLI` 工具生成 `atlas` 文件。
+在进行 `Pro Code` 开发的时候，需要一个 `json` 文件和一个 `atlas` 文件来实现 `lottie` 动画，通常美术同学通过 `AE` 导出的给到开发的只有 `json` 文件，此时需要使用 tools-atlas-lottie `CLI` 工具生成 `atlas` 文件。
 
 ```typescript
-import { LottieAnimation } from "@galacean/engine-lottie";
+import { LottieAnimation } from "@oasishub/engine-lottie";
 
 // Load lottie json、atlas file with engine's `resourceManager`
 engine.resourceManager.load({

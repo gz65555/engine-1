@@ -1,4 +1,4 @@
-import { MathUtil } from "@galacean/engine-math";
+import { MathUtil } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { TextureFormat } from "./enums/TextureFormat";
 

@@ -44,7 +44,7 @@ label: Platform
 |game.ts|入口文件，初始化的逻辑都放在这里|
 |package.json|主要存放项目依赖包|
 |project.config.json|对应微信小游戏工程所需要的 [project.config.json](https://developers.weixin.qq.com/minigame/dev/devtools/projectconfig.html)|
-|project.ts|Galacean 的工程文件，放置初始化相关信息|
+|project.ts|Oasishub 的工程文件，放置初始化相关信息|
 
 2、工程导出到本地后，先进入到根目录执行以下命令进行依赖包的安装：
 
@@ -88,9 +88,9 @@ npm run release
 
 随着小游戏玩法日益丰富，内容增多，包体积变大，影响加载速度。微信小游戏提供分包功能，将游戏内容按规则拆分为主包和子包。主包包含首次启动必要的资源，子包则按需加载，使用户能快速进入游戏。
 
-### Galacean 编辑器分包配置
+### Oasishub 编辑器分包配置
 
-在 Galacean 编辑器中，文件夹是子包划分的单位。不在子包的内容会进主包。导出小游戏时，在导出面板的子包列表添加子包并关联文件夹即可分包。
+在 Oasishub 编辑器中，文件夹是子包划分的单位。不在子包的内容会进主包。导出小游戏时，在导出面板的子包列表添加子包并关联文件夹即可分包。
 
 ### 子包配置步骤
 

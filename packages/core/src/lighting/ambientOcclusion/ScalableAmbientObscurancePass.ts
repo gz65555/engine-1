@@ -1,4 +1,4 @@
-import { Vector2, Vector4 } from "@galacean/engine-math";
+import { Vector2, Vector4 } from "@oasishub/engine-math";
 import { Camera } from "../../Camera";
 import { Engine } from "../../Engine";
 import { Material } from "../../material";

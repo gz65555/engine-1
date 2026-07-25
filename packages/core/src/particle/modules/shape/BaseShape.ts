@@ -1,4 +1,4 @@
-import { Rand, Vector3 } from "@galacean/engine-math";
+import { Rand, Vector3 } from "@oasishub/engine-math";
 import { ParticleShapeType } from "./enums/ParticleShapeType";
 import { UpdateFlagManager } from "../../../UpdateFlagManager";
 import { ignoreClone } from "../../../clone/CloneManager";

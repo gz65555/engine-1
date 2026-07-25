@@ -1,5 +1,5 @@
-import { RenderBufferDepthFormat, RenderTarget, Texture2D } from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { RenderBufferDepthFormat, RenderTarget, Texture2D } from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, beforeEach, expect, it } from "vitest";
 
 describe("RenderTarget", async () => {

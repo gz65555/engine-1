@@ -1,4 +1,4 @@
-import { Color, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { Color, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { DataType, TypedArray } from "../base";
 import { Buffer } from "../graphic/Buffer";

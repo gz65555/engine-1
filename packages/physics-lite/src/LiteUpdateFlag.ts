@@ -1,4 +1,4 @@
-import { Utils } from "@galacean/engine";
+import { Utils } from "@oasishub/engine";
 
 /**
  * Used to update tags.

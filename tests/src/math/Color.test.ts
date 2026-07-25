@@ -1,4 +1,4 @@
-import { Color } from "@galacean/engine-math";
+import { Color } from "@oasishub/engine-math";
 import { describe, expect, it } from "vitest";
 
 describe("Color test", () => {

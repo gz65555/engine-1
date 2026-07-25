@@ -1,6 +1,6 @@
-import { Camera, CameraClearFlags, Entity, Layer, ReplacementFailureStrategy, Shader } from "@galacean/engine-core";
-import { Matrix, Ray, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Camera, CameraClearFlags, Entity, Layer, ReplacementFailureStrategy, Shader } from "@oasishub/engine-core";
+import { Matrix, Ray, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeAll, describe, expect, it } from "vitest";
 
 describe("camera test", function () {

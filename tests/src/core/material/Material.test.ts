@@ -1,6 +1,6 @@
-import { Material, Shader, ShaderPropertyType, Texture2D, Texture2DArray } from "@galacean/engine-core";
-import { Color, Matrix, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Material, Shader, ShaderPropertyType, Texture2D, Texture2DArray } from "@oasishub/engine-core";
+import { Color, Matrix, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("Material", () => {

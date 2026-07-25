@@ -1,4 +1,4 @@
-import { Platform, SystemInfo } from "@galacean/engine-core";
+import { Platform, SystemInfo } from "@oasishub/engine-core";
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
 
 // Cast to access internal methods

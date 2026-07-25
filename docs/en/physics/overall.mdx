@@ -5,12 +5,12 @@ type: Physics
 label: Physics
 ---
 
-The physics engine is a very important part of the game engine. The industry generally adopts PhysX to introduce related functions. However, for lightweight scenarios, PhysX makes the final application size very large, exceeding the limits of these projects. Galacean is designed based on multiple backends. On one hand, it compiles [PhysX.js](https://github.com/galacean/physX.js) through WebAssembly; on the other hand, it also provides a lightweight physics engine. Both are consistent in [API](https://github.com/galacean/engine/tree/main/packages/design/src/physics) design. Users only need to choose a specific physics backend when initializing the engine. It can meet the needs of various scenarios such as lightweight applications and heavyweight games. For the overall design of the physics components, you can refer to the [Wiki](https://github.com/galacean/engine/wiki/Physical-system-design).
+The physics engine is a very important part of the game engine. The industry generally adopts PhysX to introduce related functions. However, for lightweight scenarios, PhysX makes the final application size very large, exceeding the limits of these projects. Oasishub is designed based on multiple backends. On one hand, it compiles PhysX.js through WebAssembly; on the other hand, it also provides a lightweight physics engine. Both are consistent in API design. Users only need to choose a specific physics backend when initializing the engine. It can meet the needs of various scenarios such as lightweight applications and heavyweight games. For the overall design of the physics components, you can refer to the Wiki.
 
-For scenarios that need to use various physics components and `InputManager` that require Raycast picking, the physics engine needs to be initialized before use. Currently, the Galacean engine provides two built-in physics engine backend implementations:
+For scenarios that need to use various physics components and `InputManager` that require Raycast picking, the physics engine needs to be initialized before use. Currently, the Oasishub engine provides two built-in physics engine backend implementations:
 
- - [physics-lite](https://github.com/galacean/engine/tree/main/packages/physics-lite)
- - [physics-physx](https://github.com/galacean/engine/tree/main/packages/physics-physx)
+ - physics-lite
+ - physics-physx
 
 Developers can set the physics backend in the **Project Settings** panel opened from the [Main Menu](/en/docs/interface/sidebar) interface.
 
@@ -20,7 +20,7 @@ Developers can set the physics backend in the **Project Settings** panel opened 
 If initializing the engine through a script, you only need to pass the physics backend object into the `Engine`:
 
 ```typescript
-import {LitePhysics} from "@galacean/engine-physics-lite";
+import {LitePhysics} from "@oasishub/engine-physics-lite";
 
 const engine = await WebGLEngine.create({
   canvas: htmlCanvas,
@@ -31,7 +31,7 @@ const engine = await WebGLEngine.create({
 ## Loading and Initializing the PhysX Version of the Physics Engine
 
 ```typescript
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 
 const engine = await WebGLEngine.create({
   canvas: htmlCanvas,
@@ -58,25 +58,25 @@ The physics engine is a crucial component of game engines, primarily responsible
 - Joint constraint system
 - Physics event response
 
-To meet the needs of different application scenarios, Galacean adopts a multi-backend design:
+To meet the needs of different application scenarios, Oasishub adopts a multi-backend design:
 
 - **Lite**: Optimized for simple interaction scenarios, lightweight
 - **PhysX**: Provides complete physics features based on PhysX physics engine
 
-Both backends implement a unified [Physics System API](https://github.com/galacean/engine/tree/main/packages/design/src/physics), allowing developers to flexibly choose based on project requirements. For detailed design specifications of the physics system, please refer to the [Design Document](https://github.com/galacean/engine/wiki/Physical-system-design).
+Both backends implement a unified Physics System API, allowing developers to flexibly choose based on project requirements. For detailed design specifications of the physics system, please refer to the Design Document.
 
 <Callout type="info">
 For scenarios requiring physics components or Raycast picking like `InputManager`, the physics engine needs to be initialized before use.
 </Callout>
 
-Currently, Galacean Engine provides two built-in physics engine backend implementations:
+Currently, Oasishub Engine provides two built-in physics engine backend implementations:
 
-1. [Lite](/apis/physics-lite)([physics-lite](https://github.com/galacean/engine/tree/main/packages/physics-lite))
+1. [Lite](/apis/physics-lite)(physics-lite)
    - Lightweight physics engine implementation
    - Only supports basic collision detection
    - Suitable for simple interaction scenarios
 
-2. [PhysX](/apis/physics-physx)([physics-physx](https://github.com/galacean/engine/tree/main/packages/physics-physx))
+2. [PhysX](/apis/physics-physx)(physics-physx)
    - Based on PhysX physics engine, compiled through WebAssembly
    - Supports advanced physics features and accurate simulation
    - Suitable for complex physical interaction scenarios
@@ -123,8 +123,8 @@ When initializing the engine through scripts, simply pass the physics backend ob
 
 #### Using Lite Physics Engine
 ```typescript
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { LitePhysics } from "@galacean/engine-physics-lite";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 
 const engine = await WebGLEngine.create({ canvas: "canvas" });
 engine.physicsManager.initialize(LitePhysics);
@@ -132,8 +132,8 @@ engine.physicsManager.initialize(LitePhysics);
 
 #### Using PhysX Physics Engine
 ```typescript
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 
 const engine = await WebGLEngine.create({ canvas: "canvas" });
 await engine.physicsManager.initialize(PhysXPhysics);

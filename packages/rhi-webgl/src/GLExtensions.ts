@@ -1,5 +1,5 @@
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
-import { GLCapabilityType } from "@galacean/engine-core";
+import { GLCapabilityType } from "@oasishub/engine-core";
 
 /**
  * GLContext extension.

@@ -1,4 +1,4 @@
-import { IHardwareRenderer } from "@galacean/engine-design";
+import { IHardwareRenderer } from "@oasishub/engine-design";
 import { RenderStateElementMap } from "../../BasicResources";
 import { ShaderData } from "../ShaderData";
 import { ShaderProperty } from "../ShaderProperty";

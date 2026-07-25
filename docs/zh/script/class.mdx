@@ -11,7 +11,7 @@ label: Script
 - 方便地获取节点实例，组件实例
 - 遵循组件的禁用销毁规则
 
-此外，还提供丰富的生命周期回调函数，只要脚本中重写特定的回调函数，不需要手工调用它们，Galacean 就会在特定的时期自动执行相关脚本。
+此外，还提供丰富的生命周期回调函数，只要脚本中重写特定的回调函数，不需要手工调用它们，Oasishub 就会在特定的时期自动执行相关脚本。
 
 ## 脚本生命周期
 
@@ -56,7 +56,7 @@ onUpdate() {
 }
 ```
 
-需要注意的是，Galacean 在批量执行完 `onStart` 回调后再批量执行 `onUpdate` 回调。这样做的好处是可以在 `onUpdate` 中访问其他实体初始化的值。
+需要注意的是，Oasishub 在批量执行完 `onStart` 回调后再批量执行 `onUpdate` 回调。这样做的好处是可以在 `onUpdate` 中访问其他实体初始化的值。
 
 ```typescript
 import { TheScript } from './TheScript'

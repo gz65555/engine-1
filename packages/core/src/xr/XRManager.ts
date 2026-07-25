@@ -1,4 +1,4 @@
-import { IXRDevice } from "@galacean/engine-design";
+import { IXRDevice } from "@oasishub/engine-design";
 import { Engine } from "../Engine";
 import { CameraClearFlags } from "../enums/CameraClearFlags";
 import { CameraType } from "../enums/CameraType";

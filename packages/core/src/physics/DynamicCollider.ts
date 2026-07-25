@@ -1,5 +1,5 @@
-import { IDynamicCollider } from "@galacean/engine-design";
-import { Quaternion, Vector3 } from "@galacean/engine-math";
+import { IDynamicCollider } from "@oasishub/engine-design";
+import { Quaternion, Vector3 } from "@oasishub/engine-math";
 import { ignoreClone } from "../clone/CloneManager";
 import { Engine } from "../Engine";
 import { Entity } from "../Entity";

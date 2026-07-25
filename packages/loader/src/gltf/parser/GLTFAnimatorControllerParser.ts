@@ -5,7 +5,7 @@ import {
   AnimatorStateMachine,
   AssetPromise,
   Logger
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { GLTFParser } from "./GLTFParser";
 import { GLTFParserContext, GLTFParserType, registerGLTFParser } from "./GLTFParserContext";
 

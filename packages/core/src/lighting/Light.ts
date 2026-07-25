@@ -1,4 +1,4 @@
-import { Color, MathUtil, Matrix } from "@galacean/engine-math";
+import { Color, MathUtil, Matrix } from "@oasishub/engine-math";
 import { Component } from "../Component";
 import { Layer } from "../Layer";
 import { deepClone, ignoreClone } from "../clone/CloneManager";

@@ -7,7 +7,7 @@ import {
   Texture2D,
   TextureCoordinate,
   UnlitMaterial
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { IMaterial, ITextureInfo, MaterialAlphaMode } from "../GLTFSchema";
 import { GLTFParser } from "./GLTFParser";
 import { GLTFParserContext, GLTFParserType, registerGLTFParser } from "./GLTFParserContext";

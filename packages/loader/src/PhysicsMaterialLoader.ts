@@ -6,7 +6,7 @@ import {
   LoadItem,
   ResourceManager,
   PhysicsMaterial
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 @resourceLoader(AssetType.PhysicsMaterial, ["mesh"])
 class PhysicsMaterialLoader extends Loader<PhysicsMaterial> {

@@ -1,5 +1,5 @@
-import { IShaderLab } from "@galacean/engine-design";
-import { Color } from "@galacean/engine-math";
+import { IShaderLab } from "@oasishub/engine-design";
+import { Color } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { IReferable } from "../asset/IReferable";
 import { ShaderMacro } from "./ShaderMacro";
@@ -38,7 +38,7 @@ export class Shader implements IReferable {
    * ShaderLab must be enabled first as follows:
    * ```ts
    * // Import shaderLab
-   * import { ShaderLab } from "@galacean/engine-shaderlab";
+   * import { ShaderLab } from "@oasishub/engine-shaderlab";
    * // Create engine with shaderLab
    * const engine = await WebGLEngine.create({ canvas: "canvas", shader: new ShaderLab() });
    * ...

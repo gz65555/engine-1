@@ -12,10 +12,10 @@ import {
   ControllerCollisionFlag,
   Layer,
   ColliderShapeUpAxis
-} from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
-import { Quaternion, Vector3 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
+import { Quaternion, Vector3 } from "@oasishub/engine-math";
 import { describe, beforeAll, beforeEach, expect, it } from "vitest";
 
 describe("CharacterController", function () {

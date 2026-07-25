@@ -1,5 +1,5 @@
-import { Camera, dependentComponents, DependentMode, Entity, MeshRenderer, Script } from "@galacean/engine-core";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Camera, dependentComponents, DependentMode, Entity, MeshRenderer, Script } from "@oasishub/engine-core";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 const canvasDOM = document.createElement("canvas");

@@ -57,8 +57,8 @@ raycast(
 ### 示例1: 基础射线检测
 
 ```typescript
-import { WebGLEngine, HitResult, Ray, Vector3, Vector2 } from "@galacean/engine";
-import { LitePhysics } from "@galacean/engine-physics-lite";
+import { WebGLEngine, HitResult, Ray, Vector3, Vector2 } from "@oasishub/engine";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 
 const engine = await WebGLEngine.create({
   canvas: "canvas",
@@ -260,7 +260,7 @@ class RaycastManager {
 ### 方式1: 在脚本中处理输入事件
 
 ```typescript
-import { Script, PointerEventData, Ray, HitResult, Layer } from "@galacean/engine";
+import { Script, PointerEventData, Ray, HitResult, Layer } from "@oasishub/engine";
 
 export class ClickDetectionScript extends Script {
   onPointerUp(eventData: PointerEventData): void {
@@ -286,7 +286,7 @@ export class ClickDetectionScript extends Script {
 ### 方式2: 轮询 InputManager 状态
 
 ```typescript
-import { Script, PointerButton, Ray, HitResult, Layer, Vector2 } from "@galacean/engine";
+import { Script, PointerButton, Ray, HitResult, Layer, Vector2 } from "@oasishub/engine";
 
 export class InputPollingScript extends Script {
   onUpdate(): void {

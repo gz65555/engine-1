@@ -1,6 +1,6 @@
-import { BlendShape, Entity, ModelMesh, Skin, SkinnedMeshRenderer } from "@galacean/engine-core";
-import { BoundingBox, Matrix, Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { BlendShape, Entity, ModelMesh, Skin, SkinnedMeshRenderer } from "@oasishub/engine-core";
+import { BoundingBox, Matrix, Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, expect, it } from "vitest";
 
 describe("SkinnedMeshRenderer", async () => {

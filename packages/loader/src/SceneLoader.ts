@@ -11,7 +11,7 @@ import {
   resourceLoader,
   ResourceManager,
   Scene
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import {
   IClass,
   IScene,

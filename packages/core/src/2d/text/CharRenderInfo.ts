@@ -1,4 +1,4 @@
-import { Vector2, Vector4 } from "@galacean/engine-math";
+import { Vector2, Vector4 } from "@oasishub/engine-math";
 import { Texture2D } from "../../texture";
 import { IPoolElement } from "../../utils/ObjectPool";
 

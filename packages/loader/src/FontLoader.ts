@@ -6,7 +6,7 @@ import {
   LoadItem,
   resourceLoader,
   ResourceManager
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 
 @resourceLoader(AssetType.Font, ["font"])
 class FontLoader extends Loader<Font> {

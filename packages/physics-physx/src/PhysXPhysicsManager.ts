@@ -1,4 +1,4 @@
-import { IPhysicsManager } from "@galacean/engine-design";
+import { IPhysicsManager } from "@oasishub/engine-design";
 import { TriggerEvent } from "./PhysXPhysicsScene";
 
 export class PhysXPhysicsManager implements IPhysicsManager {

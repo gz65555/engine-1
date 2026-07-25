@@ -8,7 +8,7 @@ import {
   RequestConfig,
   resourceLoader,
   ResourceManager
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { decode } from "./resource-deserialize";
 
 @resourceLoader(AssetType.Mesh, ["mesh"])

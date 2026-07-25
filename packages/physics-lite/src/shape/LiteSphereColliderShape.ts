@@ -1,6 +1,6 @@
-import { ISphereColliderShape } from "@galacean/engine-design";
+import { ISphereColliderShape } from "@oasishub/engine-design";
 import { LiteColliderShape } from "./LiteColliderShape";
-import { BoundingSphere, Ray, Vector3, Vector4 } from "@galacean/engine";
+import { BoundingSphere, Ray, Vector3, Vector4 } from "@oasishub/engine";
 import { LiteHitResult } from "../LiteHitResult";
 import { LitePhysicsMaterial } from "../LitePhysicsMaterial";
 

@@ -1,4 +1,4 @@
-import { Color, SphericalHarmonics3 } from "@galacean/engine-math";
+import { Color, SphericalHarmonics3 } from "@oasishub/engine-math";
 import { ReferResource } from "../asset/ReferResource";
 import { Engine } from "../Engine";
 import { Scene } from "../Scene";

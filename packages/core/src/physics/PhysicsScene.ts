@@ -1,5 +1,5 @@
-import { ICharacterController, ICollider, ICollision, IPhysicsScene } from "@galacean/engine-design";
-import { MathUtil, Ray, Vector3, Quaternion } from "@galacean/engine-math";
+import { ICharacterController, ICollider, ICollision, IPhysicsScene } from "@oasishub/engine-design";
+import { MathUtil, Ray, Vector3, Quaternion } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { Layer } from "../Layer";
 import { Scene } from "../Scene";

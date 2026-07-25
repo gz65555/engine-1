@@ -1,4 +1,4 @@
-import { AssetPromise, AssetType, Loader, LoadItem, resourceLoader, ResourceManager } from "@galacean/engine-core";
+import { AssetPromise, AssetType, Loader, LoadItem, resourceLoader, ResourceManager } from "@oasishub/engine-core";
 import { PrefabParser } from "./prefab/PrefabParser";
 import { PrefabResource } from "./prefab/PrefabResource";
 import { IHierarchyFile } from "./resource-deserialize";

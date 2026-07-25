@@ -1,4 +1,4 @@
-import { AssetPromise, Engine, Texture2D } from "@galacean/engine-core";
+import { AssetPromise, Engine, Texture2D } from "@oasishub/engine-core";
 import { BufferReader } from "../../utils/BufferReader";
 import { decoder } from "../../utils/Decorator";
 

@@ -1,4 +1,4 @@
-import { IPlatformPrimitive } from "@galacean/engine-design";
+import { IPlatformPrimitive } from "@oasishub/engine-design";
 import { Engine } from "../Engine";
 import { GraphicsResource } from "../asset/GraphicsResource";
 import { ShaderProgram } from "../shader/ShaderProgram";

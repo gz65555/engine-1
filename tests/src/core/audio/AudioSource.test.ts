@@ -1,6 +1,6 @@
-import { AssetType, AudioClip, AudioManager, AudioSource, Engine } from "@galacean/engine-core";
-import "@galacean/engine-loader";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { AssetType, AudioClip, AudioManager, AudioSource, Engine } from "@oasishub/engine-core";
+import "@oasishub/engine-loader";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeAll, describe, expect, it } from "vitest";
 import { sound } from "../model/sound";
 

@@ -12,7 +12,7 @@ import {
   TextureFilterMode,
   TextureWrapMode,
   UnlitMaterial
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import {
   GLTFExtensionMode,
   GLTFExtensionParser,
@@ -24,9 +24,9 @@ import {
   GLTFSchemaParser,
   registerGLTFExtension,
   registerGLTFParser
-} from "@galacean/engine-loader";
-import { Color } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+} from "@oasishub/engine-loader";
+import { Color } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { describe, beforeAll, afterAll, expect, it } from "vitest";
 
 let engine: WebGLEngine;

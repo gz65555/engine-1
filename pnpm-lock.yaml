@@ -78,27 +78,21 @@ importers:
 
   e2e:
     devDependencies:
-      '@galacean/engine':
+      '@oasishub/engine':
         specifier: workspace:*
-        version: link:../packages/galacean
-      '@galacean/engine-core':
+        version: link:../packages/oasishub
+      '@oasishub/engine-core':
         specifier: workspace:*
         version: link:../packages/core
-      '@galacean/engine-physics-lite':
+      '@oasishub/engine-physics-lite':
         specifier: workspace:*
         version: link:../packages/physics-lite
-      '@galacean/engine-physics-physx':
+      '@oasishub/engine-physics-physx':
         specifier: workspace:*
         version: link:../packages/physics-physx
-      '@galacean/engine-rhi-webgl':
+      '@oasishub/engine-rhi-webgl':
         specifier: workspace:*
         version: link:../packages/rhi-webgl
-      '@galacean/engine-shader':
-        specifier: workspace:*
-        version: link:../packages/shader
-      '@galacean/engine-shaderlab':
-        specifier: workspace:*
-        version: link:../packages/shader-lab
       dat.gui:
         specifier: 'catalog:'
         version: 0.7.9
@@ -108,15 +102,9 @@ importers:
 
   examples:
     devDependencies:
-      '@galacean/engine':
+      '@oasishub/engine':
         specifier: workspace:*
-        version: link:../packages/galacean
-      '@galacean/engine-shader':
-        specifier: workspace:*
-        version: link:../packages/shader
-      '@galacean/engine-shaderlab':
-        specifier: workspace:*
-        version: link:../packages/shader-lab
+        version: link:../packages/oasishub
       dat.gui:
         specifier: 'catalog:'
         version: 0.7.9
@@ -126,155 +114,103 @@ importers:
 
   packages/core:
     dependencies:
-      '@galacean/engine-math':
+      '@oasishub/engine-math':
         specifier: workspace:*
         version: link:../math
     devDependencies:
-      '@galacean/engine-design':
+      '@oasishub/engine-design':
         specifier: workspace:*
         version: link:../design
 
   packages/design:
     dependencies:
-      '@galacean/engine-math':
+      '@oasishub/engine-math':
         specifier: workspace:*
         version: link:../math
-
-  packages/galacean:
-    dependencies:
-      '@galacean/engine-core':
-        specifier: workspace:*
-        version: link:../core
-      '@galacean/engine-loader':
-        specifier: workspace:*
-        version: link:../loader
-      '@galacean/engine-math':
-        specifier: workspace:*
-        version: link:../math
-      '@galacean/engine-rhi-webgl':
-        specifier: workspace:*
-        version: link:../rhi-webgl
 
   packages/loader:
     dependencies:
-      '@galacean/engine-core':
+      '@oasishub/engine-core':
         specifier: workspace:*
         version: link:../core
-      '@galacean/engine-math':
+      '@oasishub/engine-math':
         specifier: workspace:*
         version: link:../math
-      '@galacean/engine-rhi-webgl':
+      '@oasishub/engine-rhi-webgl':
         specifier: workspace:*
         version: link:../rhi-webgl
 
   packages/math: {}
 
+  packages/oasishub:
+    dependencies:
+      '@oasishub/engine-core':
+        specifier: workspace:*
+        version: link:../core
+      '@oasishub/engine-loader':
+        specifier: workspace:*
+        version: link:../loader
+      '@oasishub/engine-math':
+        specifier: workspace:*
+        version: link:../math
+      '@oasishub/engine-rhi-webgl':
+        specifier: workspace:*
+        version: link:../rhi-webgl
+
   packages/physics-lite:
     devDependencies:
-      '@galacean/engine':
+      '@oasishub/engine':
         specifier: workspace:*
-        version: link:../galacean
-      '@galacean/engine-design':
+        version: link:../oasishub
+      '@oasishub/engine-design':
         specifier: workspace:*
         version: link:../design
 
   packages/physics-physx:
     devDependencies:
-      '@galacean/engine':
+      '@oasishub/engine':
         specifier: workspace:*
-        version: link:../galacean
-      '@galacean/engine-design':
+        version: link:../oasishub
+      '@oasishub/engine-design':
         specifier: workspace:*
         version: link:../design
 
   packages/rhi-webgl:
     dependencies:
-      '@galacean/engine-core':
+      '@oasishub/engine-core':
         specifier: workspace:*
         version: link:../core
-      '@galacean/engine-math':
+      '@oasishub/engine-math':
         specifier: workspace:*
         version: link:../math
     devDependencies:
-      '@galacean/engine-design':
+      '@oasishub/engine-design':
         specifier: workspace:*
         version: link:../design
-
-  packages/shader:
-    devDependencies:
-      '@galacean/engine':
-        specifier: workspace:*
-        version: link:../galacean
-
-  packages/shader-lab:
-    devDependencies:
-      '@galacean/engine':
-        specifier: workspace:*
-        version: link:../galacean
-      '@galacean/engine-design':
-        specifier: workspace:*
-        version: link:../design
-
-  packages/ui:
-    devDependencies:
-      '@galacean/engine':
-        specifier: workspace:*
-        version: link:../galacean
-
-  packages/xr:
-    devDependencies:
-      '@galacean/engine':
-        specifier: workspace:*
-        version: link:../galacean
-      '@galacean/engine-design':
-        specifier: workspace:*
-        version: link:../design
-
-  packages/xr-webxr:
-    dependencies:
-      '@galacean/engine-xr':
-        specifier: workspace:*
-        version: link:../xr
-    devDependencies:
-      '@galacean/engine-design':
-        specifier: workspace:*
-        version: link:../design
-      '@galacean/engine-math':
-        specifier: workspace:*
-        version: link:../math
 
   tests:
     devDependencies:
-      '@galacean/engine':
+      '@oasishub/engine':
         specifier: workspace:*
-        version: link:../packages/galacean
-      '@galacean/engine-core':
+        version: link:../packages/oasishub
+      '@oasishub/engine-core':
         specifier: workspace:*
         version: link:../packages/core
-      '@galacean/engine-loader':
+      '@oasishub/engine-loader':
         specifier: workspace:*
         version: link:../packages/loader
-      '@galacean/engine-math':
+      '@oasishub/engine-math':
         specifier: workspace:*
         version: link:../packages/math
-      '@galacean/engine-physics-lite':
+      '@oasishub/engine-physics-lite':
         specifier: workspace:*
         version: link:../packages/physics-lite
-      '@galacean/engine-physics-physx':
+      '@oasishub/engine-physics-physx':
         specifier: workspace:*
         version: link:../packages/physics-physx
-      '@galacean/engine-rhi-webgl':
+      '@oasishub/engine-rhi-webgl':
         specifier: workspace:*
         version: link:../packages/rhi-webgl
-      '@galacean/engine-shader':
-        specifier: workspace:*
-        version: link:../packages/shader
-      '@galacean/engine-shaderlab':
-        specifier: workspace:*
-        version: link:../packages/shader-lab
-      '@galacean/engine-ui':
-        specifier: workspace:*
-        version: link:../packages/ui
 
 packages:
 

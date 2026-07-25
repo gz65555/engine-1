@@ -23,7 +23,7 @@ import { StencilOperation } from "./shader/enums/StencilOperation";
 import { Texture, Texture2D, TextureCube, TextureCubeFace } from "./texture";
 import { Texture2DArray } from "./texture/Texture2DArray";
 import { TextureFormat } from "./texture/enums/TextureFormat";
-import { Color } from "@galacean/engine-math";
+import { Color } from "@oasishub/engine-math";
 
 /**
  * @internal

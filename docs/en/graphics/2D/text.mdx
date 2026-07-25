@@ -73,14 +73,14 @@ Select an entity with a TextRenderer component and configure the following prope
 
 ### Basic Usage
 ```typescript
-import { TextRenderer, Font, Color } from "@galacean/engine";
+import { TextRenderer, Font, Color } from "@oasishub/engine";
 
 // Create a text entity and add a component
 const textEntity = rootEntity.createChild("text");
 const textRenderer = textEntity.addComponent(TextRenderer);
 
 // Set basic properties
-textRenderer.text = "Galacean Text Rendering";  // Text content
+textRenderer.text = "Oasishub Text Rendering";  // Text content
 textRenderer.fontSize = 24;                   // Font size (pixels)
 textRenderer.color = new Color(1, 0, 0, 1);    // Red text
 ```

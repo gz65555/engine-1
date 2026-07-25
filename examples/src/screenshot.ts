@@ -16,7 +16,7 @@ import {
   Texture2D,
   Vector3,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
 const gui = new dat.GUI();
 

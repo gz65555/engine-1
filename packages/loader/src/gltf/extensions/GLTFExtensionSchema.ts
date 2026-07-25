@@ -152,13 +152,13 @@ export interface IEXTMeshoptCompressionSchema {
   filter?: "NONE" | "OCTAHEDRAL" | "QUATERNION" | "EXPONENTIAL";
 }
 
-export interface IGalaceanMaterialRemap {
+export interface IOasishubMaterialRemap {
   refId: string;
   key?: string;
   isClone?: boolean;
 }
 
-export interface IGalaceanAnimation {
+export interface IOasishubAnimation {
   events: {
     time: number;
     functionName: string;
@@ -204,7 +204,7 @@ export type GLTFExtensionSchema =
   | IKHRTextureTransform
   | IKHRXmp
   | IKHRXmp_Node
-  | IGalaceanAnimation
+  | IOasishubAnimation
   | IKHRMaterialsIridescence
   | IKHRMaterialsVolume
   | Object;

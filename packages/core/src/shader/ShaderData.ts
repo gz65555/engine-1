@@ -1,5 +1,5 @@
-import { IClone } from "@galacean/engine-design";
-import { Color, Matrix, Vector2, Vector3, Vector4 } from "@galacean/engine-math";
+import { IClone } from "@oasishub/engine-design";
+import { Color, Matrix, Vector2, Vector3, Vector4 } from "@oasishub/engine-math";
 import { IReferable } from "../asset/IReferable";
 import { CloneManager, ignoreClone } from "../clone/CloneManager";
 import { Texture } from "../texture/Texture";

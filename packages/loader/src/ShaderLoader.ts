@@ -6,7 +6,7 @@ import {
   ResourceManager,
   Shader,
   resourceLoader
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import { ShaderChunkLoader } from "./ShaderChunkLoader";
 
 @resourceLoader(AssetType.Shader, ["gs", "gsl"])

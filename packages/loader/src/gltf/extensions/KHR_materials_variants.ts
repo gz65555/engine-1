@@ -1,4 +1,4 @@
-import { Logger, Material, Renderer } from "@galacean/engine-core";
+import { Logger, Material, Renderer } from "@oasishub/engine-core";
 import { registerGLTFExtension } from "../parser/GLTFParser";
 import { GLTFParserContext, GLTFParserType } from "../parser/GLTFParserContext";
 import { GLTFExtensionMode, GLTFExtensionParser } from "./GLTFExtensionParser";

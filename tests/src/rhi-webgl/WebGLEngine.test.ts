@@ -1,6 +1,6 @@
-import { Camera, Entity, Script } from "@galacean/engine-core";
-import { Vector3 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Camera, Entity, Script } from "@oasishub/engine-core";
+import { Vector3 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { vi, describe, expect, it } from "vitest";
 
 describe("webgl engine test", () => {

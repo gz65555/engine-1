@@ -1,4 +1,4 @@
-import { Logger, PBRMaterial, UnlitMaterial } from "@galacean/engine-core";
+import { Logger, PBRMaterial, UnlitMaterial } from "@oasishub/engine-core";
 import { registerGLTFExtension } from "../parser/GLTFParser";
 import { GLTFParserContext } from "../parser/GLTFParserContext";
 import { GLTFExtensionMode, GLTFExtensionParser } from "./GLTFExtensionParser";

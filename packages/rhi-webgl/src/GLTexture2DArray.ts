@@ -1,4 +1,4 @@
-import { IPlatformTexture2DArray, Logger, Texture2DArray, TextureUtils } from "@galacean/engine-core";
+import { IPlatformTexture2DArray, Logger, Texture2DArray, TextureUtils } from "@oasishub/engine-core";
 import { GLTexture } from "./GLTexture";
 import { WebGLGraphicDevice } from "./WebGLGraphicDevice";
 

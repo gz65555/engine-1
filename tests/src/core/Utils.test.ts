@@ -1,31 +1,31 @@
-import { DisorderedArray, Utils } from "@galacean/engine-core";
+import { DisorderedArray, Utils } from "@oasishub/engine-core";
 import { describe, expect, it } from "vitest";
 
 describe("Utils test", function () {
   it("is absolute", () => {
     expect(Utils.isAbsoluteUrl("/test.png")).to.false;
-    expect(Utils.isAbsoluteUrl("https://www.galacean.com/test.png")).to.true;
+    expect(Utils.isAbsoluteUrl("https://www.oasishub.com/test.png")).to.true;
   });
 
   it("resolve base url", () => {
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com", "test.png")).to.equal(
-      "https://www.galacean.com/test.png"
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com", "test.png")).to.equal(
+      "https://www.oasishub.com/test.png"
     );
 
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com/", "/test.png")).to.equal(
-      "https://www.galacean.com/test.png"
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com/", "/test.png")).to.equal(
+      "https://www.oasishub.com/test.png"
     );
 
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com", "/test.png")).to.equal(
-      "https://www.galacean.com/test.png"
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com", "/test.png")).to.equal(
+      "https://www.oasishub.com/test.png"
     );
 
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com/space/basic.gltf", "texture.png")).to.equal(
-      "https://www.galacean.com/space/texture.png"
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com/space/basic.gltf", "texture.png")).to.equal(
+      "https://www.oasishub.com/space/texture.png"
     );
 
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com/space/basic.gltf", "/texture.png")).to.equal(
-      "https://www.galacean.com/texture.png"
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com/space/basic.gltf", "/texture.png")).to.equal(
+      "https://www.oasishub.com/texture.png"
     );
 
     expect(Utils.resolveAbsoluteUrl("/path/to/dir", "file.html")).to.equal("/path/to/file.html");
@@ -39,7 +39,7 @@ describe("Utils test", function () {
     );
 
     const base64Url = "data:application/octet-stream;base64,AAAAAImICD2JiIg9zczMPYmICD6rqio";
-    expect(Utils.resolveAbsoluteUrl("https://www.galacean.com", base64Url)).to.equal(base64Url);
+    expect(Utils.resolveAbsoluteUrl("https://www.oasishub.com", base64Url)).to.equal(base64Url);
   });
 
   it("DisorderedArray", () => {

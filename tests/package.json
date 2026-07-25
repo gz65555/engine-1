@@ -1,5 +1,5 @@
 {
-  "name": "@galacean/engine-tests",
+  "name": "@oasishub/engine-tests",
   "version": "1.6.13",
   "private": true,
   "license": "MIT",
@@ -12,16 +12,13 @@
     "b:types": "echo hi"
   },
   "devDependencies": {
-    "@galacean/engine": "workspace:*",
-    "@galacean/engine-core": "workspace:*",
-    "@galacean/engine-loader": "workspace:*",
-    "@galacean/engine-math": "workspace:*",
-    "@galacean/engine-physics-lite": "workspace:*",
-    "@galacean/engine-physics-physx": "workspace:*",
-    "@galacean/engine-rhi-webgl": "workspace:*",
-    "@galacean/engine-shader": "workspace:*",
-    "@galacean/engine-shaderlab": "workspace:*",
-    "@galacean/engine-ui": "workspace:*"
+    "@oasishub/engine": "workspace:*",
+    "@oasishub/engine-core": "workspace:*",
+    "@oasishub/engine-loader": "workspace:*",
+    "@oasishub/engine-math": "workspace:*",
+    "@oasishub/engine-physics-lite": "workspace:*",
+    "@oasishub/engine-physics-physx": "workspace:*",
+    "@oasishub/engine-rhi-webgl": "workspace:*"
   },
   "debug": "src/index.ts"
 }

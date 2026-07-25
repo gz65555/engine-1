@@ -1,4 +1,4 @@
-import { Matrix, Rect } from "@galacean/engine-math";
+import { Matrix, Rect } from "@oasishub/engine-math";
 import { IXRInput } from "./IXRInput";
 import { IXRPose } from "../IXRPose";
 

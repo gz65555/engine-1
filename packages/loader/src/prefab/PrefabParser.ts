@@ -1,4 +1,4 @@
-import { Engine, Entity } from "@galacean/engine-core";
+import { Engine, Entity } from "@oasishub/engine-core";
 import { IEntity, IHierarchyFile, ParserContext, ParserType } from "../resource-deserialize";
 import { HierarchyParser } from "../resource-deserialize/resources/parser/HierarchyParser";
 import { PrefabResource } from "./PrefabResource";

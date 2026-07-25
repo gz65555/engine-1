@@ -10,9 +10,9 @@ import {
   Transform,
   Vector2,
   Vector3
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
-// Adapted from @galacean/engine-toolkit-controls 1.6.0 (MIT).
+// Adapted from @oasishub/engine-toolkit-controls 1.6.0 (MIT).
 enum ControlHandlerType {
   None = 0,
   ROTATE = 1,

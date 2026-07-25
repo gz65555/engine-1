@@ -21,7 +21,7 @@ describe("Polyfill", () => {
       expect(window.AudioContext).to.be.undefined;
       expect((window as any).webkitAudioContext).to.exist;
 
-      await import("@galacean/engine-core");
+      await import("@oasishub/engine-core");
 
       expect(window.AudioContext).to.exist;
       expect(window.AudioContext).to.equal((window as any).webkitAudioContext);

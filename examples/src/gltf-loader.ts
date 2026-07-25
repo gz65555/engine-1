@@ -27,7 +27,7 @@ import {
   UnlitMaterial,
   Vector3,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { OrbitControl } from "./controls/OrbitControl";
 import * as dat from "dat.gui";
 

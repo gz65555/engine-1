@@ -1,4 +1,4 @@
-import { Vector3 } from "@galacean/engine-math";
+import { Vector3 } from "@oasishub/engine-math";
 
 /**
  * Describes a contact point where the collision occurs.

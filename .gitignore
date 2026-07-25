@@ -13,8 +13,6 @@ tmp
 /playground/node_modules
 /examples/playground
 types
-/packages/*/test/fixtures/**/node_modules
-/boilerplates/*/node_modules
 lib
 dist
 coverage
@@ -26,8 +24,6 @@ AUTHORS
 .vscode
 stats.html
 tsconfig.tsbuildinfo
-api
-docs/api
 yarn.lock
 e2e/videos/*
 e2e/screenshots/*
@@ -45,7 +41,3 @@ CLAUDE.md
 .husky/post-commit
 .husky/pre-push
 .husky/post-merge
-
-# For bison generated files used by ShaderLab
-*.tab.c
-*.output

@@ -18,9 +18,9 @@ import {
   PBRMaterial,
   Entity,
   Layer
-} from "@galacean/engine";
+} from "@oasishub/engine";
 
-import { LitePhysics } from "@galacean/engine-physics-lite";
+import { LitePhysics } from "@oasishub/engine-physics-lite";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 class MoveScript extends Script {
   onUpdate() {

@@ -16,7 +16,7 @@ Object.keys(demoList).forEach((group, groupIndex) => {
   // Create modern category title
   titleDOM.innerHTML = `
     <div class="flex items-center space-x-2 mb-3">
-      <div class="w-1 h-4 bg-gradient-to-b from-galacean-500 to-galacean-700 rounded-full"></div>
+      <div class="w-1 h-4 bg-gradient-to-b from-oasishub-500 to-oasishub-700 rounded-full"></div>
       <h3 class="category-title text-sm font-semibold uppercase tracking-wider">${group}</h3>
     </div>
   `;
@@ -39,7 +39,7 @@ Object.keys(demoList).forEach((group, groupIndex) => {
 
     itemDOM.innerHTML = `
       <div class="flex items-center space-x-3 p-3 rounded-lg demo-item group">
-        <div class="w-2 h-2 rounded-full bg-slate-300 group-hover:bg-galacean-500 transition-colors duration-200"></div>
+        <div class="w-2 h-2 rounded-full bg-slate-300 group-hover:bg-oasishub-500 transition-colors duration-200"></div>
         <span class="text-sm font-medium text-slate-700 group-hover:text-slate-900">${label}</span>
       </div>
     `;

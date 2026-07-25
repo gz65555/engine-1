@@ -14,7 +14,7 @@ import {
   TextRenderer,
   Vector3,
   WebGLEngine
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { OrbitControl } from "./.OrbitControl";
 import { initScreenshot, updateForE2E } from "./.mockForE2E";
 

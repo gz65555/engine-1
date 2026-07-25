@@ -1,5 +1,5 @@
-import { IPlaneColliderShape } from "@galacean/engine-design";
-import { Quaternion } from "@galacean/engine";
+import { IPlaneColliderShape } from "@oasishub/engine-design";
+import { Quaternion } from "@oasishub/engine";
 import { PhysXPhysics } from "../PhysXPhysics";
 import { PhysXPhysicsMaterial } from "../PhysXPhysicsMaterial";
 import { PhysXColliderShape } from "./PhysXColliderShape";

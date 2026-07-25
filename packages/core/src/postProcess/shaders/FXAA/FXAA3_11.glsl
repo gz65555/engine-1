@@ -1,7 +1,7 @@
 //----------------------------------------------------------------------------------
 //  This file was obatined from: https://github.com/hghdev/NVIDIAGameWorks-GraphicsSamples/blob/master/samples/es3-kepler/FXAA/FXAA3_11.h
 //  NVIDIA paper: https://www.iryoku.com/aacourse/downloads/09-FXAA-3.11-in-15-Slides.pdf
-//  Modifications to this file done by Galacean:
+//  Modifications to this file done by Oasishub:
 //  * Deleted HLSL-related macros
 //  * Deleted the macros and function except for 'FXAA_PC == 1' 
 //  * Deleted the useless parameters in 'FxaaPixelShader' 

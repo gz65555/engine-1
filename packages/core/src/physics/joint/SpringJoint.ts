@@ -1,4 +1,4 @@
-import { ISpringJoint } from "@galacean/engine-design";
+import { ISpringJoint } from "@oasishub/engine-design";
 import { Engine } from "../../Engine";
 import { Collider } from "../Collider";
 import { Joint } from "./Joint";

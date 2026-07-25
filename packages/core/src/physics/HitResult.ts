@@ -1,4 +1,4 @@
-import { Vector3 } from "@galacean/engine-math";
+import { Vector3 } from "@oasishub/engine-math";
 import { Entity } from "../Entity";
 import { ColliderShape } from "./shape";
 

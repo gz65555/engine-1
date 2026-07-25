@@ -1,4 +1,4 @@
-import { BoundingBox, Color, Vector3 } from "@galacean/engine-math";
+import { BoundingBox, Color, Vector3 } from "@oasishub/engine-math";
 import { Engine } from "../../Engine";
 import { Entity } from "../../Entity";
 import { BatchUtils } from "../../RenderPipeline/BatchUtils";

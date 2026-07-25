@@ -6,7 +6,7 @@ import {
   CullMode,
   RenderQueueType,
   StencilOperation
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 import type { IAssetRef, IColor, IVector2, IVector3 } from "./BasicSchema";
 
 export interface IRenderState {

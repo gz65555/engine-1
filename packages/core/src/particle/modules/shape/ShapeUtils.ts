@@ -1,4 +1,4 @@
-import { Rand, Vector2, Vector3 } from "@galacean/engine-math";
+import { Rand, Vector2, Vector3 } from "@oasishub/engine-math";
 
 /**
  * @internal

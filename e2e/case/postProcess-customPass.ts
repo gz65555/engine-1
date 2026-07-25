@@ -17,7 +17,7 @@ import {
   Texture2D,
   TonemappingEffect,
   TonemappingMode
-} from "@galacean/engine";
+} from "@oasishub/engine";
 import { initPostProcessEnv } from "./.initPostProcessEnv";
 
 const customShader = Shader.create(

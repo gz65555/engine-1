@@ -1,4 +1,4 @@
-import { Color } from "@galacean/engine-math";
+import { Color } from "@oasishub/engine-math";
 import { Engine } from "../Engine";
 import { Material } from "../material/Material";
 import { CompareFunction, CullMode, Shader, ShaderMacro } from "../shader";

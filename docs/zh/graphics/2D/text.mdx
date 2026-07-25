@@ -73,14 +73,14 @@ label: Graphics/2D
 
 ### 基础用法
 ```typescript
-import { TextRenderer, Font, Color } from "@galacean/engine";
+import { TextRenderer, Font, Color } from "@oasishub/engine";
 
 // 创建文本实体并添加组件
 const textEntity = rootEntity.createChild("text");
 const textRenderer = textEntity.addComponent(TextRenderer);
 
 // 设置基础属性
-textRenderer.text = "Galacean Text Rendering";  // 文本内容
+textRenderer.text = "Oasishub Text Rendering";  // 文本内容
 textRenderer.fontSize = 24;                   // 字体大小（像素）
 textRenderer.color = new Color(1, 0, 0, 1);    // 红色文本
 ```

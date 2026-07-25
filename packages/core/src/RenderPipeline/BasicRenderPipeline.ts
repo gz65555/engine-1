@@ -1,4 +1,4 @@
-import { Vector2 } from "@galacean/engine-math";
+import { Vector2 } from "@oasishub/engine-math";
 import { Background } from "../Background";
 import { Camera } from "../Camera";
 import { BackgroundMode } from "../enums/BackgroundMode";

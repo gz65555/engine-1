@@ -8,7 +8,7 @@ import {
   RequestConfig,
   ResourceManager,
   resourceLoader
-} from "@galacean/engine-core";
+} from "@oasishub/engine-core";
 @resourceLoader(AssetType.Audio, ["mp3", "ogg", "wav"])
 class AudioLoader extends Loader<AudioClip> {
   load(item: LoadItem, resourceManager: ResourceManager): AssetPromise<AudioClip> {

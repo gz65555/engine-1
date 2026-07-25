@@ -1,10 +1,7 @@
 {
-  "name": "@galacean/engine-physics-physx",
+  "name": "@oasishub/engine-physics-physx",
   "version": "1.6.13",
   "license": "MIT",
-  "repository": {
-    "url": "https://github.com/galacean/engine.git"
-  },
   "files": [
     "dist/**/*",
     "libs/**/*",
@@ -27,11 +24,11 @@
     "b:types": "tsc"
   },
   "devDependencies": {
-    "@galacean/engine": "workspace:*",
-    "@galacean/engine-design": "workspace:*"
+    "@oasishub/engine": "workspace:*",
+    "@oasishub/engine-design": "workspace:*"
   },
   "peerDependencies": {
-    "@galacean/engine": "workspace:*"
+    "@oasishub/engine": "workspace:*"
   },
   "debug": "src/index.ts"
 }

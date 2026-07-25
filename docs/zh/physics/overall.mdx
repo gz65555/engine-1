@@ -11,25 +11,25 @@ label: Physics
 - 关节约束系统
 - 物理事件响应
 
-为了满足不同应用场景的需求，Galacean 采用了多后端设计：
+为了满足不同应用场景的需求，Oasishub 采用了多后端设计：
 
 - **Lite**: 针对简单交互场景优化，体积小巧
 - **PhysX**: 基于 physX物理引擎 提供完整物理特性
 
-两个后端实现了统一的 [物理系统 API](https://github.com/galacean/engine/tree/main/packages/design/src/physics)，开发者可以根据项目需求灵活选择。有关物理系统的详细设计说明，请参考 [设计文档](https://github.com/galacean/engine/wiki/Physical-system-design).
+两个后端实现了统一的 物理系统 API，开发者可以根据项目需求灵活选择。有关物理系统的详细设计说明，请参考 设计文档.
 
 <Callout type="info">
 对于需要使用物理组件或 `InputManager` 等需要 Raycast 拾取的场景，都需要在使用之前初始化物理引擎。
 </Callout>
 
-目前 Galacean 引擎提供两种内置的物理引擎后端实现：
+目前 Oasishub 引擎提供两种内置的物理引擎后端实现：
 
-1. [Lite](/apis/physics-lite)（[physics-lite](https://github.com/galacean/engine/tree/main/packages/physics-lite)）
+1. [Lite](/apis/physics-lite)（physics-lite）
    - 轻量级物理引擎实现
    - 仅支持基础的碰撞检测
    - 适用于简单交互场景
 
-2. [PhysX](/apis/physics-physx)（[physics-physx](https://github.com/galacean/engine/tree/main/packages/physics-physx)）
+2. [PhysX](/apis/physics-physx)（physics-physx）
    - 基于physX物理引擎，通过WebAssembly编译
    - 支持高级物理特性和精确模拟
    - 适用于复杂物理交互场景
@@ -77,7 +77,7 @@ label: Physics
 #### 使用 Lite 物理引擎
 
 ```typescript
-import {LitePhysics} from "@galacean/engine-physics-lite";
+import {LitePhysics} from "@oasishub/engine-physics-lite";
 
 const engine = await WebGLEngine.create({
   canvas: htmlCanvas,
@@ -88,7 +88,7 @@ const engine = await WebGLEngine.create({
 #### 使用 PhysX 物理引擎
 
 ```typescript
-import { PhysXPhysics } from "@galacean/engine-physics-physx";
+import { PhysXPhysics } from "@oasishub/engine-physics-physx";
 
 const engine = await WebGLEngine.create({
   canvas: htmlCanvas,

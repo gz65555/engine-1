@@ -1,11 +1,6 @@
-# Galacean Engine
+# Oasishub Engine
 
-<a href="https://www.npmjs.com/package/@galacean/engine"><img src="https://img.shields.io/npm/v/@galacean/engine"/></a>
-![npm-size](https://img.shields.io/bundlephobia/minzip/@galacean/engine)
-![npm-download](https://img.shields.io/npm/dm/@galacean/engine)
-[![codecov](https://codecov.io/gh/galacean/engine/branch/main/graph/badge.svg?token=KR2UBKE3OX)](https://codecov.io/gh/galacean/engine)
-
-Galacean is a **web-first** and **mobile-first** high-performance real-time interactive engine. Use **component system design** and pursue ease of use and light weight. Developers can independently use and write Typescript scripts to develop projects using pure code.
+Oasishub is a **web-first** and **mobile-first** high-performance real-time interactive engine. Use **component system design** and pursue ease of use and light weight. Developers can independently use and write Typescript scripts to develop projects using pure code.
 
 ## Features
 
@@ -21,19 +16,19 @@ Galacean is a **web-first** and **mobile-first** high-performance real-time inte
 To install, use:
 
 ```sh
-npm install @galacean/engine
+npm install @oasishub/engine
 ```
 
 This will allow you to import engine entirely using:
 
 ```javascript
-import * as GALACEAN from "@galacean/engine";
+import * as OASISHUB from "@oasishub/engine";
 ```
 
 or individual classes using:
 
 ```javascript
-import { Engine, Scene, Entity } from "@galacean/engine";
+import { Engine, Scene, Entity } from "@oasishub/engine";
 ```
 
 ## Usage
@@ -75,7 +70,6 @@ engine.run();
 - [Examples](https://oasisengine.cn/#/examples/latest)
 - [Documentation](https://oasisengine.cn/#/docs/latest/cn/install)
 - [API References](https://oasisengine.cn/#/api/latest/core)
-
 
 ## License 
 

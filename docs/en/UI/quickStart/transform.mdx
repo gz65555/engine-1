@@ -131,7 +131,7 @@ label: UI
 
 # UITransform Component
 
-`UITransform` is a transform component specifically designed for UI elements in the Galacean engine, inheriting from the base `[Transform](/apis/core/#Transform)` component. It provides rich layout and alignment features and is a core component for building flexible UI systems.
+`UITransform` is a transform component specifically designed for UI elements in the Oasishub engine, inheriting from the base `[Transform](/apis/core/#Transform)` component. It provides rich layout and alignment features and is a core component for building flexible UI systems.
 
 ## Core Features
 
@@ -257,7 +257,7 @@ Vertical center offset, only effective when `verticalAlignment` is `Middle`.
 ### Basic Layout Setup
 
 ```typescript
-import { UITransform, HorizontalAlignmentMode, VerticalAlignmentMode } from "@galacean/engine";
+import { UITransform, HorizontalAlignmentMode, VerticalAlignmentMode } from "@oasishub/engine";
 
 // Get the Transform component of the UI element
 const uiTransform = entity.getComponent(UITransform);
@@ -362,4 +362,4 @@ Choose appropriate pivots based on the UI element's purpose:
 3. **Stretch Mode**: When using `LeftAndRight` or `TopAndBottom`, the corresponding direction's `size` will be automatically calculated
 4. **Parent-Child Relationship**: UI alignment is based on the parent element's UITransform, ensure the parent element is also a UI element
 
-The UITransform component provides powerful and flexible UI layout capabilities for the Galacean engine. By properly using these features, you can build beautiful UI interfaces that adapt to different screen sizes.
+The UITransform component provides powerful and flexible UI layout capabilities for the Oasishub engine. By properly using these features, you can build beautiful UI interfaces that adapt to different screen sizes.

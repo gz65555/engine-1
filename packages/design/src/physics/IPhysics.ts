@@ -1,4 +1,4 @@
-import { Quaternion, Vector3 } from "@galacean/engine-math";
+import { Quaternion, Vector3 } from "@oasishub/engine-math";
 import { ICharacterController } from "./ICharacterController";
 import { ICollider } from "./ICollider";
 import { IDynamicCollider } from "./IDynamicCollider";

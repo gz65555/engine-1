@@ -8,8 +8,8 @@ import {
   Texture2D,
   TypedArray,
   request
-} from "@galacean/engine-core";
-import { Vector2 } from "@galacean/engine-math";
+} from "@oasishub/engine-core";
+import { Vector2 } from "@oasishub/engine-math";
 import { GLTFResource } from "./gltf/GLTFResource";
 import type { AccessorComponentType, IBufferView } from "./gltf/GLTFSchema";
 import { GLTFUtils } from "./gltf/GLTFUtils";

@@ -1,6 +1,6 @@
-import { Camera, ParticleRenderer, Scene } from "@galacean/engine-core";
-import { Vector2 } from "@galacean/engine-math";
-import { WebGLEngine } from "@galacean/engine-rhi-webgl";
+import { Camera, ParticleRenderer, Scene } from "@oasishub/engine-core";
+import { Vector2 } from "@oasishub/engine-math";
+import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
 import { beforeAll, describe, expect, it } from "vitest";
 
 describe("TextureSheetAnimation Test", () => {
