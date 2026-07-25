@@ -64,27 +64,35 @@ export default class extends Script {
 
 
 
-每个 Shader 有不同的渲染效果和应用场景，更多详情参考 [内置着色器教程](/docs/graphics/material/builtinShaders/pbr/) 和 [自定义 Shader 实战教程](/docs/graphics/material/examples/shaderlab-01-basic-shader) 。
+每个 Shader 有不同的渲染效果和应用场景，更多详情参考 [内置着色器教程](/docs/graphics/material/builtinShaders/pbr/) 。
 
 
 ## 创建自定义 Shader
-如果内置 Shader 不能满足需求，我们可以自定义一个Shader，在编辑器资产面板中，新建 Shader，选择 PBR 模板或者 Unlit 模板：
+如果内置 Shader 不能满足需求，可以通过 `Shader.create` 传入顶点和片元着色器源码来创建自定义 Shader：
 
-<img
-  src="https://gw.alipayobjects.com/zos/OasisHub/9abd1026-4e4d-4994-b36a-f964375c38cb/image-20240731105324320.png"
-  style={{ zoom: "50%" }}
-/>
+```ts showLineNumbers
+const vertexSource = `
+  uniform mat4 renderer_MVPMat;
+  attribute vec3 POSITION;
 
-编辑器会自动帮我们创建好 Shader 文件和 [UIScript](/docs/graphics/material/shader/#uiscript-脚本系统) 文件。
+  void main() {
+    gl_Position = renderer_MVPMat * vec4(POSITION, 1.0);
+  }
+`;
 
-<img
-  src="https://gw.alipayobjects.com/zos/OasisHub/6351fa81-5159-4469-bd95-8f21a8f2f4ac/image-20250124162909194.png"
-  style={{ zoom: "50%" }}
-/>
+const fragmentSource = `
+  uniform vec4 u_color;
 
-<Callout type="info">
-具体 shader 内容编写可以从 [自定义 Shader 实战教程](/docs/graphics/material/examples/shaderlab-01-basic-shader) 快速上手。
-</Callout>
+  void main() {
+    gl_FragColor = u_color;
+  }
+`;
+
+Shader.create("custom-shader", vertexSource, fragmentSource);
+
+const material = new BaseMaterial(engine, Shader.find("custom-shader"));
+material.shaderData.setColor("u_color", new Color(1, 0, 0, 1));
+```
 
 ## Shader 数据的传输
 
@@ -92,38 +100,19 @@ export default class extends Script {
 
 ### 声明变量
 ```glsl showLineNumbers
-...
-Pass "Forward" {
-	// 声明自定义变量
-	vec4 u_color;
+// 声明自定义变量
+uniform vec4 u_color;
 
-	// 声明引擎内置变量
-	mat4 renderer_MVPMat;
+// 声明引擎内置变量
+uniform mat4 renderer_MVPMat;
 
-	// 通过引入代码片段
-	#include "Transform.glsl"
-}
-...
+// 通过引入代码片段
+#include <transform_declare>
 ```
 
 
 ### 设置数据
-Shader 支持通过 [UIScript](/docs/graphics/material/shader/#uiscript-脚本系统) 帮我们自动生成可以交互的面板:
-
-<div style={{display: "flex"}}>
-
-  <Image src="https://mdn.alipayobjects.com/huamei_aftkdx/afts/img/A*mwAxRr45kE8AAAAAAAAAAAAAeteEAQ/fmt.webp" width="435px" />
-
-  <Image src= "https://mdn.alipayobjects.com/huamei_aftkdx/afts/img/A*7MrxTIG5fpkAAAAAAAAAAAAAeteEAQ/fmt.webp" width="200px" />
-
-</div>
-
-
-<Callout type="info">
-  参考 [Shader Editor 模块 ](/docs/graphics/material/shader/#2-editor-模块) 使用更多类型的数据和宏。
-</Callout>
-
-当然，我们也可以通过代码设置着色器数据:
+通过代码设置着色器数据:
 
 ```ts showLineNumbers
 // shaderData 可以分别保存在 scene 、camera 、renderer、 material 中。
@@ -183,8 +172,5 @@ const test = shaderData.getTexture("u_sampler2D");
 ```
 
 ## 下一步学习
-- [自定义 Shader](/docs/graphics/material/examples/shaderlab-01-basic-shader) - 从 0 开始 Shader 创作之旅
-- [Shader 语法深入学习](/docs/graphics/material/shader) - 完整的语法参考
 - [Shader 内置变量参考](/docs/graphics/material/variables) - 引擎提供的所有内置变量
-- [Shader 内置 API 参考](/docs/graphics/material/shaderAPI) - 引擎提供的所有 Shader API
 - [光照系统](/docs/graphics/light/light) - 实现更真实的光照效果

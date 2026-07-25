@@ -2,8 +2,5 @@
   "overview": "材质概述",
   "baseUse": "材质的基本使用",
   "builtinShaders": "内置着色器",
-  "examples": "自定义Shader实战教程",
-  "shader": "Shader 介绍",
-  "variables": "Shader 内置变量",
-  "shaderAPI": "Shader API"
+  "variables": "Shader 内置变量"
 }

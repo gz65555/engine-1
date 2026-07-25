@@ -9,12 +9,9 @@ Material is a core concept in 3D rendering that determines the visual appearance
 ## Core Components
 
 ### 🎨 Shader
-Shaders are programs that run on the GPU, responsible for calculating the final color of each pixel. Oasishub provides a powerful shader language that allows you to:
-- Use familiar GLSL syntax
-- Enjoy advanced abstraction and management features
-- Easily define material properties and rendering configurations
+Shaders are programs that run on the GPU, responsible for calculating the final color of each pixel. You can write them with familiar GLSL syntax and create them through `Shader.create`.
 
-Refer to [Shader Introduction](/en/docs/graphics/material/shader) to learn about Shader syntax.
+Refer to [Basic Material Usage](/en/docs/graphics/material/baseUse) to learn how to create a Shader.
 
 ### 📊 Shader Data (ShaderData)
 Shader data contains various parameters required for rendering, such as:
@@ -31,7 +28,7 @@ Render states control how the GPU processes geometry, including:
 - **Stencil State**: implements complex masking effects
 - **Raster State**: controls face culling and polygon mode
 
-Refer to [Render States](/en/docs/graphics/material/shader/#render-state-specification) to learn about all configurable render states.
+These states can be accessed and modified through `material.renderState`.
 
 ## Quick Start
 <Callout type="info">
@@ -59,18 +56,9 @@ material.shaderData.setColor("material_BaseColor", new Color(1, 0, 0, 1));
 material.shaderData.setTexture("material_BaseTexture", texture);
 ```
 
-<Callout type="info">
-Want to get started quickly? Jump directly to [Custom Shader Tutorial](/en/docs/graphics/material/examples/shaderlab-01-basic-shader) to start your first custom shader!
-</Callout>
-
 ## Recommended Learning Path
 
 1. **Understand Basics**: Read this overview to understand core material concepts
 2. **Experience Built-ins**: Try using [Built-in Shaders](/en/docs/graphics/material/builtinShaders)
-3. **Hands-on Practice**: Follow the [Tutorial](/en/docs/graphics/material/examples/shaderlab-01-basic-shader) to create your first custom shader
-4. **Deep Learning**: Check [Shader Introduction](/en/docs/graphics/material/shader) for complete syntax
-5. **Problem Solving**: Use [Shader Built-in Variables](/en/docs/graphics/material/variables) and [Shader API](/en/docs/graphics/material/shaderAPI)
-
-<Callout type="info">
-For more practical examples, check [Online Examples](/examples/shaderlab-01-basic-shader).
-</Callout>
+3. **Hands-on Practice**: Follow [Basic Material Usage](/en/docs/graphics/material/baseUse) to create your first custom shader
+4. **Problem Solving**: Use [Shader Built-in Variables](/en/docs/graphics/material/variables)
