@@ -1,3 +1,4 @@
+import "@oasishub/engine";
 import "@oasishub/engine-loader";
 import { AssetType } from "@oasishub/engine-core";
 import { WebGLEngine } from "@oasishub/engine-rhi-webgl";
@@ -16,16 +17,15 @@ afterAll(() => {
   engine?.destroy();
 });
 
-describe("ProjectLoader Component Reference Tests", function () {
-  it("should load project successfully with component be deleted", async () => {
+describe("ProjectLoader Tests", function () {
+  it("should load a core-only project successfully", async () => {
     await engine.resourceManager.load({
       type: AssetType.Project,
-      // button.Color.target be deleted
-      url: "https://mdn.alipayobjects.com/oasis_be/afts/file/A*hPs1Q4KdkBsAAAAAQNAAAAgAekp5AQ/project.json"
+      url: "https://mdn.alipayobjects.com/huamei_aftkdx/afts/file/A*_Ao1QZtL9fMAAAAAAAAAAAAADteEAQ/mock-project.json"
     });
     const scene = engine.sceneManager.scenes[0];
 
     const entities = scene.rootEntities;
-    expect(entities.length).eq(5);
+    expect(entities.length).eq(3);
   });
 });
